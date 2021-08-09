@@ -81,6 +81,8 @@ nav .logo {
 
 nav .logo img {
   max-width: 6rem;
+  -webkit-filter: drop-shadow(3px 4px 4px rgba(0, 0, 0, 0.63));
+          filter: drop-shadow(3px 4px 4px rgba(0, 0, 0, 0.63));
 }
 
 nav .navlinks {
@@ -224,6 +226,8 @@ nav .link {
 .container .card a img {
   max-width: 70%;
   margin-bottom: 1rem;
+  -webkit-filter: drop-shadow(3px 4px 4px rgba(0, 0, 0, 0.63));
+          filter: drop-shadow(3px 4px 4px rgba(0, 0, 0, 0.63));
 }
 
 .content-info {
@@ -240,6 +244,8 @@ nav .link {
 #image-container img {
   width: 90%;
   z-index: 3;
+  -webkit-filter: drop-shadow(3px 4px 4px rgba(0, 0, 0, 0.63));
+          filter: drop-shadow(3px 4px 4px rgba(0, 0, 0, 0.63));
 }
 
 .cta {
@@ -384,7 +390,7 @@ footer a:hover {
     height: 30vh;
     width: 13px;
     margin-top: 3rem;
-    left: -6rem;
+    left: -3rem;
   }
   .container .card {
     width: 60vw;
@@ -412,11 +418,26 @@ footer a:hover {
     width: 70vw;
     height: 25vh;
   }
+  .container .content-info {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+  }
   .container .content-info h1 {
-    font-size: 3rem;
+    font-size: 2rem;
+    letter-spacing: 0.2rem;
   }
   .container .content-info p {
-    font-size: 1.25rem;
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
   }
   .container .content-info .price {
     margin-top: 1rem;
@@ -426,9 +447,13 @@ footer a:hover {
     margin-right: 2.8rem;
   }
   #image-container {
-    width: 30vh;
-    right: 9rem;
-    bottom: 5rem;
+    width: 25vh;
+    right: 0rem;
+    top: 43%;
+  }
+  #image-container img {
+    -webkit-transform: rotate(25deg);
+            transform: rotate(25deg);
   }
   nav {
     position: relative;
@@ -437,26 +462,28 @@ footer a:hover {
     width: 25px;
     cursor: pointer;
     position: absolute;
-    right: 8rem;
+    right: 0;
     top: 1rem;
     display: block;
   }
   .links {
     position: absolute;
-    top: 75px;
-    right: 2rem;
+    top: 65px;
+    width: 90%;
+    right: 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     z-index: 4;
-    padding: 4rem 1rem 4rem 1rem;
-    border-radius: 0.2rem;
+    padding: 4rem 1rem 3rem 1rem;
+    border-radius: 1rem;
     background: var(--color-main);
     overflow: hidden;
   }
   #menuList a {
     font-weight: bold;
     font-size: 1.1rem;
+    opacity: 0.9;
   }
 }
 /*# sourceMappingURL=main.css.map */
