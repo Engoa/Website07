@@ -417,7 +417,9 @@ footer a:hover {
   .container .card {
     width: 70vw;
     height: 25vh;
-    margin-top: 5rem;
+    margin-top: 8rem;
+    position: relative;
+    top: 8rem;
   }
   .container .content-info {
     -webkit-box-align: center;
@@ -454,17 +456,16 @@ footer a:hover {
     top: 0.5rem;
   }
   #image-container {
-    max-width: 35%;
+    max-width: 80%;
+    position: relative;
     margin-right: 2rem;
-    right: 0rem;
-    top: 43%;
-    z-index: 4;
+    top: -60%;
+    z-index: -1;
   }
   #image-container img {
-    -webkit-transform: rotate(15deg);
-            transform: rotate(15deg);
     z-index: 4;
     max-width: 100%;
+    position: absolute;
   }
   nav {
     position: relative;
