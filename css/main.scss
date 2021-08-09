@@ -119,19 +119,21 @@ nav {
 
   h1 {
    font-weight: bold;
-   font-size: 4rem;
+   font-size: 5rem;
    color: var(--color-main);
+  }
+  p {
+   font-size: 2rem;
   }
 
   span {
    margin-top: 1rem;
    opacity: 0.6;
-   font-size: 0.9rem;
   }
   .price {
    opacity: 1;
    font-weight: bold;
-   font-size: 3rem;
+   font-size: 4rem;
    margin-left: 2rem;
   }
  }
@@ -180,14 +182,14 @@ nav {
 }
 
 .cta {
- margin-left: 3.8rem;
+ margin-left: 2rem;
  margin-top: 1rem;
  .btn {
   background: var(--color-btn);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  font-size: 1.5rem;
+  font-size: 3rem;
   font-weight: bold;
   position: relative;
 
@@ -195,14 +197,14 @@ nav {
    content: '\f054';
    font-weight: bold;
    font-family: 'Font Awesome 5 Free';
-   font-size: 0.8rem;
+   font-size: 1.3rem;
    position: absolute;
    background: var(--color-main);
    -webkit-background-clip: text;
    background-clip: text;
    color: transparent;
    right: -1.2rem;
-   top: 0.6rem;
+   top: 1.5rem;
    transform: translateX(0);
    transition: transform var(--anim-speed);
   }
@@ -236,7 +238,7 @@ footer {
  }
  a {
   padding-top: 5rem;
-  font-size: 2rem;
+  font-size: 3rem;
   color: var(--color-accent);
   transition: transform var(--anim-speed), color var(--anim-speed);
 
@@ -247,11 +249,14 @@ footer {
  }
 }
 
-@media only screen and (max-width: 1600px) {
+@media only screen and (max-width: 1900px) {
  .container {
   .content-info {
    h1 {
     font-size: 3rem;
+   }
+   p {
+       font-size: 1.4rem;
    }
   }
  }

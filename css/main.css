@@ -161,20 +161,23 @@ nav .link {
 
 .container .content-info h1 {
   font-weight: bold;
-  font-size: 4rem;
+  font-size: 5rem;
   color: var(--color-main);
+}
+
+.container .content-info p {
+  font-size: 2rem;
 }
 
 .container .content-info span {
   margin-top: 1rem;
   opacity: 0.6;
-  font-size: 0.9rem;
 }
 
 .container .content-info .price {
   opacity: 1;
   font-weight: bold;
-  font-size: 3rem;
+  font-size: 4rem;
   margin-left: 2rem;
 }
 
@@ -240,7 +243,7 @@ nav .link {
 }
 
 .cta {
-  margin-left: 3.8rem;
+  margin-left: 2rem;
   margin-top: 1rem;
 }
 
@@ -249,7 +252,7 @@ nav .link {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  font-size: 1.5rem;
+  font-size: 3rem;
   font-weight: bold;
   position: relative;
 }
@@ -258,14 +261,14 @@ nav .link {
   content: '\f054';
   font-weight: bold;
   font-family: 'Font Awesome 5 Free';
-  font-size: 0.8rem;
+  font-size: 1.3rem;
   position: absolute;
   background: var(--color-main);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   right: -1.2rem;
-  top: 0.6rem;
+  top: 1.5rem;
   -webkit-transform: translateX(0);
           transform: translateX(0);
   -webkit-transition: -webkit-transform var(--anim-speed);
@@ -317,7 +320,7 @@ footer .icons {
 
 footer a {
   padding-top: 5rem;
-  font-size: 2rem;
+  font-size: 3rem;
   color: var(--color-accent);
   -webkit-transition: color var(--anim-speed), -webkit-transform var(--anim-speed);
   transition: color var(--anim-speed), -webkit-transform var(--anim-speed);
@@ -331,9 +334,12 @@ footer a:hover {
   color: black;
 }
 
-@media only screen and (max-width: 1600px) {
+@media only screen and (max-width: 1900px) {
   .container .content-info h1 {
     font-size: 3rem;
+  }
+  .container .content-info p {
+    font-size: 1.4rem;
   }
   #image-container {
     width: 45vh;
@@ -342,7 +348,7 @@ footer a:hover {
   }
 }
 
-@media only screen and (max-width: 1600px) and (max-width: 1200px) {
+@media only screen and (max-width: 1900px) and (max-width: 1200px) {
   .container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -401,7 +407,7 @@ footer a:hover {
   }
 }
 
-@media only screen and (max-width: 1600px) and (max-width: 950px) {
+@media only screen and (max-width: 1900px) and (max-width: 950px) {
   .container .card {
     width: 70vw;
     height: 25vh;
