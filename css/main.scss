@@ -75,9 +75,9 @@ nav {
 
  .links {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   list-style: none;
-  gap: 2rem;
+  margin-top: 1rem;
 
   a {
    text-decoration: none;
@@ -331,7 +331,7 @@ footer {
     text-align: center;
 
     h1 {
-     font-size: 2rem;
+     font-size: 1.8rem;
      letter-spacing: 0.2rem;
     }
     p {
@@ -371,34 +371,36 @@ footer {
   }
   nav {
    position: relative;
-  }
-  .hamburger-menu {
-   width: 25px;
-   cursor: pointer;
-   position: absolute;
-   right: 0;
-   top: 1rem;
-   display: block;
-  }
 
-  .links {
-   position: absolute;
-   top: 65px;
-   width: 100%;
-   right: 0;
-   display: flex;
-   z-index: 4;
-   padding: 4rem 1rem 3rem 1rem;
-   border-radius: 1rem;
-   background: var(--color-main);
-   overflow: hidden;
-  }
+   .hamburger-menu {
+    width: 25px;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 1rem;
+    display: block;
+   }
 
-  #menuList {
-   a {
-    font-weight: bold;
-    font-size: 0.8rem;
-    opacity: 0.9;
+   .links {
+    position: absolute;
+    top: 65px;
+    width: 100%;
+    right: 0;
+    display: flex;
+    z-index: 4;
+    padding: 3rem 1rem 2rem 0;
+    border-radius: 1rem;
+    background: var(--color-main);
+    overflow: hidden;
+    justify-content: center;
+    gap: 1rem;
+   }
+
+   #menuList {
+    a {
+     font-weight: bold;
+     font-size: 0.8rem;
+    }
    }
   }
  }
