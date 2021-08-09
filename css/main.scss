@@ -293,7 +293,7 @@ footer {
      height: 30vh;
      width: 13px;
      margin-top: 3rem;
-     left: -3rem;
+     left: -2rem;
     }
    }
   }
@@ -318,6 +318,7 @@ footer {
    .card {
     width: 70vw;
     height: 25vh;
+    margin-top: 5rem;
    }
    .content-info {
     align-items: center;
@@ -336,20 +337,31 @@ footer {
     .price {
      margin-top: 1rem;
      margin-bottom: 1rem;
+     font-size: 1.5rem;
     }
     .btn {
      margin-right: 2.8rem;
+     font-size: 1.5rem;
+
+     &::after {
+      font-size: 1rem;
+      top: 0.5rem;
+     }
     }
    }
   }
 
   #image-container {
-   width: 25vh;
+   max-width: 35%;
+   margin-right: 2rem;
    right: 0rem;
    top: 43%;
+   z-index: 4;
 
    img {
-    transform: rotate(25deg);
+    transform: rotate(15deg);
+    z-index: 4;
+    max-width: 100%;
    }
   }
   nav {
@@ -380,7 +392,7 @@ footer {
   #menuList {
    a {
     font-weight: bold;
-    font-size: 1.1rem;
+    font-size: 0.8rem;
     opacity: 0.9;
    }
   }

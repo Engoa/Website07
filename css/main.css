@@ -390,7 +390,7 @@ footer a:hover {
     height: 30vh;
     width: 13px;
     margin-top: 3rem;
-    left: -3rem;
+    left: -2rem;
   }
   .container .card {
     width: 60vw;
@@ -417,6 +417,7 @@ footer a:hover {
   .container .card {
     width: 70vw;
     height: 25vh;
+    margin-top: 5rem;
   }
   .container .content-info {
     -webkit-box-align: center;
@@ -442,18 +443,28 @@ footer a:hover {
   .container .content-info .price {
     margin-top: 1rem;
     margin-bottom: 1rem;
+    font-size: 1.5rem;
   }
   .container .content-info .btn {
     margin-right: 2.8rem;
+    font-size: 1.5rem;
+  }
+  .container .content-info .btn::after {
+    font-size: 1rem;
+    top: 0.5rem;
   }
   #image-container {
-    width: 25vh;
+    max-width: 35%;
+    margin-right: 2rem;
     right: 0rem;
     top: 43%;
+    z-index: 4;
   }
   #image-container img {
-    -webkit-transform: rotate(25deg);
-            transform: rotate(25deg);
+    -webkit-transform: rotate(15deg);
+            transform: rotate(15deg);
+    z-index: 4;
+    max-width: 100%;
   }
   nav {
     position: relative;
@@ -482,7 +493,7 @@ footer a:hover {
   }
   #menuList a {
     font-weight: bold;
-    font-size: 1.1rem;
+    font-size: 0.8rem;
     opacity: 0.9;
   }
 }
