@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+   href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap"
+   rel="stylesheet"
+  />
+  <script src="https://kit.fontawesome.com/9a80e50f42.js" crossorigin="anonymous"></script>
+  <title>Playstation Store</title>
+ </head>
+ <body>
+  <nav>
+   <div class="logo">
+    <img src="/images/logo.png" alt="Playstation Logo" />
+   </div>
+
+   <div class="navlinks">
+    <div>
+     <ul class="links" id="menuList">
+      <li class="controllers link"><a href="#">Controllers</a></li>
+      <li class="consoles link"><a href="#">Game Consoles</a></li>
+      <li class="accessories link"><a href="#">VR Accessories</a></li>
+      <li class="contact link"><a href="#">Contact</a></li>
+     </ul>
+    </div>
+    <img class="hamburger-menu" src="/images/menu.png" onclick="togglemenu()" alt="Menu" />
+   </div>
+  </nav>
+
+  <header>
+   <div class="container">
+    <div class="content-info">
+     <h1 id="header">PS5 DualSense 5</h1>
+     <p>Wireless Controller for Playstation 5</p>
+     <span>* Compatible for Playstation 4 Pro</span>
+     <span class="price">$49.99</span>
+     <div class="cta">
+      <a href="#" class="btn link">More Info</a>
+     </div>
+    </div>
+    <div class="card">
+     <a class="cardplus" href=""> <img src="/images/add.png" alt="Plus Icon" />Add to Cart</a>
+    </div>
+    <div id="image-container"><img src="/images/controller.png" alt="Controller image" /></div>
+   </div>
+  </header>
+
+  <footer>
+   <div class="icons">
+    <a id="facebook icon" href="#"><i class="fab fa-twitter-square"></i></a>
+    <a id="instagram icon" href="#"><i class="fab fa-instagram-square"></i></a>
+    <a id="twitter icon" href="#"><i class="fab fa-facebook-square"></i></a>
+   </div>
+  </footer>
+
+  <script>
+   var menuList = document.getElementById('menuList');
+   menuList.style.display = 'none';
+
+   function togglemenu() {
+    if (menuList.style.display == 'none') {
+     menuList.style.display = 'flex';
+    } else {
+     menuList.style.display = 'none';
+    }
+   }
+  </script>
+ </body>
+</html>
