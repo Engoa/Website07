@@ -144,8 +144,7 @@ nav {
   .price {
    opacity: 1;
    font-weight: bold;
-   font-size: 4rem;
-   margin-left: 2rem;
+   font-size: 3.5rem;
   }
  }
 
@@ -291,7 +290,7 @@ footer {
  }
 
  &__icon:not(:hover),
- &__icon:not(:active) {
+ &__icon:active {
   color: black;
  }
 

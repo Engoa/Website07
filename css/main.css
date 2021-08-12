@@ -186,8 +186,7 @@ nav .link {
 .container .content-info .price {
   opacity: 1;
   font-weight: bold;
-  font-size: 4rem;
-  margin-left: 2rem;
+  font-size: 3.5rem;
 }
 
 .container .card {
@@ -400,7 +399,7 @@ footer a {
   color: #00acee;
 }
 
-.icons__icon:not(:hover), .icons__icon:not(:active) {
+.icons__icon:not(:hover), .icons__icon:active {
   color: black;
 }
 
