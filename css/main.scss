@@ -280,17 +280,19 @@ footer {
 }
 
 .icons {
- &__facebook:hover,
- &__facebook:focus {
+ &__facebook {
   color: #4267b2;
  }
- &__instagram:hover,
- &__instagram:focus {
+ &__instagram {
   color: #e1306c;
  }
- &__twitter:hover,
- &__twitter:focus {
+ &__twitter {
   color: #00acee;
+ }
+
+ &__icon:not(:hover),
+ &__icon:not(:active) {
+  color: black;
  }
 
  // Scale on Hover for all social icons

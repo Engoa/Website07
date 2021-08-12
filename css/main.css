@@ -388,16 +388,20 @@ footer a {
   transition: transform var(--anim-speed), color var(--anim-speed), -webkit-transform var(--anim-speed);
 }
 
-.icons__facebook:hover, .icons__facebook:focus {
+.icons__facebook {
   color: #4267b2;
 }
 
-.icons__instagram:hover, .icons__instagram:focus {
+.icons__instagram {
   color: #e1306c;
 }
 
-.icons__twitter:hover, .icons__twitter:focus {
+.icons__twitter {
   color: #00acee;
+}
+
+.icons__icon:not(:hover), .icons__icon:not(:active) {
+  color: black;
 }
 
 .icons__icon:hover, .icons__icon:focus {
