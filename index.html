@@ -53,21 +53,21 @@
 
   <footer>
    <div class="icons">
-    <a id="facebook icon" href="#"><i class="fab fa-twitter-square"></i></a>
-    <a id="instagram icon" href="#"><i class="fab fa-instagram-square"></i></a>
-    <a id="twitter icon" href="#"><i class="fab fa-facebook-square"></i></a>
+    <a class="icons__facebook icons__icon" href="#"><i class="fab fa-facebook-square"></i></a>
+    <a class="icons__instagram icons__icon" href="#"><i class="fab fa-instagram-square"></i></a>
+    <a class="icons__twitter icons__icon" href="#"><i class="fab fa-twitter-square"></i></a>
    </div>
   </footer>
 
   <script>
    var menuList = document.getElementById('menuList');
-   menuList.style.display = 'none';
+   menuList.style.opacity = '0';
 
    function togglemenu() {
-    if (menuList.style.display == 'none') {
-     menuList.style.display = 'flex';
+    if (menuList.style.opacity == '1') {
+     menuList.style.opacity = '0';
     } else {
-     menuList.style.display = 'none';
+     menuList.style.opacity = '1';
     }
    }
   </script>

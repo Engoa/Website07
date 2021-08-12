@@ -23,9 +23,18 @@ a {
  font-family: 'Montserrat', sans-serif;
 }
 
+// Hide Hamburger menu on Desktop
 .hamburger-menu {
  display: none;
 }
+// Hide Hamburger menu on Desktop
+
+// Animation for moboile hamburger menu
+.links {
+ transition: opacity var(--anim-speed);
+}
+// Animation for moboile hamburger menu
+
 // Nav button animations
 
 .link {
@@ -109,13 +118,14 @@ nav {
 
   &::before {
    position: absolute;
-   height: 20vh;
    width: 11px;
+   height: 100%;
    background: var(--color-main);
    left: -5%;
    top: 0.5rem;
    content: '';
    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.63);
+   animation: width-load 1.5s ease;
   }
 
   h1 {
@@ -181,6 +191,27 @@ nav {
   width: 90%;
   z-index: 3;
   filter: drop-shadow(3px 4px 4px rgba(0, 0, 0, 0.63));
+  animation: load 1.5s ease;
+ }
+}
+@keyframes load {
+ 0% {
+  transform: translateY(-20rem);
+  opacity: 0;
+ }
+
+ 100% {
+  transform: translateY(0);
+  opacity: 1;
+ }
+}
+@keyframes width-load {
+ 0% {
+  height: 0%;
+ }
+
+ 100% {
+  height: 100%;
  }
 }
 
@@ -237,23 +268,38 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1.5rem;
-  padding-bottom: 5rem;
-  margin-top: 6rem;
+  gap: 2rem;
+  width: 100%;
  }
  a {
-  padding-top: 5rem;
+  margin-top: 5rem;
   font-size: 3rem;
   color: var(--color-accent);
   transition: transform var(--anim-speed), color var(--anim-speed);
-
-  &:hover {
-   transform: scale(1.1);
-   color: black;
-  }
  }
 }
 
+.icons {
+ &__facebook:hover,
+ &__facebook:focus {
+  color: #4267b2;
+ }
+ &__instagram:hover,
+ &__instagram:focus {
+  color: #e1306c;
+ }
+ &__twitter:hover,
+ &__twitter:focus {
+  color: #00acee;
+ }
+
+ // Scale on Hover for all social icons
+ &__icon:hover,
+ &__icon:focus {
+  transform: scale(1.2);
+ }
+ // Scale on Hover for all social icons
+}
 @media only screen and (max-width: 1900px) {
  .container {
   .content-info {
@@ -294,8 +340,8 @@ footer {
     &::before {
      height: 30vh;
      width: 13px;
-     margin-top: 3rem;
-     left: -2rem;
+     margin-top: 0.5rem;
+     left: -1.5rem;
     }
    }
   }
@@ -358,10 +404,10 @@ footer {
   #image-container {
    max-width: 80%;
    position: relative;
-   margin-right: 2rem;
+   margin-right: 2.5rem;
 
    top: -60%;
-   z-index: -1;
+   z-index: -3;
 
    img {
     z-index: 4;
@@ -383,25 +429,43 @@ footer {
 
    .links {
     position: absolute;
-    top: 65px;
+    top: 40px;
     width: 100%;
     right: 0;
     display: flex;
     z-index: 4;
     padding: 3rem 1rem 2rem 0;
-    border-radius: 1rem;
+    border-radius: 0.3rem;
     background: var(--color-main);
     overflow: hidden;
-    justify-content: center;
-    gap: 1rem;
+    justify-content: space-around;
    }
 
    #menuList {
     a {
      font-weight: bold;
      font-size: 0.8rem;
+     color: white;
+     opacity: 0.9;
+     transform: scale(1);
     }
    }
+
+   .link::before {
+    background: white;
+    bottom: -0.5rem;
+   }
+  }
+ }
+ @keyframes load {
+  0% {
+   transform: translateY(-12rem);
+   opacity: 0;
+  }
+
+  100% {
+   transform: translateY(0);
+   opacity: 1;
   }
  }
 }
