@@ -29,7 +29,7 @@
       <li class="contact link"><a href="#">Contact</a></li>
      </ul>
     </div>
-    <img class="hamburger-menu" src="/images/menu.png" onclick="togglemenu()" alt="Menu" />
+    <i class="fas fa-bars hamburger-menu" onclick="togglemenu()"></i>
    </div>
   </nav>
 
@@ -61,13 +61,13 @@
 
   <script>
    var menuList = document.getElementById('menuList');
-   menuList.style.opacity = '0';
+   menuList.style.opacity = '1';
 
    function togglemenu() {
-    if (menuList.style.opacity == '1') {
-     menuList.style.opacity = '0';
-    } else {
+    if (menuList.style.opacity == '0') {
      menuList.style.opacity = '1';
+    } else {
+     menuList.style.opacity = '0';
     }
    }
   </script>
