@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="assets/css/main.css" />
+      <link rel="stylesheet" href="assets/css/calc.css" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap"
+         rel="stylesheet"
+      />
+      <script src="https://kit.fontawesome.com/9a80e50f42.js" crossorigin="anonymous"></script>
+      <title>Document</title>
+   </head>
+   <body>
+      <nav>
+         <div class="logo">
+            <img src="/images/logo.png" alt="Playstation Logo" />
+         </div>
+
+         <div class="navlinks">
+            <div>
+               <ul class="links" id="menuList">
+                  <li class="controllers link"><a href="index.html">Home</a></li>
+                  <li class="consoles link"><a href="#">Consoles</a></li>
+                  <li class="accessories link"><a href="#">Accessories</a></li>
+                  <li class="contact link"><a href="#">Contact</a></li>
+               </ul>
+            </div>
+            <i class="fas fa-bars hamburger-menu" onclick="togglemenu()"></i>
+         </div>
+      </nav>
+
+      <main>
+         <form action="#">
+            <div class="container">
+               <h1>Please Input any numbers to calculate the result:</h1>
+               <input
+                  class="container__input"
+                  id="container__input1"
+                  placeholder="Enter a number"
+                  type="number"
+                  inputmode="numeric"
+               />
+               <input
+                  class="container__input"
+                  id="container__input2"
+                  placeholder="Enter a number"
+                  type="number"
+                  inputmode="numeric"
+               />
+               <div class="button__container">
+                  <button class="container__button" id="container__button" type="button">
+                     <i class="fas fa-calculator"></i>
+                  </button>
+                  <button class="container__reset" id="container__reset" type="reset">
+                     <i class="fas fa-undo"></i>
+                  </button>
+               </div>
+               <div class="result__container" id="container__result">
+                  <p class="result__container__p" id="result__container__p">0</p>
+               </div>
+            </div>
+         </form>
+      </main>
+      <script src="assets/js/main.js"></script>
+      <script src="assets/js/assignment.js"></script>
+   </body>
+</html>

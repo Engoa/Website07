@@ -3,7 +3,7 @@
   --color-main: linear-gradient(to right top, #b13c89, #bb4382, #c34c7c, #c95677, #ce6073);
   --color-btn: linear-gradient(to left, #b13c89, #bb4382, #c34c7c, #c95677, #ce6073);
   --box-shadow: -5px 5px 6px rgba(0, 0, 0, 0.63);
-  --anim-speed: 250ms ease;
+  --anim-speed: 300ms ease;
 }
 
 *,
