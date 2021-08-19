@@ -32,26 +32,12 @@ h1 {
   width: 50%;
 }
 
-.container::after {
-  position: absolute;
-  content: '\f067';
-  color: black;
-  left: 48%;
-  bottom: 63%;
-  opacity: 0.9;
-  padding: 0.5rem;
-  font-weight: bold;
-  font-family: 'Font Awesome 5 Free';
-  font-size: 1.5rem;
-}
-
 .container__input {
   font-family: 'Montserrat', sans-serif;
   border: 2px solid black;
   background: #e4e4e4;
   outline: none;
   border-radius: 2rem;
-  margin-bottom: 2.5rem;
   padding: 0.5rem 4rem 0.5rem 4rem;
   text-align: center;
   font-weight: bold;
@@ -95,7 +81,14 @@ h1 {
   -webkit-appearance: none;
 }
 
+.container span {
+  font-size: 3rem;
+  color: black;
+  font-weight: bold;
+}
+
 .container__button, .container__reset {
+  color: black;
   font-size: 1.1rem;
   border: 2px solid black;
   font-weight: bold;
@@ -112,11 +105,10 @@ h1 {
 .container__button:hover, .container__button:focus, .container__reset:hover, .container__reset:focus {
   -webkit-transform: translateY(-2px);
           transform: translateY(-2px);
+  background: yellowgreen;
 }
 
 .container__button:active, .container__reset:active {
-  -webkit-transform: scale(1.03);
-          transform: scale(1.03);
   background: yellowgreen;
 }
 

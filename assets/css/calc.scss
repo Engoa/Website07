@@ -16,26 +16,12 @@ h1 {
    position: relative;
    width: 50%;
 
-   &::after {
-      position: absolute;
-      content: '\f067';
-      color: black;
-      left: 48%;
-      bottom: 63%;
-      opacity: 0.9;
-      padding: 0.5rem;
-      font-weight: bold;
-      font-family: 'Font Awesome 5 Free';
-      font-size: 1.5rem;
-   }
-
    &__input {
       font-family: 'Montserrat', sans-serif;
       border: 2px solid black;
       background: #e4e4e4;
       outline: none;
       border-radius: 2rem;
-      margin-bottom: 2.5rem;
       padding: 0.5rem 4rem 0.5rem 4rem;
       text-align: center;
       font-weight: bold;
@@ -57,8 +43,16 @@ h1 {
       -webkit-appearance: none;
    }
 
+   span {
+      font-size: 3rem;
+      color: black;
+
+      font-weight: bold;
+   }
+
    &__button,
    &__reset {
+      color: black;
       font-size: 1.1rem;
       border: 2px solid black;
       font-weight: bold;
@@ -74,11 +68,11 @@ h1 {
    &__reset:hover,
    &__reset:focus {
       transform: translateY(-2px);
+      background: yellowgreen;
    }
 
    &__button:active,
    &__reset:active {
-      transform: scale(1.03);
       background: yellowgreen;
    }
 }

@@ -7,24 +7,21 @@ const resetBtn = document.getElementById('container__reset');
 function add() {
    currentResult.innerText =
       parseInt(firstInput.value) + parseInt(secondInput.value) + parseInt(currentResult.innerText);
-   return currentResult;
 }
 
 function reset() {
    currentResult.innerText = 0;
-   return currentResult;
 }
 
 function isEmpty() {
    if (firstInput.value.length == 0 || secondInput.value.length == 0) {
       currentResult.innerText = 0;
-      alert('Input fields need to have some value')
+      alert('Input fields need to have some value');
    }
    return;
 }
 
 // Event Listeners for buttons.
-
 calcBtn.addEventListener('click', () => {
    add();
    isEmpty();
