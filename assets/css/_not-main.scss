@@ -1,20 +1,23 @@
 body {
    background: rgb(192, 192, 192);
 }
-h1 {
-   display: flex;
-   justify-content: center;
-   margin-top: 2rem;
-   text-align: center;
+
+.calc__container {
+   h1 {
+      display: flex;
+      justify-content: center;
+      margin-top: 2rem;
+      text-align: center;
+   }
 }
-.container {
+.input__container {
    display: flex;
    flex-direction: column;
    align-items: center;
    justify-content: center;
    gap: 2rem;
+   margin-top: 2rem;
    position: relative;
-   width: 50%;
 
    &__input {
       font-family: 'Montserrat', sans-serif;
@@ -43,45 +46,44 @@ h1 {
       -webkit-appearance: none;
    }
 
-   span {
+   & span {
       font-size: 3rem;
       color: black;
 
       font-weight: bold;
    }
+   .button__container {
+      gap: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
-   &__button,
-   &__reset {
-      color: black;
-      font-size: 1.1rem;
-      border: 2px solid black;
-      font-weight: bold;
-      outline: none;
-      padding: 0.3rem 2rem 0.3rem 2rem;
-      border-radius: 2rem;
-      cursor: pointer;
-      transition: transform 200ms linear;
+      &__calc,
+      &__reset {
+         color: black;
+         font-size: 1.1rem;
+         border: 2px solid black;
+         font-weight: bold;
+         outline: none;
+         padding: 0.3rem 2rem 0.3rem 2rem;
+         border-radius: 2rem;
+         cursor: pointer;
+         transition: transform 200ms linear;
+      }
+
+      &__calc:hover,
+      &__calc:focus,
+      &__reset:hover,
+      &__reset:focus {
+         transform: translateY(-2px);
+         background: yellowgreen;
+      }
+
+      &__calc:active,
+      &__reset:active {
+         background: yellowgreen;
+      }
    }
-
-   &__button:hover,
-   &__button:focus,
-   &__reset:hover,
-   &__reset:focus {
-      transform: translateY(-2px);
-      background: yellowgreen;
-   }
-
-   &__button:active,
-   &__reset:active {
-      background: yellowgreen;
-   }
-}
-
-.button__container {
-   gap: 1rem;
-   display: flex;
-   align-items: center;
-   justify-content: center;
 }
 
 .result__container {

@@ -1,3 +1,138 @@
+body {
+  background: silver;
+}
+
+.calc__container h1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.input__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  position: relative;
+}
+
+.input__container__input {
+  font-family: 'Montserrat', sans-serif;
+  border: 2px solid black;
+  background: #e4e4e4;
+  outline: none;
+  border-radius: 2rem;
+  padding: 0.5rem 4rem 0.5rem 4rem;
+  text-align: center;
+  font-weight: bold;
+  -webkit-transition: -webkit-transform 150ms linear;
+  transition: -webkit-transform 150ms linear;
+  transition: transform 150ms linear;
+  transition: transform 150ms linear, -webkit-transform 150ms linear;
+}
+
+.input__container__input:focus {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.input__container__input::-webkit-input-placeholder {
+  font-weight: bold;
+  color: black;
+  opacity: 0.9;
+}
+
+.input__container__input:-ms-input-placeholder {
+  font-weight: bold;
+  color: black;
+  opacity: 0.9;
+}
+
+.input__container__input::-ms-input-placeholder {
+  font-weight: bold;
+  color: black;
+  opacity: 0.9;
+}
+
+.input__container__input::placeholder {
+  font-weight: bold;
+  color: black;
+  opacity: 0.9;
+}
+
+.input__container__input::-webkit-inner-spin-button, .input__container__input::-webkit-outer-spin-button {
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.input__container span {
+  font-size: 3rem;
+  color: black;
+  font-weight: bold;
+}
+
+.input__container .button__container {
+  gap: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.input__container .button__container__calc, .input__container .button__container__reset {
+  color: black;
+  font-size: 1.1rem;
+  border: 2px solid black;
+  font-weight: bold;
+  outline: none;
+  padding: 0.3rem 2rem 0.3rem 2rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 200ms linear;
+  transition: -webkit-transform 200ms linear;
+  transition: transform 200ms linear;
+  transition: transform 200ms linear, -webkit-transform 200ms linear;
+}
+
+.input__container .button__container__calc:hover, .input__container .button__container__calc:focus, .input__container .button__container__reset:hover, .input__container .button__container__reset:focus {
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+  background: yellowgreen;
+}
+
+.input__container .button__container__calc:active, .input__container .button__container__reset:active {
+  background: yellowgreen;
+}
+
+.result__container__p {
+  border-radius: 0.4rem;
+  border: 2px solid black;
+  padding: 0.1rem 4rem 0.1rem 4rem;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
 :root {
   --color-accent: rgba(0, 0, 0, 0.9);
   --color-main: linear-gradient(to right top, #b13c89, #bb4382, #c34c7c, #c95677, #ce6073);
@@ -22,6 +157,12 @@ body {
 
 a {
   font-family: 'Montserrat', sans-serif;
+}
+
+nav {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
 }
 
 nav .hamburger-menu {
@@ -485,7 +626,7 @@ footer a {
   .container .card {
     width: 70vw;
     height: 25vh;
-    margin-top: 8rem;
+    margin-top: 5rem;
     position: relative;
     top: 8rem;
   }
@@ -558,12 +699,13 @@ footer a {
     position: absolute;
     top: 2.5rem;
     width: 97%;
+    top: 2rem;
     right: 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     z-index: 4;
-    padding: 2.2rem 0.5rem 1.5rem 0.5rem;
+    padding: 2rem 0.5rem 1.2rem 0.5rem;
     border-radius: 0.4rem;
     background: var(--color-main);
     overflow: hidden;
