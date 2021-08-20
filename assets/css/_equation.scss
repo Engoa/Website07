@@ -8,7 +8,7 @@
 
    &__input {
       font-family: 'Montserrat', sans-serif;
-      border: 2px solid black;
+      border: 3px solid black;
       background: #e4e4e4;
       outline: none;
       border-radius: 2rem;
@@ -48,11 +48,11 @@
 
    &__calc {
       color: black;
-      font-size: 1.1rem;
-      border: 2px solid black;
+      font-size: 1.3rem;
+      border: 3px solid black;
       font-weight: bold;
       outline: none;
-      padding: 0.4rem 2.5rem 0.4rem 2.5rem;
+      padding: 0.2rem 2rem;
       border-radius: 2rem;
       cursor: pointer;
       transition: transform 200ms linear;
@@ -60,21 +60,13 @@
 
    &__calc:hover,
    &__calc:focus {
-      transform: translateY(-2px);
-      background: blueviolet;
+      background: yellowgreen;
+      transform: translateY(-4px);
    }
 
    &__calc:active {
-      background: blueviolet;
-   }
-
-   &__description {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-top: 2rem;
-      font-size: 1.5rem;
-      font-weight: bold;
+      background: rgba(7, 48, 228, 0.699);
+      transform: scale(1.05);
    }
 }
 
