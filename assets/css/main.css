@@ -648,14 +648,12 @@ footer .icons {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 0.6rem;
   position: relative;
   z-index: 5;
-  margin-top: 5rem;
 }
 
 footer a {
-  margin-top: 1rem;
+  margin-top: 5rem;
   font-size: 3.5rem;
   padding: 1rem;
   color: var(--color-accent);

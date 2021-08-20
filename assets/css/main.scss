@@ -276,13 +276,11 @@ footer {
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 0.6rem;
       position: relative;
       z-index: 5;
-      margin-top: 5rem;
    }
    a {
-      margin-top: 1rem;
+      margin-top: 5rem;
       font-size: 3.5rem;
       padding: 1rem;
       color: var(--color-accent);
@@ -397,7 +395,7 @@ footer {
                font-size: 1rem;
                letter-spacing: 0.1rem;
             }
-           
+
             .price {
                margin-top: 1rem;
                margin-bottom: 1rem;
