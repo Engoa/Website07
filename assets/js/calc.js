@@ -14,11 +14,9 @@ function reset() {
 }
 
 function isEmpty() {
-   if (firstInput.value.length == 0 || secondInput.value.length == 0) {
+   if (!firstInput.value || !secondInput.value) {
       currentResult.innerText = 0;
-      alert('Input fields need to have some value \n נא למלא ערך כלשהו');
-   }
-   return;
+      alert('Input fields need to have some value \n נא למלא ערך כלשהו');}
 }
 
 // Event Listeners for buttons.

@@ -1,0 +1,77 @@
+.equation__container {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   margin-top: 5rem;
+   gap: 2rem;
+
+   &__input {
+      font-family: 'Montserrat', sans-serif;
+      border: 2px solid black;
+      background: #e4e4e4;
+      outline: none;
+      border-radius: 2rem;
+      padding: 0.5rem 2rem 0.5rem 2rem;
+      text-align: center;
+      font-weight: bold;
+      transition: transform 150ms linear;
+      margin-left: 1.5rem;
+   }
+
+   &__input:focus {
+      transform: scale(1.1);
+   }
+   &__input::placeholder {
+      font-weight: bold;
+      color: black;
+      opacity: 0.6;
+   }
+
+   &__input::-webkit-inner-spin-button,
+   &__input::-webkit-outer-spin-button {
+      appearance: none;
+      -webkit-appearance: none;
+   }
+
+   &__result {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      font-weight: bold;
+      font-size: 1.8rem;
+   }
+
+   &__calc {
+      color: black;
+      font-size: 1.1rem;
+      border: 2px solid black;
+      font-weight: bold;
+      outline: none;
+      padding: 0.3rem 2rem 0.3rem 2rem;
+      border-radius: 2rem;
+      cursor: pointer;
+      transition: transform 200ms linear;
+   }
+
+   &__calc:hover,
+   &__calc:focus {
+      transform: translateY(-2px);
+      background: yellowgreen;
+   }
+
+   &__calc:active {
+      background: yellowgreen;
+   }
+}
+
+.image__container {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   img {
+      width: 40%;
+   }
+}

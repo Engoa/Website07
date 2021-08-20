@@ -33,40 +33,45 @@
          </div>
       </nav>
 
-      <header>
-         <div class="container">
-            <div class="content-info">
-               <h1 id="header">PS5 DualSense 5</h1>
-               <p>Wireless Controller for Playstation 5</p>
-               <span>* Compatible for Playstation 4 Pro</span>
-               <span class="price">$49.99 / €42.99</span>
-               <div class="cta">
-                  <a href="#" class="btn link">More Info</a>
-               </div>
+      <main>
+         <div class="equation__container">
+            <div>
+               <input
+                  class="equation__container__input"
+                  id="aInput"
+                  placeholder="Enter a value for A"
+                  type="number"
+               />
+               <input
+                  class="equation__container__input"
+                  id="bInput"
+                  placeholder="Enter a value for B"
+                  type="number"
+               />
+               <input
+                  class="equation__container__input"
+                  id="cInput"
+                  placeholder="Enter a value for C"
+                  type="number"
+               />
             </div>
-            <div class="card">
-               <a class="cardplus" href="">
-                  <img src="/images/add.png" alt="Plus Icon" />Add to Cart</a
-               >
-            </div>
-            <div id="image-container">
-               <img src="/images/controller.png" alt="Controller image" />
-            </div>
-         </div>
-      </header>
 
-      <footer>
-         <div class="icons">
-            <a class="icons__facebook icons__icon" href="#"
-               ><i class="fab fa-facebook-square"></i
-            ></a>
-            <a class="icons__instagram icons__icon" href="#"
-               ><i class="fab fa-instagram-square"></i
-            ></a>
-            <a class="icons__twitter icons__icon" href="#"><i class="fab fa-twitter-square"></i></a>
+            <button type="button" class="equation__container__calc" id="btnCalc">
+               <i class="fas fa-calculator"></i>
+            </button>
+
+            <div class="equation__container__result">
+               <span class="equation__container__result__span" id="firstRoot">Root1: 0 </span>
+               <span class="equation__container__result__span" id="secondRoot">Root2: 0 </span>
+            </div>
          </div>
-      </footer>
+
+         <div class="image__container">
+            <img src="/images/equation.png" alt="Equation Image">
+         </div>
+      </main>
 
       <script src="assets/js/main.js"></script>
+      <script src="assets/js/equation.js"></script>
    </body>
 </html>

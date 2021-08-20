@@ -1,4 +1,5 @@
-@import "_not-main.scss";
+@import '_calc.scss';
+@import '_equation.scss';
 
 :root {
    --color-accent: rgba(0, 0, 0, 0.9);
@@ -19,6 +20,7 @@
 body {
    font-family: 'Montserrat', sans-serif;
    font-size: 16px;
+   background: rgb(192, 192, 192);
 }
 
 a {
@@ -27,8 +29,6 @@ a {
 
 // Hide Hamburger menu on Desktop
 nav {
-   display: flex !important;
-
    .hamburger-menu {
       display: none;
    }
@@ -277,8 +277,8 @@ footer {
       width: 100%;
    }
    a {
-      margin-top: 5rem;
-      font-size: 3rem;
+      margin-top: 3rem;
+      font-size: 3.5rem;
       color: var(--color-accent);
       transition: transform var(--anim-speed), color var(--anim-speed);
    }
@@ -412,7 +412,7 @@ footer {
          max-width: 80%;
          position: relative;
          margin-right: 2.5rem;
-
+         margin-top: 2rem;
          top: -60%;
          z-index: -3;
 

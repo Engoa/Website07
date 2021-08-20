@@ -1,7 +1,3 @@
-body {
-  background: silver;
-}
-
 .calc__container h1 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -100,7 +96,7 @@ body {
           justify-content: center;
 }
 
-.input__container .button__container__calc, .input__container .button__container__reset {
+.input__container .button__container__btn {
   color: black;
   font-size: 1.1rem;
   border: 2px solid black;
@@ -115,13 +111,13 @@ body {
   transition: transform 200ms linear, -webkit-transform 200ms linear;
 }
 
-.input__container .button__container__calc:hover, .input__container .button__container__calc:focus, .input__container .button__container__reset:hover, .input__container .button__container__reset:focus {
+.input__container .button__container__btn:hover, .input__container .button__container__btn:focus {
   -webkit-transform: translateY(-2px);
           transform: translateY(-2px);
   background: yellowgreen;
 }
 
-.input__container .button__container__calc:active, .input__container .button__container__reset:active {
+.input__container .button__container__btn:active {
   background: yellowgreen;
 }
 
@@ -131,6 +127,131 @@ body {
   padding: 0.1rem 4rem 0.1rem 4rem;
   font-size: 3rem;
   font-weight: bold;
+}
+
+.equation__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 5rem;
+  gap: 2rem;
+}
+
+.equation__container__input {
+  font-family: 'Montserrat', sans-serif;
+  border: 2px solid black;
+  background: #e4e4e4;
+  outline: none;
+  border-radius: 2rem;
+  padding: 0.5rem 2rem 0.5rem 2rem;
+  text-align: center;
+  font-weight: bold;
+  -webkit-transition: -webkit-transform 150ms linear;
+  transition: -webkit-transform 150ms linear;
+  transition: transform 150ms linear;
+  transition: transform 150ms linear, -webkit-transform 150ms linear;
+  margin-left: 1.5rem;
+}
+
+.equation__container__input:focus {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.equation__container__input::-webkit-input-placeholder {
+  font-weight: bold;
+  color: black;
+  opacity: 0.6;
+}
+
+.equation__container__input:-ms-input-placeholder {
+  font-weight: bold;
+  color: black;
+  opacity: 0.6;
+}
+
+.equation__container__input::-ms-input-placeholder {
+  font-weight: bold;
+  color: black;
+  opacity: 0.6;
+}
+
+.equation__container__input::placeholder {
+  font-weight: bold;
+  color: black;
+  opacity: 0.6;
+}
+
+.equation__container__input::-webkit-inner-spin-button, .equation__container__input::-webkit-outer-spin-button {
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.equation__container__result {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+
+.equation__container__calc {
+  color: black;
+  font-size: 1.1rem;
+  border: 2px solid black;
+  font-weight: bold;
+  outline: none;
+  padding: 0.3rem 2rem 0.3rem 2rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 200ms linear;
+  transition: -webkit-transform 200ms linear;
+  transition: transform 200ms linear;
+  transition: transform 200ms linear, -webkit-transform 200ms linear;
+}
+
+.equation__container__calc:hover, .equation__container__calc:focus {
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+  background: yellowgreen;
+}
+
+.equation__container__calc:active {
+  background: yellowgreen;
+}
+
+.image__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.image__container img {
+  width: 40%;
 }
 
 :root {
@@ -153,16 +274,11 @@ body {
 body {
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
+  background: silver;
 }
 
 a {
   font-family: 'Montserrat', sans-serif;
-}
-
-nav {
-  display: -webkit-box !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
 }
 
 nav .hamburger-menu {
@@ -519,8 +635,8 @@ footer .icons {
 }
 
 footer a {
-  margin-top: 5rem;
-  font-size: 3rem;
+  margin-top: 3rem;
+  font-size: 3.5rem;
   color: var(--color-accent);
   -webkit-transition: color var(--anim-speed), -webkit-transform var(--anim-speed);
   transition: color var(--anim-speed), -webkit-transform var(--anim-speed);
@@ -668,6 +784,7 @@ footer a {
     max-width: 80%;
     position: relative;
     margin-right: 2.5rem;
+    margin-top: 2rem;
     top: -60%;
     z-index: -3;
   }

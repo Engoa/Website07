@@ -5,7 +5,6 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="stylesheet" href="assets/css/main.css" />
-      <link rel="stylesheet" href="assets/css/calc.css" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
       <link
          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap"
@@ -17,14 +16,14 @@
    <body>
       <nav>
          <div class="logo">
-            <img src="/images/logo.png" alt="Playstation Logo" />
+            <a href="/index.html"><img src="/images/logo.png" alt="Playstation Logo" /></a>
          </div>
 
          <div class="navlinks">
             <div>
                <ul class="links" id="menuList">
-                  <li class="controllers link"><a href="index.html">Home</a></li>
-                  <li class="consoles link"><a href="#">Consoles</a></li>
+                  <li class="controllers link"><a href="/calc.html">Calculator</a></li>
+                  <li class="consoles link"><a href="/equation.html">Equation</a></li>
                   <li class="accessories link"><a href="#">Accessories</a></li>
                   <li class="contact link"><a href="#">Contact</a></li>
                </ul>
@@ -54,10 +53,10 @@
                   inputmode="numeric"
                />
                <div class="button__container">
-                  <button class="button__container__calc" id="container__button" type="button">
+                  <button class="button__container__calc button__container__btn" id="container__button" type="button">
                      <i class="fas fa-calculator"></i>
                   </button>
-                  <button class="button__container__reset" id="container__reset" type="reset">
+                  <button class="button__container__reset button__container__btn " id="container__reset" type="reset">
                      <i class="fas fa-undo"></i>
                   </button>
                </div>
@@ -68,6 +67,6 @@
          </form>
       </main>
       <script src="assets/js/main.js"></script>
-      <script src="assets/js/assignment.js"></script>
+      <script src="assets/js/calc.js"></script>
    </body>
 </html>
