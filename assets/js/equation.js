@@ -22,7 +22,7 @@ function quadEquationSolver() {
    }
 
    if (!aInput.value || !bInput.value || !cInput.value) {
-      alert('Please assign a value to each variable \n נא למלא את הערכים של המשתנים' );
+      alert('Please assign a value to each variable \n נא למלא את הערכים של המשתנים');
       firstResultElement.innerText = 'Root1: ' + 0;
       secondResultElement.innerText = 'Root2: ' + 0;
    }

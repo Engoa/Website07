@@ -5,12 +5,7 @@ const currentResult = document.getElementById('result__container__p');
 const resetBtn = document.getElementById('container__reset');
 
 function add() {
-   currentResult.innerText =
-      parseInt(firstInput.value) + parseInt(secondInput.value) + parseInt(currentResult.innerText);
-}
-
-function reset() {
-   currentResult.innerText = 0;
+   currentResult.innerText = +firstInput.value + +secondInput.value + +currentResult.innerText;
 }
 
 function isEmpty() {
@@ -18,6 +13,10 @@ function isEmpty() {
       currentResult.innerText = 0;
       alert('Input fields need to have some value \n נא למלא ערך כלשהו');
    }
+}
+
+function reset() {
+   currentResult.innerText = 0;
 }
 
 // Event Listeners for buttons.
