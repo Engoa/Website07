@@ -26,7 +26,7 @@ function quadEquationSolver() {
       firstResultElement.innerText = 'The first root is Invalid';
       secondResultElement.innerText = 'The second root is Invalid';
    } else {
-      firstResultElement.innerText = 'The first root is ' + firstRootResult.toFixed(2);
-      secondResultElement.innerText = 'The second root is ' + secondRootResult.toFixed(2);
+      firstResultElement.innerText = 'The first root is ' + firstRootResult.toFixed(1);
+      secondResultElement.innerText = 'The second root is ' + secondRootResult.toFixed(1);
    }
 }
