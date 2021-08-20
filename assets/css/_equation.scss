@@ -3,8 +3,8 @@
    align-items: center;
    justify-content: center;
    flex-direction: column;
-   margin-top: 5rem;
-   gap: 2rem;
+   margin-top: 2rem;
+   gap: 1rem;
 
    &__input {
       font-family: 'Montserrat', sans-serif;
@@ -65,7 +65,7 @@
    }
 
    &__calc:active {
-      background: rgba(7, 48, 228, 0.699);
+      background: yellowgreen;
       transform: scale(1.05);
    }
 }

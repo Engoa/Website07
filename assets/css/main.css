@@ -5,9 +5,10 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 2rem;
   text-align: center;
-  font-size: 1.6rem;
+  font-size: 1.35rem;
+  margin: 0.5rem;
+  margin-top: 3rem;
 }
 
 .input__container {
@@ -24,9 +25,8 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  gap: 2rem;
+  gap: 1rem;
   margin-top: 2rem;
-  margin: 2rem 1rem 2rem 1rem;
   position: relative;
 }
 
@@ -36,7 +36,7 @@
   background: #e4e4e4;
   outline: none;
   border-radius: 2rem;
-  padding: 0.5rem 4rem 0.5rem 4rem;
+  padding: 0.5rem 2rem 0.5rem 2rem;
   text-align: center;
   font-weight: bold;
   -webkit-transition: -webkit-transform 150ms linear;
@@ -120,7 +120,9 @@
 }
 
 .input__container .button__container__btn:active {
-  background: rgba(7, 48, 228, 0.699);
+  background: yellowgreen;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 .result__container__p {
@@ -145,8 +147,8 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-top: 5rem;
-  gap: 2rem;
+  margin-top: 2rem;
+  gap: 1rem;
 }
 
 .equation__container__input {
@@ -244,7 +246,7 @@
 }
 
 .equation__container__calc:active {
-  background: rgba(7, 48, 228, 0.699);
+  background: yellowgreen;
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
 }
