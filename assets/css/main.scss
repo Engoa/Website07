@@ -144,8 +144,9 @@ nav {
       }
 
       span {
-         margin-top: 1rem;
+         margin-top: 0.5rem;
          opacity: 0.6;
+         font-size: 0.95rem;
       }
       .price {
          opacity: 1;
@@ -278,6 +279,7 @@ footer {
       gap: 0.6rem;
       position: relative;
       z-index: 5;
+      margin-top: 5rem;
    }
    a {
       margin-top: 1rem;
@@ -378,8 +380,8 @@ footer {
             width: 70vw;
             height: 25vh;
             position: relative;
-            top: 5rem;
-            margin-top: 2rem;
+            top: 6.5rem;
+            margin-top: 5rem;
          }
          .content-info {
             align-items: center;
@@ -395,14 +397,15 @@ footer {
                font-size: 1rem;
                letter-spacing: 0.1rem;
             }
+           
             .price {
                margin-top: 1rem;
                margin-bottom: 1rem;
-               font-size: 1.5rem;
+               font-size: 2rem;
             }
             .btn {
                margin-right: 2.8rem;
-               font-size: 1.5rem;
+               font-size: 2rem;
 
                &::after {
                   font-size: 1rem;

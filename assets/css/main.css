@@ -449,8 +449,9 @@ nav .link {
 }
 
 .container .content-info span {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   opacity: 0.6;
+  font-size: 0.95rem;
 }
 
 .container .content-info .price {
@@ -650,6 +651,7 @@ footer .icons {
   gap: 0.6rem;
   position: relative;
   z-index: 5;
+  margin-top: 5rem;
 }
 
 footer a {
@@ -762,8 +764,8 @@ footer a {
     width: 70vw;
     height: 25vh;
     position: relative;
-    top: 5rem;
-    margin-top: 2rem;
+    top: 6.5rem;
+    margin-top: 5rem;
   }
   .container .content-info {
     -webkit-box-align: center;
@@ -789,11 +791,11 @@ footer a {
   .container .content-info .price {
     margin-top: 1rem;
     margin-bottom: 1rem;
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
   .container .content-info .btn {
     margin-right: 2.8rem;
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
   .container .content-info .btn::after {
     font-size: 1rem;
