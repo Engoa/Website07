@@ -16,7 +16,8 @@ calcBtn.addEventListener('click', quadEquationSolver);
 
 function quadEquationSolver() {
    let rootPart = Math.sqrt(
-      Number(bInput.value) * Number(bInput.value) - 4 * Number(aInput.value) * Number(cInput.value));
+      Number(bInput.value) * Number(bInput.value) - 4 * Number(aInput.value) * Number(cInput.value)
+   );
    let denom = 2 * Number(aInput.value);
    let firstRootResult = (Number(-bInput.value) + rootPart) / denom;
    let secondRootResult = (Number(-bInput.value) - rootPart) / denom;
@@ -25,7 +26,7 @@ function quadEquationSolver() {
       firstResultElement.innerText = 'The first root is Invalid';
       secondResultElement.innerText = 'The second root is Invalid';
    } else {
-      firstResultElement.innerText = 'The first root is ' + firstRootResult;
-      secondResultElement.innerText = 'The second root is ' + secondRootResult;
+      firstResultElement.innerText = 'The first root is ' + firstRootResult.toFixed(2);
+      secondResultElement.innerText = 'The second root is ' + secondRootResult.toFixed(2);
    }
 }

@@ -16,7 +16,9 @@
       text-align: center;
       font-weight: bold;
       transition: transform 150ms linear;
-      margin-left: 1.5rem;
+      display: flex;
+      align-items: center;
+      margin-bottom: 2rem;
    }
 
    &__input:focus {
@@ -40,7 +42,8 @@
       align-items: center;
       gap: 1rem;
       font-weight: bold;
-      font-size: 1.8rem;
+      font-size: 1.5rem;
+      text-align: center;
    }
 
    &__calc {
@@ -72,6 +75,6 @@
    align-items: center;
 
    img {
-      width: 40%;
+      width: 60%;
    }
 }
