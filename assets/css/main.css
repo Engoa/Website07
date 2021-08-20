@@ -758,7 +758,7 @@ footer a {
   #image-container {
     width: 40vh;
     right: -2rem;
-    bottom: 15rem;
+    bottom: 10rem;
   }
 }
 
@@ -816,6 +816,7 @@ footer a {
     z-index: 4;
     max-width: 100%;
     position: absolute;
+    top: -1.3rem;
   }
   nav {
     position: relative;
