@@ -16,7 +16,8 @@ function reset() {
 function isEmpty() {
    if (!firstInput.value || !secondInput.value) {
       currentResult.innerText = 0;
-      alert('Input fields need to have some value \n נא למלא ערך כלשהו');}
+      alert('Input fields need to have some value \n נא למלא ערך כלשהו');
+   }
 }
 
 // Event Listeners for buttons.

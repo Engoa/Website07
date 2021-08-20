@@ -5,15 +5,6 @@ const calcBtn = document.getElementById('btnCalc');
 const firstResultElement = document.getElementById('firstRoot');
 const secondResultElement = document.getElementById('secondRoot');
 
-// function equation() {
-//    const rootPart = Math.sqrt(parseInt(b.value ** 2) - 4 * parseInt(a.value * c.value));
-//    let denom = 2 * parseInt(a.value);
-//    root1.innerText = parseInt(-b.value) + rootPart / denom;
-//    root2.innerText = parseInt(-b.value) - rootPart / denom;
-// }
-
-calcBtn.addEventListener('click', quadEquationSolver);
-
 function quadEquationSolver() {
    let rootPart = Math.sqrt(
       Number(bInput.value) * Number(bInput.value) - 4 * Number(aInput.value) * Number(cInput.value)
@@ -29,4 +20,14 @@ function quadEquationSolver() {
       firstResultElement.innerText = 'The first root is ' + firstRootResult.toFixed(1);
       secondResultElement.innerText = 'The second root is ' + secondRootResult.toFixed(1);
    }
+
+   if (!aInput.value || !bInput.value || !cInput.value) {
+      alert('Please assign a value to each variable \n נא למלא את הערכים של המשתנים' );
+      firstResultElement.innerText = 'Root1: ' + 0;
+      secondResultElement.innerText = 'Root2: ' + 0;
+   }
 }
+
+calcBtn.addEventListener('click', () => {
+   quadEquationSolver();
+});

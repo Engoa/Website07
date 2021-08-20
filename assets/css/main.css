@@ -226,7 +226,7 @@
   border: 2px solid black;
   font-weight: bold;
   outline: none;
-  padding: 0.3rem 2rem 0.3rem 2rem;
+  padding: 0.4rem 2.5rem 0.4rem 2.5rem;
   border-radius: 2rem;
   cursor: pointer;
   -webkit-transition: -webkit-transform 200ms linear;
@@ -238,11 +238,26 @@
 .equation__container__calc:hover, .equation__container__calc:focus {
   -webkit-transform: translateY(-2px);
           transform: translateY(-2px);
-  background: yellowgreen;
+  background: blueviolet;
 }
 
 .equation__container__calc:active {
-  background: yellowgreen;
+  background: blueviolet;
+}
+
+.equation__container__description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 .image__container {
@@ -255,10 +270,12 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  max-width: 80%;
+  margin: 0 auto;
 }
 
 .image__container img {
-  width: 60%;
+  width: 70%;
 }
 
 :root {
