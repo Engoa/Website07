@@ -1,24 +1,8 @@
-.equation__container {
+.result__container {
    display: flex;
-   align-items: center;
-   justify-content: center;
-   flex-direction: column;
-   margin-top: 2rem;
-   gap: 1rem;
-
-   &__input {
-      display: flex;
-      margin-bottom: 1rem;
-   }
-
-   &__result {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 1rem;
-      font-weight: bold;
+   &__equation {
+      padding: 0.1rem 4rem 0.1rem 4rem;
       font-size: 1.5rem;
-      text-align: center;
    }
 }
 

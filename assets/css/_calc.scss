@@ -1,54 +1,3 @@
-.input--rounded {
-   font-family: 'Montserrat', sans-serif;
-   border: 3px solid black;
-   background: #e4e4e4;
-   outline: none;
-   border-radius: 2rem;
-   padding: 0.5rem 2rem 0.5rem 2rem;
-   text-align: center;
-   font-weight: bold;
-   transition: transform 150ms linear;
-   font-size: 16px;
-
-   &:focus {
-      transform: scale(1.1);
-   }
-   &::placeholder {
-      font-weight: bold;
-      color: black;
-      opacity: 0.7;
-   }
-
-   &::-webkit-inner-spin-button,
-   &::-webkit-outer-spin-button {
-      appearance: none;
-      -webkit-appearance: none;
-   }
-}
-
-.btn--rounded {
-   color: black;
-   font-size: 1.1rem;
-   border: 3px solid black;
-   font-weight: bold;
-   outline: none;
-   padding: 0.3rem 2rem 0.3rem 2rem;
-   border-radius: 2rem;
-   cursor: pointer;
-   transition: transform 200ms linear;
-
-   &:hover,
-   &:focus {
-      transform: translateY(-2px);
-      background: yellowgreen;
-   }
-
-   &:active {
-      background: yellowgreen;
-      transform: scale(1.05);
-   }
-}
-
 .calc__container {
    h1 {
       display: flex;
@@ -58,6 +7,11 @@
       margin: 0.5rem;
       margin-top: 3rem;
    }
+   &__plus {
+      font-size: 3rem;
+      color: black;
+      font-weight: bold;
+   }
 }
 .input__container {
    display: flex;
@@ -66,23 +20,79 @@
    justify-content: center;
    gap: 1rem;
    margin-top: 2rem;
-   position: relative;
 
-   & span {
-      font-size: 3rem;
-      color: black;
+   .input--rounded {
+      font-family: 'Montserrat', sans-serif;
+      border: 3px solid black;
+      background: #e4e4e4;
+      outline: none;
+      border-radius: 2rem;
+      padding: 0.5rem 2rem 0.5rem 2rem;
+      text-align: center;
       font-weight: bold;
+      transition: transform 150ms linear;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+      flex-direction: column;
+
+      &:focus {
+         transform: scale(1.1);
+      }
+      &::placeholder {
+         font-weight: bold;
+         color: black;
+         opacity: 0.7;
+      }
+
+      &::-webkit-inner-spin-button,
+      &::-webkit-outer-spin-button {
+         appearance: none;
+         -webkit-appearance: none;
+      }
    }
+
    .button__container {
       gap: 1rem;
       display: flex;
       align-items: center;
       justify-content: center;
+
+      .btn--rounded {
+         color: black;
+         font-size: 1.1rem;
+         border: 3px solid black;
+         font-weight: bold;
+         outline: none;
+         padding: 0.3rem 2rem 0.3rem 2rem;
+         border-radius: 2rem;
+         cursor: pointer;
+         transition: transform 200ms linear;
+
+         &:hover,
+         &:focus {
+            transform: translateY(-2px);
+            background: yellowgreen;
+         }
+
+         &:active {
+            background: yellowgreen;
+            transform: scale(1.05);
+         }
+      }
    }
 }
 
 .result__container {
-   &__p {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   gap: 1rem;
+
+   &__text {
       border-radius: 0.4rem;
       border: 3px solid black;
       padding: 0.1rem 4rem 0.1rem 4rem;

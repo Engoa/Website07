@@ -18,20 +18,19 @@
       let secondRootResult = (Number(-inputs.b.value) - rootPart) / denom;
 
       if (isNaN(firstRootResult) || isNaN(secondRootResult)) {
-         firstResultElement.innerText = 'The first root is Invalid';
-         secondResultElement.innerText = 'The second root is Invalid';
+         firstResultElement.innerText = 'x1 is Invalid';
+         secondResultElement.innerText = 'x2 is Invalid';
       } else {
-         firstResultElement.innerText = 'The first root is ' + firstRootResult.toFixed(1);
-         secondResultElement.innerText = 'The second root is ' + secondRootResult.toFixed(1);
+         firstResultElement.innerText = 'x1: ' + firstRootResult.toFixed(1);
+         secondResultElement.innerText = 'x2: ' + secondRootResult.toFixed(1);
       }
 
       if (Object.keys(inputs).some((key) => !inputs[key].value)) {
          alert('Please assign a value to each variable \n נא למלא את הערכים של המשתנים');
-         firstResultElement.innerText = 'Root1: ' + 0;
-         secondResultElement.innerText = 'Root2: ' + 0;
+         firstResultElement.innerText = 'x1: ' + 0;
+         secondResultElement.innerText = 'x2: ' + 0;
       }
    }
 
-   const form = document.getElementById('form');
    form.addEventListener('submit', quadEquationSolver);
 })();

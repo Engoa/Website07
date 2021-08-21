@@ -1,80 +1,3 @@
-.input--rounded {
-  font-family: 'Montserrat', sans-serif;
-  border: 3px solid black;
-  background: #e4e4e4;
-  outline: none;
-  border-radius: 2rem;
-  padding: 0.5rem 2rem 0.5rem 2rem;
-  text-align: center;
-  font-weight: bold;
-  -webkit-transition: -webkit-transform 150ms linear;
-  transition: -webkit-transform 150ms linear;
-  transition: transform 150ms linear;
-  transition: transform 150ms linear, -webkit-transform 150ms linear;
-  font-size: 16px;
-}
-
-.input--rounded:focus {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-}
-
-.input--rounded::-webkit-input-placeholder {
-  font-weight: bold;
-  color: black;
-  opacity: 0.7;
-}
-
-.input--rounded:-ms-input-placeholder {
-  font-weight: bold;
-  color: black;
-  opacity: 0.7;
-}
-
-.input--rounded::-ms-input-placeholder {
-  font-weight: bold;
-  color: black;
-  opacity: 0.7;
-}
-
-.input--rounded::placeholder {
-  font-weight: bold;
-  color: black;
-  opacity: 0.7;
-}
-
-.input--rounded::-webkit-inner-spin-button, .input--rounded::-webkit-outer-spin-button {
-  appearance: none;
-  -webkit-appearance: none;
-}
-
-.btn--rounded {
-  color: black;
-  font-size: 1.1rem;
-  border: 3px solid black;
-  font-weight: bold;
-  outline: none;
-  padding: 0.3rem 2rem 0.3rem 2rem;
-  border-radius: 2rem;
-  cursor: pointer;
-  -webkit-transition: -webkit-transform 200ms linear;
-  transition: -webkit-transform 200ms linear;
-  transition: transform 200ms linear;
-  transition: transform 200ms linear, -webkit-transform 200ms linear;
-}
-
-.btn--rounded:hover, .btn--rounded:focus {
-  -webkit-transform: translateY(-2px);
-          transform: translateY(-2px);
-  background: yellowgreen;
-}
-
-.btn--rounded:active {
-  background: yellowgreen;
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
-}
-
 .calc__container h1 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -86,6 +9,12 @@
   font-size: 1.35rem;
   margin: 0.5rem;
   margin-top: 3rem;
+}
+
+.calc__container__plus {
+  font-size: 3rem;
+  color: black;
+  font-weight: bold;
 }
 
 .input__container {
@@ -104,13 +33,70 @@
           justify-content: center;
   gap: 1rem;
   margin-top: 2rem;
-  position: relative;
 }
 
-.input__container span {
-  font-size: 3rem;
-  color: black;
+.input__container .input--rounded {
+  font-family: 'Montserrat', sans-serif;
+  border: 3px solid black;
+  background: #e4e4e4;
+  outline: none;
+  border-radius: 2rem;
+  padding: 0.5rem 2rem 0.5rem 2rem;
+  text-align: center;
   font-weight: bold;
+  -webkit-transition: -webkit-transform 150ms linear;
+  transition: -webkit-transform 150ms linear;
+  transition: transform 150ms linear;
+  transition: transform 150ms linear, -webkit-transform 150ms linear;
+  font-size: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 1rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.input__container .input--rounded:focus {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.input__container .input--rounded::-webkit-input-placeholder {
+  font-weight: bold;
+  color: black;
+  opacity: 0.7;
+}
+
+.input__container .input--rounded:-ms-input-placeholder {
+  font-weight: bold;
+  color: black;
+  opacity: 0.7;
+}
+
+.input__container .input--rounded::-ms-input-placeholder {
+  font-weight: bold;
+  color: black;
+  opacity: 0.7;
+}
+
+.input__container .input--rounded::placeholder {
+  font-weight: bold;
+  color: black;
+  opacity: 0.7;
+}
+
+.input__container .input--rounded::-webkit-inner-spin-button, .input__container .input--rounded::-webkit-outer-spin-button {
+  appearance: none;
+  -webkit-appearance: none;
 }
 
 .input__container .button__container {
@@ -126,15 +112,34 @@
           justify-content: center;
 }
 
-.result__container__p {
-  border-radius: 0.4rem;
+.input__container .button__container .btn--rounded {
+  color: black;
+  font-size: 1.1rem;
   border: 3px solid black;
-  padding: 0.1rem 4rem 0.1rem 4rem;
-  font-size: 3rem;
   font-weight: bold;
+  outline: none;
+  padding: 0.3rem 2rem 0.3rem 2rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 200ms linear;
+  transition: -webkit-transform 200ms linear;
+  transition: transform 200ms linear;
+  transition: transform 200ms linear, -webkit-transform 200ms linear;
 }
 
-.equation__container {
+.input__container .button__container .btn--rounded:hover, .input__container .button__container .btn--rounded:focus {
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+  background: yellowgreen;
+}
+
+.input__container .button__container .btn--rounded:active {
+  background: yellowgreen;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.result__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -148,32 +153,26 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-top: 2rem;
   gap: 1rem;
 }
 
-.equation__container__input {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-bottom: 1rem;
-}
-
-.equation__container__result {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 1rem;
+.result__container__text {
+  border-radius: 0.4rem;
+  border: 3px solid black;
+  padding: 0.1rem 4rem 0.1rem 4rem;
+  font-size: 3rem;
   font-weight: bold;
+}
+
+.result__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.result__container__equation {
+  padding: 0.1rem 4rem 0.1rem 4rem;
   font-size: 1.5rem;
-  text-align: center;
 }
 
 .image__container {
@@ -332,7 +331,7 @@ nav .mobile {
 
 nav .mobile a {
   font-weight: bold;
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   color: white;
   opacity: 0.9;
 }

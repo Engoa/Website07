@@ -5,35 +5,43 @@
       <main class="calc__container">
          <h1>Please Input any numbers to calculate the result:</h1>
          <form id="form">
-            <div class="equation__container">
+            <div class="input__container">
                <div>
                   <input
-                     class="equation__container__input input--rounded"
+                     class="input--rounded"
                      id="aInput"
                      placeholder="Enter a value for A"
                      type="number"
+                     step="0.01"
                   />
                   <input
-                     class="equation__container__input input--rounded"
+                     class="input--rounded"
                      id="bInput"
                      placeholder="Enter a value for B"
                      type="number"
+                     step="0.01"
                   />
                   <input
-                     class="equation__container__input input--rounded"
+                     class="input--rounded"
                      id="cInput"
                      placeholder="Enter a value for C"
                      type="number"
+                     step="0.01"
                   />
                </div>
+               <div class="button__container">
+                  <button type="submit" class="btn--rounded" id="btnCalc">
+                     <i class="fas fa-calculator"></i>
+                  </button>
+               </div>
 
-               <button type="submit" class="equation__container__calc btn--rounded" id="btnCalc">
-                  <i class="fas fa-calculator"></i>
-               </button>
-
-               <div class="equation__container__result">
-                  <span class="equation__container__result__span" id="firstRoot">Root1: 0 </span>
-                  <span class="equation__container__result__span" id="secondRoot">Root2: 0 </span>
+               <div class="result__container">
+                  <span class="result__container__text result__container__equation" id="firstRoot"
+                     >x1:</span
+                  >
+                  <span class="result__container__text result__container__equation" id="secondRoot"
+                     >x2:</span
+                  >
                </div>
             </div>
 

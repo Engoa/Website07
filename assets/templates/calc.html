@@ -11,34 +11,26 @@
                   id="container__input1"
                   placeholder="Enter a number"
                   type="number"
-                  inputmode="numeric"
+                  step="0.01"
                />
-               <span>+</span>
+               <span class="calc__container__plus">+</span>
                <input
                   class="input__container__input input--rounded"
                   id="container__input2"
                   placeholder="Enter a number"
                   type="number"
-                  inputmode="numeric"
+                  step="0.01"
                />
                <div class="button__container">
-                  <button
-                     class="button__container__calc button__container__btn btn--rounded"
-                     id="container__button"
-                     type="submit"
-                  >
+                  <button class="btn--rounded" id="container__button" type="submit">
                      <i class="fas fa-calculator"></i>
                   </button>
-                  <button
-                     class="button__container__reset button__container__btn btn--rounded"
-                     id="container__reset"
-                     type="reset"
-                  >
+                  <button class="btn--rounded" id="container__reset" type="reset">
                      <i class="fas fa-undo"></i>
                   </button>
                </div>
                <div class="result__container" id="container__result">
-                  <p class="result__container__p" id="result__container__p">0</p>
+                  <p class="result__container__text" id="result__container__p">0</p>
                </div>
             </div>
          </form>
