@@ -7,33 +7,8 @@
    gap: 1rem;
 
    &__input {
-      font-family: 'Montserrat', sans-serif;
-      border: 3px solid black;
-      background: #e4e4e4;
-      outline: none;
-      border-radius: 2rem;
-      padding: 0.5rem 2rem 0.5rem 2rem;
-      text-align: center;
-      font-weight: bold;
-      transition: transform 150ms linear;
       display: flex;
-      align-items: center;
-      margin-bottom: 2rem;
-   }
-
-   &__input:focus {
-      transform: scale(1.1);
-   }
-   &__input::placeholder {
-      font-weight: bold;
-      color: black;
-      opacity: 0.6;
-   }
-
-   &__input::-webkit-inner-spin-button,
-   &__input::-webkit-outer-spin-button {
-      appearance: none;
-      -webkit-appearance: none;
+      margin-bottom: 1rem;
    }
 
    &__result {
@@ -44,29 +19,6 @@
       font-weight: bold;
       font-size: 1.5rem;
       text-align: center;
-   }
-
-   &__calc {
-      color: black;
-      font-size: 1.3rem;
-      border: 3px solid black;
-      font-weight: bold;
-      outline: none;
-      padding: 0.2rem 2rem;
-      border-radius: 2rem;
-      cursor: pointer;
-      transition: transform 200ms linear;
-   }
-
-   &__calc:hover,
-   &__calc:focus {
-      background: yellowgreen;
-      transform: translateY(-4px);
-   }
-
-   &__calc:active {
-      background: yellowgreen;
-      transform: scale(1.05);
    }
 }
 

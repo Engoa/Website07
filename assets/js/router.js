@@ -10,7 +10,7 @@ async function fetchHtmlAsText(url) {
 // this is your `load_home() function`
 async function loadPage(page, oldPage) {
    const contentDiv = document.getElementById('app');
-   contentDiv.innerHTML = await fetchHtmlAsText(page + '.html');
+   contentDiv.innerHTML = await fetchHtmlAsText('assets/templates/' + page + '.html');
    if (document.getElementById('script_' + oldPage)) {
       contentDiv.removeChild('#script_' + oldPage);
    }
