@@ -125,18 +125,27 @@
   transition: -webkit-transform 200ms linear;
   transition: transform 200ms linear;
   transition: transform 200ms linear, -webkit-transform 200ms linear;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 
 .input__container .button__container .btn--rounded:hover, .input__container .button__container .btn--rounded:focus {
   -webkit-transform: translateY(-2px);
           transform: translateY(-2px);
   background: yellowgreen;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 
 .input__container .button__container .btn--rounded:active {
   background: yellowgreen;
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 
 .result__container {

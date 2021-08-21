@@ -70,16 +70,19 @@
          border-radius: 2rem;
          cursor: pointer;
          transition: transform 200ms linear;
+         appearance: none;
 
          &:hover,
          &:focus {
             transform: translateY(-2px);
             background: yellowgreen;
+            appearance: none;
          }
 
          &:active {
             background: yellowgreen;
             transform: scale(1.05);
+            appearance: none;
          }
       }
    }
