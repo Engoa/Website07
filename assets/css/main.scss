@@ -35,12 +35,6 @@ nav {
 }
 // Hide Hamburger menu on Desktop
 
-// Fade animation for mobile hamburger menu
-.links {
-   transition: opacity var(--anim-speed);
-}
-// Fade animation for moboile hamburger menu
-
 // Nav button animations
 
 .link {
@@ -88,7 +82,8 @@ nav {
       flex: 3;
    }
 
-   .links {
+   .desktop {
+      visibility: visible;
       display: flex;
       justify-content: space-between;
       list-style: none;
@@ -100,8 +95,29 @@ nav {
          font-size: 1.5rem;
       }
    }
-   .link {
-      margin-top: -1rem;
+
+   .mobile {
+      visibility: hidden;
+      position: absolute;
+      width: 100%;
+      top: 2.4rem;
+      right: -0.5rem;
+      display: flex;
+      z-index: 4;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      background: var(--color-main);
+      justify-content: space-evenly;
+      align-items: center;
+      overflow: hidden;
+      transition: all 0.4s;
+
+      a {
+         font-weight: bold;
+         font-size: 0.7rem;
+         color: white;
+         opacity: 0.9;
+      }
    }
 }
 
@@ -373,6 +389,14 @@ footer {
    }
 
    @media only screen and (max-width: 950px) {
+      nav {
+         .desktop {
+            visibility: hidden;
+         }
+         .mobile {
+            visibility: visible;
+         }
+      }
       .container {
          .card {
             width: 70vw;
@@ -438,37 +462,11 @@ footer {
             right: 0;
             top: 1.27rem;
             display: block;
-            transition: transform var(--anim-speed);
+            transition: transform 200ms;
 
             &:hover,
             &:active {
-               transform: scale(1.2);
-            }
-         }
-
-         .links {
-            position: absolute;
-            top: 2.5rem;
-            width: 97%;
-            top: 2rem;
-            right: 0;
-            display: flex;
-            z-index: 4;
-            padding: 2rem 0.5rem 1.2rem 0.5rem;
-            border-radius: 0.4rem;
-            background: var(--color-main);
-            overflow: hidden;
-            justify-content: center;
-            gap: 1rem;
-         }
-
-         #menuList {
-            a {
-               font-weight: bold;
-               font-size: 0.8rem;
-               color: white;
-               opacity: 0.9;
-               transform: scale(1);
+               transform: scale(1.1);
             }
          }
 

@@ -22,39 +22,18 @@
 
          <div class="navlinks">
             <div>
-               <ul class="links" id="menuList">
-                  <li class="controllers link"><a href="calc.html">Calculator</a></li>
-                  <li class="consoles link"><a href="equation.html">Equation</a></li>
+               <ul class="desktop" id="menuList">
+                  <li class="controllers link"><a href="#calc">Calculator</a></li>
+                  <li class="consoles link"><a href="#equation">Equation</a></li>
                   <li class="accessories link"><a href="#">Accessories</a></li>
                   <li class="contact link"><a href="#">Contact</a></li>
                </ul>
             </div>
-            <i class="fas fa-bars hamburger-menu" onclick="togglemenu()"></i>
+            <i class="fas fa-bars hamburger-menu" id="menubtn" onclick="menuToggle()"></i>
          </div>
       </nav>
 
-      <header>
-         <div class="container">
-            <div class="content-info">
-               <h1 id="header">PS5 DualSense 5</h1>
-               <p>Wireless Controller for Playstation 5</p>
-               <span>* Compatible for Playstation 4 Pro</span>
-               <span class="price">$49.99 / €42.99</span>
-               <div class="cta">
-                  <a href="#" class="btn link">More Info</a>
-               </div>
-            </div>
-            <div class="card">
-               <a class="cardplus" href="">
-                  <img src="/images/add.png" alt="Plus Icon" />Add to Cart</a
-               >
-            </div>
-            <div id="image-container">
-               <img src="/images/controller.png" alt="Controller image" />
-            </div>
-         </div>
-      </header>
-
+      <div id="app"></div>
       <footer>
          <div class="icons">
             <a class="icons__facebook icons__icon" href="#"
@@ -67,6 +46,8 @@
          </div>
       </footer>
 
-      <script src="assets/js/main.js"></script>
+      <script src="/assets/js/main.js"></script>
+      <script src="/assets/js/router.js"></script>
+
    </body>
 </html>

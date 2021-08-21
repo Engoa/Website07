@@ -1,10 +1,9 @@
-var menuList = document.getElementById('menuList');
-menuList.style.opacity = '1';
+// Hide/Show Navigation bar on mobile/desktop
+const menuList = document.getElementById('menuList');
+const menuBtn = document.getElementById('menubtn');
 
-function togglemenu() {
-   if (menuList.style.opacity == '0') {
-      menuList.style.opacity = '1';
-   } else {
-      menuList.style.opacity = '0';
-   }
+function menuToggle() {
+   menuList.classList.toggle('mobile');
 }
+
+// Hide/Show Navigation bar on mobile/desktop

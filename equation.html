@@ -1,79 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
    <head>
-      <meta charset="UTF-8" />
-      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="stylesheet" href="assets/css/main.css" />
-
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-      <link
-         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap"
-         rel="stylesheet"
-      />
-      <script src="https://kit.fontawesome.com/9a80e50f42.js" crossorigin="anonymous"></script>
       <title>Playstation Store</title>
    </head>
    <body>
-      <nav>
-         <div class="logo">
-            <a href="/index.html"><img src="/images/logo.png" alt="Playstation Logo" /></a>
-         </div>
-
-         <div class="navlinks">
-            <div>
-               <ul class="links" id="menuList">
-                  <li class="controllers link"><a href="calc.html">Calculator</a></li>
-                  <li class="consoles link"><a href="equation.html">Equation</a></li>
-                  <li class="accessories link"><a href="#">Accessories</a></li>
-                  <li class="contact link"><a href="#">Contact</a></li>
-               </ul>
-            </div>
-            <i class="fas fa-bars hamburger-menu" onclick="togglemenu()"></i>
-         </div>
-      </nav>
-
       <main class="calc__container">
          <h1>Please Input any numbers to calculate the result:</h1>
+         <form action="#" onsubmit="quadEquationSolver(event)">
+            <div class="equation__container">
+               <div>
+                  <input
+                     class="equation__container__input"
+                     id="aInput"
+                     placeholder="Enter a value for A"
+                     type="number"
+                  />
+                  <input
+                     class="equation__container__input"
+                     id="bInput"
+                     placeholder="Enter a value for B"
+                     type="number"
+                  />
+                  <input
+                     class="equation__container__input"
+                     id="cInput"
+                     placeholder="Enter a value for C"
+                     type="number"
+                  />
+               </div>
 
-         <div class="equation__container">
-            <div>
-               <input
-                  class="equation__container__input"
-                  id="aInput"
-                  placeholder="Enter a value for A"
-                  type="number"
-               />
-               <input
-                  class="equation__container__input"
-                  id="bInput"
-                  placeholder="Enter a value for B"
-                  type="number"
-               />
-               <input
-                  class="equation__container__input"
-                  id="cInput"
-                  placeholder="Enter a value for C"
-                  type="number"
-               />
+               <button type="submit" class="equation__container__calc" id="btnCalc">
+                  <i class="fas fa-calculator"></i>
+               </button>
+
+               <div class="equation__container__result">
+                  <span class="equation__container__result__span" id="firstRoot">Root1: 0 </span>
+                  <span class="equation__container__result__span" id="secondRoot">Root2: 0 </span>
+               </div>
             </div>
 
-            <button type="button" class="equation__container__calc" id="btnCalc">
-               <i class="fas fa-calculator"></i>
-            </button>
-
-            <div class="equation__container__result">
-               <span class="equation__container__result__span" id="firstRoot">Root1: 0 </span>
-               <span class="equation__container__result__span" id="secondRoot">Root2: 0 </span>
+            <div class="image__container">
+               <img src="/images/equation.png" alt="Equation Image" />
             </div>
-         </div>
-
-         <div class="image__container">
-            <img src="/images/equation.png" alt="Equation Image" />
-         </div>
+         </form>
       </main>
 
-      <script src="assets/js/main.js"></script>
-      <script src="assets/js/equation.js"></script>
    </body>
 </html>
