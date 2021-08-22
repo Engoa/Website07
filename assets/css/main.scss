@@ -87,12 +87,11 @@ nav {
       display: flex;
       justify-content: space-between;
       list-style: none;
-      margin-top: 1rem;
 
       a {
          text-decoration: none;
          color: var(--color-accent);
-         font-size: 1.5rem;
+         font-size: 1.7rem;
       }
    }
 
@@ -100,17 +99,17 @@ nav {
       visibility: hidden;
       position: absolute;
       width: 100%;
-      top: 2.4rem;
-      right: -0.5rem;
+      top: 3.2rem;
+      right: -0.2rem;
       display: flex;
       z-index: 4;
-      padding: 1rem;
+      padding: 1rem 1.2rem 1rem 1.2rem;
       border-radius: 0.5rem;
       background: var(--color-main);
-      justify-content: space-evenly;
+      justify-content: space-between;
       align-items: center;
       overflow: hidden;
-      transition: all 250ms ease;
+      transition: all 350ms ease;
 
       a {
          font-weight: bold;
@@ -152,22 +151,22 @@ nav {
 
       h1 {
          font-weight: bold;
-         font-size: 4rem;
+         font-size: clamp(1.8rem, 3vw, 4rem);
          color: var(--color-main);
       }
       p {
-         font-size: 2rem;
+         font-size: clamp(1rem, 1.8vw, 1.8rem);
       }
 
       span {
-         margin-top: 0.5rem;
-         opacity: 0.6;
+         margin-top: 0.3rem;
+         opacity: 0.7;
          font-size: 0.95rem;
       }
       .price {
          opacity: 1;
          font-weight: bold;
-         font-size: 3.5rem;
+         font-size: clamp(2rem, 3vw, 3.5rem);
       }
    }
 
@@ -327,14 +326,6 @@ footer {
 }
 @media only screen and (max-width: 1600px) {
    .container {
-      .content-info {
-         h1 {
-            font-size: 3rem;
-         }
-         p {
-            font-size: 1.4rem;
-         }
-      }
       .image-container {
          width: 55vh;
          right: 30%;
@@ -365,23 +356,15 @@ footer {
             align-items: center;
             justify-content: center;
             margin: 0 auto;
-            h1 {
-               font-size: 4rem;
-            }
-            p {
-               font-size: 1.5rem;
-            }
-            .price {
-               margin: 0;
-            }
+
             .btn {
                margin-right: 2.2rem;
             }
             &::before {
                height: 30vh;
                width: 13px;
-               margin-top: 2rem;
-               left: -1.5rem;
+               margin-top: 3rem;
+               left: -2rem;
             }
          }
          .card {
@@ -439,19 +422,8 @@ footer {
             justify-content: center;
             text-align: center;
 
-            h1 {
-               font-size: 1.8rem;
-               letter-spacing: 0.2rem;
-            }
-            p {
-               font-size: 1rem;
-               letter-spacing: 0.1rem;
-            }
-
             .price {
                margin-top: 1rem;
-               margin-bottom: 1rem;
-               font-size: 2rem;
             }
             .btn {
                margin-right: 2.8rem;
@@ -473,9 +445,8 @@ footer {
             font-size: 1.3rem;
             position: absolute;
             right: 0;
-            top: 1.27rem;
+            top: 1.5rem;
             display: block;
-            transition: transform 200ms;
 
             &:hover,
             &:active {

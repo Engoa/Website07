@@ -299,37 +299,36 @@ nav .desktop {
       -ms-flex-pack: justify;
           justify-content: space-between;
   list-style: none;
-  margin-top: 1rem;
 }
 
 nav .desktop a {
   text-decoration: none;
   color: var(--color-accent);
-  font-size: 1.5rem;
+  font-size: 1.7rem;
 }
 
 nav .mobile {
   visibility: hidden;
   position: absolute;
   width: 100%;
-  top: 2.4rem;
-  right: -0.5rem;
+  top: 3.2rem;
+  right: -0.2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   z-index: 4;
-  padding: 1rem;
+  padding: 1rem 1.2rem 1rem 1.2rem;
   border-radius: 0.5rem;
   background: var(--color-main);
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   overflow: hidden;
-  -webkit-transition: all 250ms ease;
-  transition: all 250ms ease;
+  -webkit-transition: all 350ms ease;
+  transition: all 350ms ease;
 }
 
 nav .mobile a {
@@ -392,24 +391,24 @@ nav .mobile a {
 
 .container .content-info h1 {
   font-weight: bold;
-  font-size: 4rem;
+  font-size: clamp(1.8rem, 3vw, 4rem);
   color: var(--color-main);
 }
 
 .container .content-info p {
-  font-size: 2rem;
+  font-size: clamp(1rem, 1.8vw, 1.8rem);
 }
 
 .container .content-info span {
-  margin-top: 0.5rem;
-  opacity: 0.6;
+  margin-top: 0.3rem;
+  opacity: 0.7;
   font-size: 0.95rem;
 }
 
 .container .content-info .price {
   opacity: 1;
   font-weight: bold;
-  font-size: 3.5rem;
+  font-size: clamp(2rem, 3vw, 3.5rem);
 }
 
 .container .card {
@@ -633,12 +632,6 @@ footer a {
 }
 
 @media only screen and (max-width: 1600px) {
-  .container .content-info h1 {
-    font-size: 3rem;
-  }
-  .container .content-info p {
-    font-size: 1.4rem;
-  }
   .container .image-container {
     width: 55vh;
     right: 30%;
@@ -689,23 +682,14 @@ footer a {
             justify-content: center;
     margin: 0 auto;
   }
-  .container .content-info h1 {
-    font-size: 4rem;
-  }
-  .container .content-info p {
-    font-size: 1.5rem;
-  }
-  .container .content-info .price {
-    margin: 0;
-  }
   .container .content-info .btn {
     margin-right: 2.2rem;
   }
   .container .content-info::before {
     height: 30vh;
     width: 13px;
-    margin-top: 2rem;
-    left: -1.5rem;
+    margin-top: 3rem;
+    left: -2rem;
   }
   .container .card {
     width: 60vw;
@@ -778,18 +762,8 @@ footer a {
             justify-content: center;
     text-align: center;
   }
-  .container .content-info h1 {
-    font-size: 1.8rem;
-    letter-spacing: 0.2rem;
-  }
-  .container .content-info p {
-    font-size: 1rem;
-    letter-spacing: 0.1rem;
-  }
   .container .content-info .price {
     margin-top: 1rem;
-    margin-bottom: 1rem;
-    font-size: 2rem;
   }
   .container .content-info .btn {
     margin-right: 2.8rem;
@@ -807,12 +781,8 @@ footer a {
     font-size: 1.3rem;
     position: absolute;
     right: 0;
-    top: 1.27rem;
+    top: 1.5rem;
     display: block;
-    -webkit-transition: -webkit-transform 200ms;
-    transition: -webkit-transform 200ms;
-    transition: transform 200ms;
-    transition: transform 200ms, -webkit-transform 200ms;
   }
   nav .hamburger-menu:hover, nav .hamburger-menu:active {
     -webkit-transform: scale(1.1);
