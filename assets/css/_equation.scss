@@ -1,8 +1,9 @@
 .result__container {
    display: flex;
    &__equation {
-      padding: 0.1rem 4rem 0.1rem 4rem;
-      font-size: 1.5rem;
+      padding: 0.1rem 2.5rem 0.1rem 2.5rem;
+      background: #e4e4e4;
+      font-size: 2rem;
    }
 }
 

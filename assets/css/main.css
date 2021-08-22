@@ -114,7 +114,8 @@
 
 .input__container .button__container .btn--rounded {
   color: black;
-  font-size: 1.1rem;
+  background: #e4e4e4;
+  font-size: 1.2rem;
   border: 3px solid black;
   font-weight: bold;
   outline: none;
@@ -125,27 +126,18 @@
   transition: -webkit-transform 200ms linear;
   transition: transform 200ms linear;
   transition: transform 200ms linear, -webkit-transform 200ms linear;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
 }
 
 .input__container .button__container .btn--rounded:hover, .input__container .button__container .btn--rounded:focus {
   -webkit-transform: translateY(-2px);
           transform: translateY(-2px);
   background: yellowgreen;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
 }
 
 .input__container .button__container .btn--rounded:active {
   background: yellowgreen;
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
 }
 
 .result__container {
@@ -166,10 +158,11 @@
 }
 
 .result__container__text {
-  border-radius: 0.4rem;
+  border-radius: 1rem;
+  background: #e4e4e4;
   border: 3px solid black;
-  padding: 0.1rem 4rem 0.1rem 4rem;
-  font-size: 3rem;
+  padding: 0.1rem 2.5rem 0.1rem 2.5rem;
+  font-size: 2rem;
   font-weight: bold;
 }
 
@@ -180,8 +173,9 @@
 }
 
 .result__container__equation {
-  padding: 0.1rem 4rem 0.1rem 4rem;
-  font-size: 1.5rem;
+  padding: 0.1rem 2.5rem 0.1rem 2.5rem;
+  background: #e4e4e4;
+  font-size: 2rem;
 }
 
 .image__container {
@@ -334,8 +328,8 @@ nav .mobile {
       -ms-flex-align: center;
           align-items: center;
   overflow: hidden;
-  -webkit-transition: all 0.4s;
-  transition: all 0.4s;
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
 }
 
 nav .mobile a {
@@ -398,7 +392,7 @@ nav .mobile a {
 
 .container .content-info h1 {
   font-weight: bold;
-  font-size: 5rem;
+  font-size: 4rem;
   color: var(--color-main);
 }
 
@@ -419,6 +413,8 @@ nav .mobile a {
 }
 
 .container .card {
+  position: relative;
+  z-index: -4;
   background: var(--color-main);
   border-radius: 1rem;
   height: 35vh;
@@ -437,12 +433,11 @@ nav .mobile a {
           align-items: center;
 }
 
-.container .card a {
+.container .card .cardplus {
   margin: auto 0;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  z-index: 2;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -458,30 +453,25 @@ nav .mobile a {
   font-size: 1.1rem;
 }
 
-.container .card a img {
+.container .card .cardplus img {
   max-width: 70%;
   margin-bottom: 1rem;
   -webkit-filter: drop-shadow(3px 4px 4px rgba(0, 0, 0, 0.63));
           filter: drop-shadow(3px 4px 4px rgba(0, 0, 0, 0.63));
 }
 
-.content-info {
-  position: relative;
-}
-
-#image-container {
+.image-container {
   width: 70vh;
   position: absolute;
-  right: 33%;
-  bottom: 7%;
+  right: 27%;
+  bottom: 5%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-#image-container img {
+.image-container img {
   width: 90%;
-  margin: 0 auto;
   z-index: 3;
   -webkit-filter: drop-shadow(3px 4px 4px rgba(0, 0, 0, 0.63));
           filter: drop-shadow(3px 4px 4px rgba(0, 0, 0, 0.63));
@@ -642,26 +632,49 @@ footer a {
           transform: scale(1.2);
 }
 
-@media only screen and (max-width: 1900px) {
+@media only screen and (max-width: 1600px) {
   .container .content-info h1 {
     font-size: 3rem;
   }
   .container .content-info p {
     font-size: 1.4rem;
   }
-  #image-container {
-    width: 45vh;
+  .container .image-container {
+    width: 55vh;
     right: 30%;
-    bottom: 25%;
+    bottom: 20%;
   }
 }
 
-@media only screen and (max-width: 1900px) and (max-width: 1200px) {
+@media only screen and (max-width: 1600px) and (max-width: 1300px) {
+  @-webkit-keyframes bar-load {
+    0% {
+      height: 0%;
+    }
+    100% {
+      height: 75%;
+    }
+  }
+  @keyframes bar-load {
+    0% {
+      height: 0%;
+    }
+    100% {
+      height: 75%;
+    }
+  }
   .container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .container .image-container {
+    width: 50vh;
+    right: 5%;
+    bottom: 10rem;
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
   }
   .container .content-info {
     -webkit-box-orient: vertical;
@@ -691,7 +704,7 @@ footer a {
   .container .content-info::before {
     height: 30vh;
     width: 13px;
-    margin-top: 0.5rem;
+    margin-top: 2rem;
     left: -1.5rem;
   }
   .container .card {
@@ -708,19 +721,42 @@ footer a {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  #image-container {
-    width: 40vh;
-    right: 2rem;
-    bottom: 10rem;
-  }
 }
 
-@media only screen and (max-width: 1900px) and (max-width: 950px) {
+@media only screen and (max-width: 1600px) and (max-width: 950px) {
+  @-webkit-keyframes bar-load {
+    0% {
+      height: 0%;
+    }
+    100% {
+      height: 85%;
+    }
+  }
+  @keyframes bar-load {
+    0% {
+      height: 0%;
+    }
+    100% {
+      height: 85%;
+    }
+  }
   nav .desktop {
     visibility: hidden;
   }
   nav .mobile {
     visibility: visible;
+  }
+  .container .image-container {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    max-width: 80%;
+    position: relative;
+    bottom: 60%;
+    right: -2.6%;
+  }
+  .container .image-container img {
+    max-width: 90%;
+    position: absolute;
   }
   .container .card {
     width: 70vw;
@@ -763,20 +799,6 @@ footer a {
     font-size: 1rem;
     top: 0.5rem;
   }
-  #image-container {
-    max-width: 80%;
-    position: relative;
-    margin-right: 1.5rem;
-    bottom: 55%;
-    z-index: -3;
-  }
-  #image-container img {
-    z-index: 4;
-    max-width: 90%;
-    position: absolute;
-    top: -1rem;
-    right: -2rem;
-  }
   nav {
     position: relative;
   }
@@ -802,8 +824,8 @@ footer a {
   }
 }
 
-@media only screen and (max-width: 1900px) {
-  @-webkit-keyframes load {
+@media only screen and (max-width: 1600px) {
+  @-webkit-keyframes loadPage {
     0% {
       -webkit-transform: translateY(-12rem);
               transform: translateY(-12rem);
@@ -815,7 +837,7 @@ footer a {
       opacity: 1;
     }
   }
-  @keyframes load {
+  @keyframes loadPage {
     0% {
       -webkit-transform: translateY(-12rem);
               transform: translateY(-12rem);
@@ -830,10 +852,13 @@ footer a {
 }
 
 @media only screen and (max-width: 340px) {
-  #image-container {
+  nav .mobile a {
+    font-size: 0.65rem;
+  }
+  .image-container {
     bottom: 55%;
   }
-  #image-container img {
+  .image-container img {
     top: 1.3rem;
   }
 }

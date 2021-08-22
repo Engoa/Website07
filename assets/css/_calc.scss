@@ -62,7 +62,8 @@
 
       .btn--rounded {
          color: black;
-         font-size: 1.1rem;
+         background: #e4e4e4;
+         font-size: 1.2rem;
          border: 3px solid black;
          font-weight: bold;
          outline: none;
@@ -70,19 +71,16 @@
          border-radius: 2rem;
          cursor: pointer;
          transition: transform 200ms linear;
-         appearance: none;
 
          &:hover,
          &:focus {
             transform: translateY(-2px);
             background: yellowgreen;
-            appearance: none;
          }
 
          &:active {
             background: yellowgreen;
             transform: scale(1.05);
-            appearance: none;
          }
       }
    }
@@ -94,12 +92,12 @@
    justify-content: center;
    flex-direction: column;
    gap: 1rem;
-
    &__text {
-      border-radius: 0.4rem;
+      border-radius: 1rem;
+      background: #e4e4e4;
       border: 3px solid black;
-      padding: 0.1rem 4rem 0.1rem 4rem;
-      font-size: 3rem;
+      padding: 0.1rem 2.5rem 0.1rem 2.5rem;
+      font-size: 2rem;
       font-weight: bold;
    }
 }
