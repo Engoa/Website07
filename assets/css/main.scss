@@ -91,11 +91,12 @@ nav {
       a {
          text-decoration: none;
          color: var(--color-accent);
-         font-size: 1.7rem;
+         font-size: 1.65rem;
       }
    }
 
-   .mobile {
+   .mobilebtn {
+      list-style: none;
       visibility: hidden;
       position: absolute;
       width: 100%;
@@ -106,10 +107,10 @@ nav {
       padding: 1rem 1.2rem 1rem 1.2rem;
       border-radius: 0.5rem;
       background: var(--color-main);
-      justify-content: space-between;
+      justify-content: space-evenly;
       align-items: center;
       overflow: hidden;
-      transition: all 350ms ease;
+      transition: 500ms ease;
 
       a {
          font-weight: bold;
@@ -392,7 +393,7 @@ footer {
          .desktop {
             visibility: hidden;
          }
-         .mobile {
+         .mobilebtn {
             visibility: visible;
          }
       }
@@ -447,16 +448,16 @@ footer {
             right: 0;
             top: 1.5rem;
             display: block;
+            transition: transform var(--anim-speed);
 
             &:hover,
             &:active {
-               transform: scale(1.1);
+               transform: scale(1.2);
             }
          }
 
          .link::before {
             background: white;
-            bottom: -0.5rem;
          }
       }
    }
@@ -474,7 +475,7 @@ footer {
 }
 @media only screen and (max-width: 340px) {
    nav {
-      .mobile {
+      .mobilebtn {
          a {
             font-size: 0.65rem;
          }

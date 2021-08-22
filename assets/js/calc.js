@@ -6,14 +6,11 @@
    const resetBtn = document.getElementById('container__reset');
 
    function add() {
-      const result = +firstInput.value + +secondInput.value + +resultElement.innerText;
-      resultElement.innerText = result.toFixed(2);
-   }
-
-   function isEmpty() {
-      if (!firstInput.value || !secondInput.value) {
-         resultElement.innerText = 0;
-         alert('Input fields need to have some value \n נא למלא ערך כלשהו');
+      if (!firstInput.value && !secondInput.value) {
+         alert('Input fields need to have some value');
+      } else {
+         const result = +firstInput.value + +secondInput.value + +resultElement.innerText;
+         resultElement.innerText = result.toFixed(1);
       }
    }
 
@@ -26,7 +23,6 @@
    document.getElementById('form').addEventListener('submit', (event) => {
       event.preventDefault();
       add();
-      isEmpty();
    });
 
    resetBtn.addEventListener('click', reset);

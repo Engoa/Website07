@@ -91,13 +91,14 @@
    align-items: center;
    justify-content: center;
    flex-direction: column;
+   text-align: center;
    gap: 1rem;
    &__text {
       border-radius: 1rem;
       background: #e4e4e4;
       border: 3px solid black;
       padding: 0.1rem 2.5rem 0.1rem 2.5rem;
-      font-size: 2rem;
+      font-size: 1.5rem;
       font-weight: bold;
    }
 }

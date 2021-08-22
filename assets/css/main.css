@@ -154,6 +154,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  text-align: center;
   gap: 1rem;
 }
 
@@ -162,7 +163,7 @@
   background: #e4e4e4;
   border: 3px solid black;
   padding: 0.1rem 2.5rem 0.1rem 2.5rem;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: bold;
 }
 
@@ -304,10 +305,11 @@ nav .desktop {
 nav .desktop a {
   text-decoration: none;
   color: var(--color-accent);
-  font-size: 1.7rem;
+  font-size: 1.65rem;
 }
 
-nav .mobile {
+nav .mobilebtn {
+  list-style: none;
   visibility: hidden;
   position: absolute;
   width: 100%;
@@ -320,18 +322,18 @@ nav .mobile {
   padding: 1rem 1.2rem 1rem 1.2rem;
   border-radius: 0.5rem;
   background: var(--color-main);
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   overflow: hidden;
-  -webkit-transition: all 350ms ease;
-  transition: all 350ms ease;
+  -webkit-transition: 500ms ease;
+  transition: 500ms ease;
 }
 
-nav .mobile a {
+nav .mobilebtn a {
   font-weight: bold;
   font-size: 0.75rem;
   color: white;
@@ -727,7 +729,7 @@ footer a {
   nav .desktop {
     visibility: hidden;
   }
-  nav .mobile {
+  nav .mobilebtn {
     visibility: visible;
   }
   .container .image-container {
@@ -783,14 +785,17 @@ footer a {
     right: 0;
     top: 1.5rem;
     display: block;
+    -webkit-transition: -webkit-transform var(--anim-speed);
+    transition: -webkit-transform var(--anim-speed);
+    transition: transform var(--anim-speed);
+    transition: transform var(--anim-speed), -webkit-transform var(--anim-speed);
   }
   nav .hamburger-menu:hover, nav .hamburger-menu:active {
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1);
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
   }
   nav .link::before {
     background: white;
-    bottom: -0.5rem;
   }
 }
 
@@ -822,7 +827,7 @@ footer a {
 }
 
 @media only screen and (max-width: 340px) {
-  nav .mobile a {
+  nav .mobilebtn a {
     font-size: 0.65rem;
   }
   .image-container {
