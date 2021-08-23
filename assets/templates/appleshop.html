@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head> </head>
+   <body>
+      <form>
+         <main class="calc__container">
+            <div class="calc__container__header">
+               <h1>Welcome to my Apple Shop!</h1>
+               <p>Please select an apple type via the dropdown menu below:</p>
+            </div>
+            <div class="input__container">
+               <select class="input__container__dropdown" id="dropdown" value="smith" required>
+                  <option></option>
+                  <option value="5.90">* Smith 5.90/kg</option>
+                  <option value="9.90">* Red-Velvet 9.90/kg</option>
+                  <option value="10.90">* Arkanas Black 10.90/kg</option>
+                  <option value="19.90">* Hermon 19.90/kg</option>
+                  <option value="29.90">* Pink Pearl 29.90/kg</option>
+               </select>
+               <input
+                  class="input__container__input input--rounded"
+                  id="kg"
+                  type="number"
+                  placeholder="Kg amount"
+                  step="0.01"
+                  max="100"
+                  min="0"
+               />
+               <div class="button__container">
+                  <button class="btn--rounded" id="btncalc" type="submit">
+                     <i class="fas fa-calculator"></i>
+                  </button>
+                  <button class="btn--rounded" id="btnreset" type="reset">
+                     <i class="fas fa-undo"></i>
+                  </button>
+               </div>
+               <div class="result__container" id="result__container">
+                  <p class="result__container__text">Result: <span id="totalresult">0</span></p>
+               </div>
+            </div>
+         </main>
+      </form>
+   </body>
+</html>

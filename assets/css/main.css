@@ -1,20 +1,24 @@
-.calc__container h1 {
+.calc__container__header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
-  font-size: 1.35rem;
-  margin: 0.5rem;
+  font-size: clamp(0.6rem, 3vw, 1.3rem);
+  margin: 1rem;
   margin-top: 3rem;
+  color: black;
+  font-style: italic;
 }
 
-.calc__container__plus {
-  font-size: 3rem;
-  color: black;
-  font-weight: bold;
+.calc__container__header p {
+  font-size: 1rem;
 }
 
 .input__container {
@@ -38,7 +42,7 @@
 .input__container .input--rounded {
   font-family: 'Montserrat', sans-serif;
   border: 3px solid black;
-  background: #e4e4e4;
+  background: #3b3b3b;
   outline: none;
   border-radius: 2rem;
   padding: 0.5rem 2rem 0.5rem 2rem;
@@ -63,6 +67,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  color: white;
 }
 
 .input__container .input--rounded:focus {
@@ -72,26 +77,30 @@
 
 .input__container .input--rounded::-webkit-input-placeholder {
   font-weight: bold;
-  color: black;
-  opacity: 0.7;
+  color: #e4e4e4;
+  opacity: 0.6;
+  font-size: 0.9rem;
 }
 
 .input__container .input--rounded:-ms-input-placeholder {
   font-weight: bold;
-  color: black;
-  opacity: 0.7;
+  color: #e4e4e4;
+  opacity: 0.6;
+  font-size: 0.9rem;
 }
 
 .input__container .input--rounded::-ms-input-placeholder {
   font-weight: bold;
-  color: black;
-  opacity: 0.7;
+  color: #e4e4e4;
+  opacity: 0.6;
+  font-size: 0.9rem;
 }
 
 .input__container .input--rounded::placeholder {
   font-weight: bold;
-  color: black;
-  opacity: 0.7;
+  color: #e4e4e4;
+  opacity: 0.6;
+  font-size: 0.9rem;
 }
 
 .input__container .input--rounded::-webkit-inner-spin-button, .input__container .input--rounded::-webkit-outer-spin-button {
@@ -100,7 +109,7 @@
 }
 
 .input__container .button__container {
-  gap: 1rem;
+  gap: 0.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -113,8 +122,8 @@
 }
 
 .input__container .button__container .btn--rounded {
-  color: black;
-  background: #e4e4e4;
+  color: #e4e4e4;
+  background: #3b3b3b;
   font-size: 1.2rem;
   border: 3px solid black;
   font-weight: bold;
@@ -131,13 +140,17 @@
 .input__container .button__container .btn--rounded:hover, .input__container .button__container .btn--rounded:focus {
   -webkit-transform: translateY(-2px);
           transform: translateY(-2px);
-  background: yellowgreen;
+  background: #857f7f;
 }
 
 .input__container .button__container .btn--rounded:active {
-  background: yellowgreen;
+  background: #857f7f;
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
+}
+
+.input__container .button__container .btn--calc {
+  padding: 0.3rem 1rem 0.3rem 1rem;
 }
 
 .result__container {
@@ -156,15 +169,17 @@
           flex-direction: column;
   text-align: center;
   gap: 1rem;
+  color: black;
 }
 
 .result__container__text {
   border-radius: 1rem;
-  background: #e4e4e4;
   border: 3px solid black;
-  padding: 0.1rem 2.5rem 0.1rem 2.5rem;
+  padding: 0.2rem 3rem 0.2rem 3rem;
   font-size: 1.5rem;
   font-weight: bold;
+  background: #3b3b3b;
+  color: #e4e4e4;
 }
 
 .result__container {
@@ -175,7 +190,6 @@
 
 .result__container__equation {
   padding: 0.1rem 2.5rem 0.1rem 2.5rem;
-  background: #e4e4e4;
   font-size: 2rem;
 }
 
@@ -195,6 +209,41 @@
 
 .image__container img {
   width: 70%;
+}
+
+.input__container__dropdown {
+  border-radius: 2rem;
+  padding: 0.1rem 1rem;
+  outline: none;
+  border: 2px solid black;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  width: 0;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat, repeat;
+  background-position: right 0.71em top 50%;
+  background-size: 0.6em auto;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  text-align-last: center;
+}
+
+.input__container__dropdown:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.input__container__dropdown:focus, .input__container__dropdown:active {
+  width: 250px;
+}
+
+#kg {
+  padding: 0.3rem 3rem;
 }
 
 :root {
@@ -375,6 +424,7 @@ nav .mobilebtn a {
           flex: 1;
   margin-right: 2rem;
   position: relative;
+  color: black;
 }
 
 .container .content-info::before {
@@ -394,7 +444,6 @@ nav .mobilebtn a {
 .container .content-info h1 {
   font-weight: bold;
   font-size: clamp(1.8rem, 3vw, 4rem);
-  color: var(--color-main);
 }
 
 .container .content-info p {
@@ -779,6 +828,7 @@ footer a {
     position: relative;
   }
   nav .hamburger-menu {
+    color: black;
     cursor: pointer;
     font-size: 1.3rem;
     position: absolute;
