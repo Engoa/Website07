@@ -1,30 +1,73 @@
 (() => {
-   const firstInput = document.getElementById('container__input1');
-   const secondInput = document.getElementById('container__input2');
-   const calcBtn = document.getElementById('container__button');
-   const resultElement = document.getElementById('result__container__p');
-   const resetBtn = document.getElementById('container__reset');
+   // Event Listeners for buttons with functions nested!
 
-   function add() {
-      if (!firstInput.value && !secondInput.value) {
-         alert('Input fields need to have some value');
-      } else {
-         const result = +firstInput.value + +secondInput.value + +resultElement.innerText;
-         resultElement.innerText = result.toFixed(1);
+   const $result = $('#result__container__p');
+   // Flag if result is shown on screen
+   let isShown = false;
+   // Hide result on load
+   $result.hide();
+
+   let result = 0;
+
+   function getValue() {
+      return Number(document.getElementById('container__input1').value);
+   }
+
+   // Should receive an operator, evaluate the result 
+   // and returns a number
+   function calculate(operator) {
+      if (!operator) return 0;
+      return eval(`${result} ${operator} ${getValue()}`);
+   }
+
+   function fadeIn() {
+      if (!isShown) {
+         $result.fadeIn();
+         isShown = true;
       }
    }
 
-   function reset() {
-      resultElement.innerText = 0;
+   function fadeOut() {
+      if (isShown) {
+         $result.fadeOut();
+         isShown = false;
+      }
+   }
+   function handleCalculate(operator) {
+      // Show result if now shown
+      fadeIn();
+      if (!getValue()) {
+         alert('Input fields need to have some value');
+      } else {
+         result = calculate(operator);
+         $result.text(result);
+      }
    }
 
-   // Event Listeners for buttons.
+   // Add
+   $('#btnadd').click(() => handleCalculate('+'));
+   //Substract
+   $('#btnsubstract').click(() => handleCalculate('-'));
+   //Multiply
+   $('#btnmultiply').click(() => handleCalculate('*'));
+   //Divide
+   $('#btndivide').click(() => handleCalculate('/'));
+   //Substract
 
+   // Prevents reload of page on click
    document.getElementById('form').addEventListener('submit', (event) => {
       event.preventDefault();
-      add();
    });
+   // Prevents reload of page on click
 
-   resetBtn.addEventListener('click', reset);
-   // Event Listeners for buttons.
+   // Reset
+   const resetBtn = document.getElementById('btnreset');
+   resetBtn.addEventListener('click', () => {
+      result = 0;
+      $result.text(result);
+      fadeOut();
+   });
+   // Reset
+
+   // Event Listeners for buttons with functions nested!
 })();

@@ -17,25 +17,29 @@
                   <option value="19.90">* Hermon 19.90/kg</option>
                   <option value="29.90">* Pink Pearl 29.90/kg</option>
                </select>
-               <input
-                  class="input__container__input input--rounded"
-                  id="kg"
-                  type="number"
-                  placeholder="Kg amount"
-                  step="0.01"
-                  max="100"
-                  min="0"
-               />
+               <label for="kg" class="input__container__label"
+                  >Kilograms amount:
+
+                  <input
+                     name="kg"
+                     class="input__container__input input--rounded"
+                     id="kg"
+                     type="number"
+                     placeholder="Kg"
+                     step="0.01"
+                     max="100"
+                     min="1"
+               /></label>
                <div class="button__container">
                   <button class="btn--rounded" id="btncalc" type="submit">
-                     <i class="fas fa-calculator"></i>
+                     <i class="fab fa-apple button__container__icon"></i>
                   </button>
                   <button class="btn--rounded" id="btnreset" type="reset">
-                     <i class="fas fa-undo"></i>
+                     <i class="fas fa-undo button__container__icon"></i>
                   </button>
                </div>
                <div class="result__container" id="result__container">
-                  <p class="result__container__text">Result: <span id="totalresult">0</span></p>
+                  <p class="result__container__text">Result: <span id="totalresult">0$</span></p>
                </div>
             </div>
          </main>

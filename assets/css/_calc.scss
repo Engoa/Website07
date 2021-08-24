@@ -42,7 +42,7 @@
       color: white;
 
       &:focus {
-         transform: scale(1.1);
+         transform: scale(1.07);
       }
       &::placeholder {
          font-weight: bold;
@@ -65,11 +65,9 @@
       justify-content: center;
 
       .btn--rounded {
-         color: #e4e4e4;
          background: #3b3b3b;
-         font-size: 1.2rem;
+         font-size: 1.1rem;
          border: 3px solid black;
-         font-weight: bold;
          outline: none;
          padding: 0.3rem 2rem 0.3rem 2rem;
          border-radius: 2rem;
@@ -79,16 +77,26 @@
          &:hover,
          &:focus {
             transform: translateY(-2px);
-            background: rgb(133, 127, 127);
+            background: rgba(61, 60, 60, 0.5);
          }
-
          &:active {
-            background: rgb(133, 127, 127);
+            background: rgba(133, 127, 127, 0.5);
             transform: scale(1.05);
          }
+         &:hover .button__container__icon,
+         &:focus .button__container__icon {
+            opacity: 1;
+         }
+         &:active .button__container__icon {
+            opacity: 1;
+         }
+      }
+      &__icon {
+         opacity: 0.8;
+         transition: opacity 100ms;
       }
       .btn--calc {
-         padding: 0.3rem 1rem 0.3rem 1rem;
+         padding: 0.2rem 1rem 0.2rem 1rem;
       }
    }
 }
@@ -101,6 +109,7 @@
    text-align: center;
    gap: 1rem;
    color: black;
+
    &__text {
       border-radius: 1rem;
       border: 3px solid black;

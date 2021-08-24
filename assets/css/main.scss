@@ -1,6 +1,13 @@
-@import '_calc.scss';
-@import '_equation.scss';
-@import '_appleshop.scss';
+@import 'calc';
+@import 'equation';
+@import 'appleshop';
+@import 'breakpoints';
+
+// @include media('<lg', '>md') {
+//    * {
+//       outline: 1px solid red !important;
+//    }
+// }
 
 :root {
    --color-accent: rgba(0, 0, 0, 0.9);
