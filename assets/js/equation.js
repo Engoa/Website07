@@ -7,6 +7,7 @@
       b: document.getElementById('bInput'),
       c: document.getElementById('cInput'),
    };
+
    function quadEquationSolver(event) {
       event.preventDefault();
       let rootPart = Math.sqrt(

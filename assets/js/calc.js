@@ -1,6 +1,4 @@
 (() => {
-   // Event Listeners for buttons with functions nested!
-
    const $result = $('#result__container__p');
    // Flag if result is shown on screen
    let isShown = false;
@@ -11,13 +9,6 @@
 
    function getValue() {
       return Number(document.getElementById('container__input1').value);
-   }
-
-   // Should receive an operator, evaluate the result 
-   // and returns a number
-   function calculate(operator) {
-      if (!operator) return 0;
-      return eval(`${result} ${operator} ${getValue()}`);
    }
 
    function fadeIn() {
@@ -33,32 +24,35 @@
          isShown = false;
       }
    }
+
+   // Should receive an operator, evaluate the result
+   // and returns a number
+   function calculate(operator) {
+      if (!operator) return 0;
+      return eval(`${result} ${operator} ${getValue()}`);
+   }
+
    function handleCalculate(operator) {
-      // Show result if now shown
+      // Show result if not shown
       fadeIn();
-      if (!getValue()) {
-         alert('Input fields need to have some value');
-      } else {
-         result = calculate(operator);
-         $result.text(result);
-      }
+      !getValue() ? alert('Input fields need to have some value') : (result = calculate(operator));
+      $result.text(result);
    }
 
    // Add
    $('#btnadd').click(() => handleCalculate('+'));
+
    //Substract
    $('#btnsubstract').click(() => handleCalculate('-'));
+
    //Multiply
    $('#btnmultiply').click(() => handleCalculate('*'));
+
    //Divide
    $('#btndivide').click(() => handleCalculate('/'));
-   //Substract
 
-   // Prevents reload of page on click
-   document.getElementById('form').addEventListener('submit', (event) => {
-      event.preventDefault();
-   });
-   // Prevents reload of page on click
+   //Exponential
+   $('#btnexponential').click(() => handleCalculate('**'));
 
    // Reset
    const resetBtn = document.getElementById('btnreset');
@@ -67,7 +61,10 @@
       $result.text(result);
       fadeOut();
    });
-   // Reset
 
-   // Event Listeners for buttons with functions nested!
+   // Prevents reload of page on click
+   document.getElementById('form').addEventListener('submit', (event) => {
+      event.preventDefault();
+   });
+   // Prevents reload of page on click
 })();
