@@ -169,6 +169,13 @@
   font-size: clamp(0.8rem, 3vw, 1rem);
 }
 
+.input__container .btn--calc {
+  border-radius: 50%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  font-size: clamp(0.8rem, 3vw, 1rem);
+}
+
 .result__container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -186,6 +193,17 @@
   text-align: center;
   gap: 1rem;
   color: black;
+}
+
+.result__container__text {
+  border-radius: 0.6rem;
+  border: 3px solid black;
+  padding: 0.2rem 1.5rem 0.2rem 1.5rem;
+  font-size: 1.45rem;
+  font-size: clamp(1.2rem, 3vw, 1.45rem);
+  font-weight: bold;
+  background: #3b3b3b;
+  color: #e4e4e4e9;
 }
 
 .result__container__text {
@@ -697,6 +715,17 @@ footer {
   padding: 1rem;
 }
 
+footer a {
+  font-size: 3rem;
+  font-size: clamp(2.4rem, 3vw, 3rem);
+  padding: 0.2rem;
+  color: var(--color-accent);
+  -webkit-transition: color var(--anim-speed), -webkit-transform var(--anim-speed);
+  transition: color var(--anim-speed), -webkit-transform var(--anim-speed);
+  transition: transform var(--anim-speed), color var(--anim-speed);
+  transition: transform var(--anim-speed), color var(--anim-speed), -webkit-transform var(--anim-speed);
+}
+
 footer .icons {
   z-index: 5;
   -webkit-box-orient: horizontal;
@@ -730,15 +759,8 @@ footer .icons__icon:hover, footer .icons__icon:focus {
           transform: scale(1.2);
 }
 
-footer a {
-  font-size: 3rem;
-  font-size: clamp(2.5rem, 3vw, 3rem);
-  padding: 0.2rem;
-  color: var(--color-accent);
-  -webkit-transition: color var(--anim-speed), -webkit-transform var(--anim-speed);
-  transition: color var(--anim-speed), -webkit-transform var(--anim-speed);
-  transition: transform var(--anim-speed), color var(--anim-speed);
-  transition: transform var(--anim-speed), color var(--anim-speed), -webkit-transform var(--anim-speed);
+footer .engoa {
+  position: relative;
 }
 
 footer .engoa a {
@@ -746,15 +768,35 @@ footer .engoa a {
   font-size: 0.8rem;
   margin-top: 0.5rem;
   font-weight: bold;
-  opacity: 0.8;
+  opacity: 0.9;
   text-decoration: none;
   -webkit-transition: all 150ms linear;
   transition: all 150ms linear;
-  padding: 1rem;
 }
 
 footer .engoa a:hover {
   opacity: 1;
+}
+
+footer .engoa::before {
+  content: '';
+  position: absolute;
+  background: var(--color-accent);
+  width: 0%;
+  top: 50%;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+  right: 0;
+  left: 0;
+  height: 2px;
+  -webkit-transition: width 150ms linear;
+  transition: width 150ms linear;
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+footer .engoa:hover::before {
+  width: 100%;
 }
 
 @media only screen and (max-width: 1600px) {

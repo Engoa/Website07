@@ -299,12 +299,20 @@ footer {
   justify-content: center;
   margin-top: 10rem;
   padding: 1rem;
+  a {
+    font-size: 3rem;
+    font-size: clamp(2.4rem, 3vw, 3rem);
+    padding: 0.2rem;
+    color: var(--color-accent);
+    transition: transform var(--anim-speed), color var(--anim-speed);
+  }
 
   .icons {
     z-index: 5;
     flex-direction: row;
     display: flex;
     gap: 1rem;
+
     &__facebook {
       color: #4267b2;
     }
@@ -326,26 +334,40 @@ footer {
     }
     // Scale on Hover for all social icons
   }
-  a {
-    font-size: 3rem;
-    font-size: clamp(2.5rem, 3vw, 3rem);
-    padding: 0.2rem;
-    color: var(--color-accent);
-    transition: transform var(--anim-speed), color var(--anim-speed);
-  }
 
-  .engoa a {
-    color: black;
-    font-size: 0.8rem;
-    margin-top: 0.5rem;
-    font-weight: bold;
-    opacity: 0.8;
-    text-decoration: none;
-    transition: all 150ms linear;
-    padding: 1rem;
+  .engoa {
+    position: relative;
 
-    &:hover {
-      opacity: 1;
+    a {
+      color: black;
+      font-size: 0.8rem;
+      margin-top: 0.5rem;
+      font-weight: bold;
+      opacity: 0.9;
+      text-decoration: none;
+      transition: all 150ms linear;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      background: var(--color-accent);
+      width: 0%;
+      top: 50%;
+      transform: translateY(50%);
+      right: 0;
+      left: 0;
+      height: 2px;
+      transition: width 150ms linear;
+      opacity: 0.55;
+      pointer-events: none;
+    }
+
+    &:hover::before {
+      width: 100%;
     }
   }
 }
