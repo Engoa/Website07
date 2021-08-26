@@ -711,8 +711,8 @@ footer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 10rem;
-  padding: 1rem;
+  height: 40vh;
+  gap: 0.3rem;
 }
 
 footer a {
@@ -766,9 +766,9 @@ footer .engoa {
 footer .engoa a {
   color: black;
   font-size: 0.8rem;
-  margin-top: 0.5rem;
+  font-size: clamp(0.7rem, 1vw, 0.8rem);
   font-weight: bold;
-  opacity: 0.9;
+  opacity: 0.85;
   text-decoration: none;
   -webkit-transition: all 150ms linear;
   transition: all 150ms linear;
@@ -895,8 +895,14 @@ footer .engoa:hover::before {
   nav .desktop {
     visibility: hidden;
   }
+  nav .desktop a {
+    font-size: 0;
+  }
   nav .mobilebtn {
     visibility: visible;
+  }
+  nav .mobilebtn a {
+    font-size: 0.7rem;
   }
   .container .image-container {
     -webkit-transform: rotate(0deg);
@@ -947,7 +953,6 @@ footer .engoa:hover::before {
   nav .hamburger-menu {
     color: black;
     cursor: pointer;
-    font-size: 1.3rem;
     position: absolute;
     right: 0;
     top: 1.5rem;
