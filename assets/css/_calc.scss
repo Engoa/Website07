@@ -97,7 +97,10 @@
          transition: opacity 100ms;
       }
       .btn--calc {
-         padding: 0.2rem 1rem 0.2rem 1rem;
+         border-radius: 50%;
+         padding: 0.5rem;
+         font-size: 1rem;
+         font-size: clamp(0.8rem, 3vw, 1rem);
       }
    }
 }
@@ -112,13 +115,13 @@
    color: black;
 
    &__text {
-      border-radius: 1rem;
+      border-radius: 0.6rem;
       border: 3px solid black;
       padding: 0.2rem 1.5rem 0.2rem 1.5rem;
-      font-size: 1.4rem;
-      font-size: clamp(1rem, 3vw, 1.4rem);
+      font-size: 1.45rem;
+      font-size: clamp(1.2rem, 3vw, 1.45rem);
       font-weight: bold;
       background: #3b3b3b;
-      color: #e4e4e4;
+      color: #e4e4e4e9;
    }
 }

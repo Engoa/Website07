@@ -163,7 +163,10 @@
 }
 
 .input__container .button__container .btn--calc {
-  padding: 0.2rem 1rem 0.2rem 1rem;
+  border-radius: 50%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  font-size: clamp(0.8rem, 3vw, 1rem);
 }
 
 .result__container {
@@ -186,14 +189,14 @@
 }
 
 .result__container__text {
-  border-radius: 1rem;
+  border-radius: 0.6rem;
   border: 3px solid black;
   padding: 0.2rem 1.5rem 0.2rem 1.5rem;
-  font-size: 1.4rem;
-  font-size: clamp(1rem, 3vw, 1.4rem);
+  font-size: 1.45rem;
+  font-size: clamp(1.2rem, 3vw, 1.45rem);
   font-weight: bold;
   background: #3b3b3b;
-  color: #e4e4e4;
+  color: #e4e4e4e9;
 }
 
 .result__container {
@@ -398,6 +401,7 @@ nav .desktop a {
   text-decoration: none;
   color: var(--color-accent);
   font-size: 1.65rem;
+  font-size: clamp(1.4rem, 2vw, 1.65rem);
 }
 
 nav .mobilebtn {
@@ -427,9 +431,8 @@ nav .mobilebtn {
 
 nav .mobilebtn a {
   font-weight: bold;
-  font-size: 0.75rem;
-  color: white;
-  opacity: 0.9;
+  font-size: 0.77rem;
+  color: #e4e4e4;
 }
 
 .container {
@@ -677,26 +680,60 @@ nav .mobilebtn a {
 
 footer {
   margin-top: 5rem;
-}
-
-footer .icons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 10rem;
+  padding: 1rem;
+}
+
+footer .icons {
   z-index: 5;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+}
+
+footer .icons__facebook {
+  color: #4267b2;
+}
+
+footer .icons__instagram {
+  color: #e1306c;
+}
+
+footer .icons__twitter {
+  color: #00acee;
+}
+
+footer .icons__icon:not(:hover) {
+  color: black;
+}
+
+footer .icons__icon:hover, footer .icons__icon:focus {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 footer a {
-  margin-top: 5rem;
-  font-size: 3.5rem;
-  padding: 1rem;
+  font-size: 3rem;
+  font-size: clamp(2.5rem, 3vw, 3rem);
+  padding: 0.2rem;
   color: var(--color-accent);
   -webkit-transition: color var(--anim-speed), -webkit-transform var(--anim-speed);
   transition: color var(--anim-speed), -webkit-transform var(--anim-speed);
@@ -704,25 +741,20 @@ footer a {
   transition: transform var(--anim-speed), color var(--anim-speed), -webkit-transform var(--anim-speed);
 }
 
-.icons__facebook {
-  color: #4267b2;
-}
-
-.icons__instagram {
-  color: #e1306c;
-}
-
-.icons__twitter {
-  color: #00acee;
-}
-
-.icons__icon:not(:hover), .icons__icon:active {
+footer .engoa a {
   color: black;
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+  font-weight: bold;
+  opacity: 0.8;
+  text-decoration: none;
+  -webkit-transition: all 150ms linear;
+  transition: all 150ms linear;
+  padding: 1rem;
 }
 
-.icons__icon:hover, .icons__icon:focus {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+footer .engoa a:hover {
+  opacity: 1;
 }
 
 @media only screen and (max-width: 1600px) {
@@ -733,7 +765,7 @@ footer a {
   }
 }
 
-@media only screen and (max-width: 1600px) and (max-width: 1300px) {
+@media only screen and (max-width: 1300px) {
   @-webkit-keyframes bar-load {
     0% {
       height: 0%;
@@ -801,7 +833,7 @@ footer a {
   }
 }
 
-@media only screen and (max-width: 1600px) and (max-width: 950px) {
+@media only screen and (max-width: 950px) {
   @-webkit-keyframes bar-load {
     0% {
       height: 0%;
@@ -890,32 +922,21 @@ footer a {
   nav .link::before {
     background: white;
   }
+  .icons__icon:active {
+    color: black;
+  }
 }
 
-@media only screen and (max-width: 1600px) {
-  @-webkit-keyframes loadPage {
-    0% {
-      -webkit-transform: translateY(-12rem);
-              transform: translateY(-12rem);
-      opacity: 0;
-    }
-    100% {
-      -webkit-transform: translateY(0);
-              transform: translateY(0);
-      opacity: 1;
-    }
+@keyframes loadPage {
+  0% {
+    -webkit-transform: translateY(-12rem);
+            transform: translateY(-12rem);
+    opacity: 0;
   }
-  @keyframes loadPage {
-    0% {
-      -webkit-transform: translateY(-12rem);
-              transform: translateY(-12rem);
-      opacity: 0;
-    }
-    100% {
-      -webkit-transform: translateY(0);
-              transform: translateY(0);
-      opacity: 1;
-    }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
   }
 }
 
