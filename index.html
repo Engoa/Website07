@@ -1,68 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8" />
-      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="stylesheet" href="assets/css/main.css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/main.css" />
 
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-      <link
-         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap"
-         rel="stylesheet"
-      />
-      <script
-         src="https://code.jquery.com/jquery-3.6.0.min.js"
-         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-         crossorigin="anonymous"
-      ></script>
-      <script src="https://kit.fontawesome.com/9a80e50f42.js" crossorigin="anonymous"></script>
-      <meta name="color-scheme" content="dark" />
-      <title>Playstation Store</title>
-   </head>
-   <body>
-      <nav>
-         <div class="logo">
-            <a href="#" onclick="closeNav()"
-               ><img src="/images/logo.png" alt="Playstation Logo"
-            /></a>
-         </div>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://kit.fontawesome.com/9a80e50f42.js" crossorigin="anonymous"></script>
+    <script src="/assets/js/main.js" defer></script>
+    <script src="/assets/js/router.js" defer></script>
+    <meta name="color-scheme" content="dark" />
+    <title>Playstation Store</title>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <a href="#" onclick="closeNav()"><img src="/images/logo.png" alt="Playstation Logo" /></a>
+      </div>
 
-         <div class="navlinks">
-            <div>
-               <ul class="desktop" id="menuList">
-                  <li class="controllers link">
-                     <a onclick="closeNav()" href="#calc">Calculator</a>
-                  </li>
-                  <li class="consoles link">
-                     <a onclick="closeNav()" href="#equation">Quad Equation</a>
-                  </li>
-                  <li class="accessories link">
-                     <a onclick="closeNav()" href="#fruitshop">Apple Shop</a>
-                  </li>
-                  <li class="contact link"><a onclick="closeNav()" href="#">Contact</a></li>
-               </ul>
-            </div>
+      <div class="navlinks">
+        <div>
+          <ul class="desktop" id="menuList">
+            <li class="controllers link">
+              <a onclick="closeNav()" href="#calc">Calculator</a>
+            </li>
+            <li class="consoles link">
+              <a onclick="closeNav()" href="#equation">Quad Equation</a>
+            </li>
+            <li class="accessories link">
+              <a onclick="closeNav()" href="#fruitshop">Apple Shop</a>
+            </li>
+            <li class="contact link"><a onclick="closeNav()" href="#">Contact</a></li>
+          </ul>
+        </div>
 
-            <i class="fas fa-bars hamburger-menu" id="menubtn" onclick="menuToggle()"></i>
-         </div>
-      </nav>
+        <i class="fas fa-bars hamburger-menu" id="menubtn" onclick="menuToggle()"></i>
+      </div>
+    </nav>
 
-      <div id="app"></div>
+    <div id="app"></div>
 
-      <footer>
-         <div class="icons">
-            <a class="icons__facebook icons__icon" href="#"
-               ><i class="fab fa-facebook-square"></i
-            ></a>
-            <a class="icons__instagram icons__icon" href="#"
-               ><i class="fab fa-instagram-square"></i
-            ></a>
-            <a class="icons__twitter icons__icon" href="#"><i class="fab fa-twitter-square"></i></a>
-         </div>
-      </footer>
-
-      <script src="/assets/js/main.js"></script>
-      <script src="/assets/js/router.js"></script>
-   </body>
+    <footer>
+      <div class="icons">
+        <a class="icons__facebook icons__icon" href="https://www.facebook.com/" target="__blank"
+          ><i class="fab fa-facebook-square"></i
+        ></a>
+        <a
+          class="icons__instagram icons__icon"
+          href="https://www.instagram.com/idobenzaken1/"
+          target="__blank"
+          ><i class="fab fa-instagram-square"></i
+        ></a>
+        <a class="icons__twitter icons__icon" href="https://twitter.com/Engoa97" target="__blank"
+          ><i class="fab fa-twitter-square"></i
+        ></a>
+      </div>
+      <div class="engoa">
+        <a href="https://www.linkedin.com/in/idobenzaken/" target="__blank"
+          ><span>By Engoa</span>
+        </a>
+      </div>
+    </footer>
+  </body>
 </html>

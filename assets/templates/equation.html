@@ -1,57 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head> </head>
-   <body>
-      <main class="calc__container">
-         <div class="calc__container__header">
-            <h1>Please Input any numbers to calculate the result:</h1>
-         </div>
-         <form id="form">
-            <div class="input__container">
-               <div>
-                  <input
-                     class="input--rounded"
-                     id="aInput"
-                     placeholder="Enter a value for A"
-                     type="number"
-                     step="0.01"
-                  />
-                  <input
-                     class="input--rounded"
-                     id="bInput"
-                     placeholder="Enter a value for B"
-                     type="number"
-                     step="0.01"
-                  />
-                  <input
-                     class="input--rounded"
-                     id="cInput"
-                     placeholder="Enter a negative value for C"
-                     type="number"
-                     step="0.01"
-                     max="-1"
-                  />
-               </div>
-               <div class="button__container">
-                  <button type="submit" class="btn--rounded" id="btnCalc">
-                     <i class="fas fa-calculator button__container__icon"></i>
-                  </button>
-               </div>
+  <head> </head>
+  <body>
+    <main class="calc__container">
+      <div class="calc__container__header">
+        <h1>Please Input any numbers to calculate the result:</h1>
+      </div>
+      <form id="form">
+        <div class="input__container">
+          <div>
+            <input
+              class="input--rounded"
+              id="aInput"
+              placeholder="Enter a value for A"
+              type="number"
+              step="0.01"
+            />
+            <input
+              class="input--rounded"
+              id="bInput"
+              placeholder="Enter a value for B"
+              type="number"
+              step="0.01"
+            />
+            <input
+              class="input--rounded"
+              id="cInput"
+              placeholder="Enter a negative value for C"
+              type="number"
+              step="0.01"
+              max="-1"
+            />
+          </div>
+          <div class="button__container">
+            <button type="submit" class="btn--rounded" id="btnCalc">
+              <i class="fas fa-calculator button__container__icon"></i>
+            </button>
+          </div>
 
-               <div class="result__container">
-                  <span class="result__container__text result__container__equation" id="firstRoot"
-                     >x1: 0</span
-                  >
-                  <span class="result__container__text result__container__equation" id="secondRoot"
-                     >x2: 0</span
-                  >
-               </div>
-            </div>
+          <div class="result__container">
+            <span class="result__container__text result__container__equation" id="firstRoot"
+              >x1: 0</span
+            >
+            <span class="result__container__text result__container__equation" id="secondRoot"
+              >x2: 0</span
+            >
+          </div>
+        </div>
 
-            <div class="image__container">
-               <img src="/images/equation.png" alt="Equation Image" />
-            </div>
-         </form>
-      </main>
-   </body>
+        <div class="image__container">
+          <img src="/images/equation.png" alt="Equation Image" />
+        </div>
+      </form>
+    </main>
+  </body>
 </html>
