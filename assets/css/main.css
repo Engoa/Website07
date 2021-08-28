@@ -1228,7 +1228,7 @@ footer {
 
 footer a {
   font-size: 3rem;
-  font-size: clamp(2.4rem, 3vw, 3rem);
+  font-size: clamp(2.6rem, 3vw, 3rem);
   padding: 0.2rem;
   color: var(--color-accent);
   -webkit-transition: color var(--anim-speed), -webkit-transform var(--anim-speed);
@@ -1276,8 +1276,8 @@ footer .engoa {
 
 footer .engoa a {
   color: black;
-  font-size: 0.8rem;
-  font-size: clamp(0.7rem, 1vw, 0.8rem);
+  font-size: 0.85rem;
+  font-size: clamp(0.75rem, 1vw, 0.85rem);
   font-weight: bold;
   opacity: 0.85;
   text-decoration: none;
