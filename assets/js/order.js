@@ -8,6 +8,8 @@
   const zipCode = document.getElementById('zipcode');
   const totalResultElement = document.getElementById('cost');
   const orderDescription = document.getElementById('description');
+  const youtubePlayer = document.getElementById('player');
+  
 
   const checkBoxes = document.querySelectorAll('input[type=checkbox]');
   let totalValue = 0;
@@ -52,6 +54,7 @@
   formElement.addEventListener('submit', (event) => {
     event.preventDefault();
     getUserDetails();
+    youtubePlayer.classList.toggle('hide');
   });
   // Submit form
 
@@ -62,6 +65,7 @@
     totalValue = 0;
     totalResultElement.innerText = 'Goodbye :)';
     totalResultElement === totalValue;
+    youtubePlayer.classList.toggle('hide');
   });
   // Reset button
 })();

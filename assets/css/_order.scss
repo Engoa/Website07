@@ -339,6 +339,20 @@
   }
 }
 
+.youtubeplayer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.show {
+  display: flex;
+}
+.hide {
+  display: none;
+}
+
+
 @include media('<smd') {
   .main__container {
     &__items {
