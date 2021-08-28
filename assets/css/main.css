@@ -331,10 +331,9 @@
 }
 
 .main__container__header {
-  background: var(--color-btn2);
+  color: #d3436c;
   -webkit-background-clip: text;
   background-clip: text;
-  color: transparent;
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
   display: block;
@@ -342,18 +341,17 @@
 
 .main__container__label {
   color: black;
-  font-size: 1.2rem;
-  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-size: 1.25rem;
+  font-size: clamp(1.1rem, 2vw, 1.25rem);
   -webkit-transition: all 100ms linear;
   transition: all 100ms linear;
 }
 
 .main__container__label:focus-within {
   font-weight: bold;
-  background: var(--color-btn2);
+  color: #d3436c;
   -webkit-background-clip: text;
   background-clip: text;
-  color: transparent;
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
 }
@@ -394,10 +392,9 @@
           box-shadow: var(--box-shadow);
   -webkit-transform: scale(1.03);
           transform: scale(1.03);
-  background: var(--color-btn2);
+  color: #d3436c;
   -webkit-background-clip: text;
   background-clip: text;
-  color: transparent;
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
   font-weight: bold;
@@ -430,10 +427,9 @@
 .main__container__select:focus-within, .main__container__select:active {
   background: #e4e4e4;
   width: 280px;
-  background: var(--color-btn2);
+  color: #d3436c;
   -webkit-background-clip: text;
   background-clip: text;
-  color: transparent;
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
   color: #c72159fd;
@@ -504,10 +500,9 @@
   font-weight: bold;
   -webkit-transform: scale(1.03);
           transform: scale(1.03);
-  background: var(--color-btn2);
+  color: #d3436c;
   -webkit-background-clip: text;
   background-clip: text;
-  color: transparent;
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
 }
@@ -557,14 +552,13 @@
 
 .main__container__result {
   color: black;
-  font-size: 1.4rem;
-  font-size: clamp(1.2rem, 2vw, 1.4rem);
+  font-size: 1.5rem;
+  font-size: clamp(1.3rem, 2vw, 1.5rem);
   margin-top: 2rem;
   text-align: center;
-  background: var(--color-btn2);
+  color: #d3436c;
   -webkit-background-clip: text;
   background-clip: text;
-  color: transparent;
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
 }
@@ -610,10 +604,9 @@
 .main__container__buttons button:hover, .main__container__buttons button:focus {
   outline: 2px solid black;
   outline-offset: -1px;
-  background: var(--color-btn2);
+  color: #d3436c;
   -webkit-background-clip: text;
   background-clip: text;
-  color: transparent;
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
 }
@@ -638,10 +631,9 @@
   left: 45%;
   -webkit-transform: scale(0);
           transform: scale(0);
-  background: var(--color-btn2);
+  color: #d3436c;
   -webkit-background-clip: text;
   background-clip: text;
-  color: transparent;
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
   -webkit-transition: all 150ms linear;
@@ -798,6 +790,8 @@
 .main__container__description h2 {
   margin-bottom: 1rem;
   text-transform: uppercase;
+  font-size: 1.35rem;
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
 }
 
 .main__container__description__text {
@@ -808,8 +802,8 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  font-size: 1.3rem;
-  font-size: clamp(1rem, 2vw, 1.3rem);
+  font-size: 1rem;
+  font-size: clamp(0.9rem, 2vw, 1rem);
   font-weight: bold;
 }
 
@@ -827,7 +821,7 @@
   --color-accent: rgba(0, 0, 0, 0.9);
   --color-main: linear-gradient(to right top, #b13c89, #bb4382, #c34c7c, #c95677, #ce6073);
   --color-main2: linear-gradient(to right top, #65dfc9, #6cdbeb);
-  --color-btn: linear-gradient(to left, #b13c89, #bb4382, #c34c7c, #c95677, #ce6073);
+  --color-btn: linear-gradient(to left, #b13c89, #bb4382, #c34c7c, #c95677, #d86c7e);
   --color-btn2: linear-gradient(to left, #d1399c, #b43677, #d83d7b, #d3436c, #e04b63);
   --box-shadow: -6px 3px 6px rgba(0, 0, 0, 0.63);
   --anim-speed: 300ms ease;

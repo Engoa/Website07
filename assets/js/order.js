@@ -38,9 +38,11 @@
     let cityValue = city.value;
     let addressValue = address.value;
     let zipCodeValue = +zipCode.value;
-    let userDetails = ` First Name: ${fnameValue}
+    let userDetails = `
+    First Name: ${fnameValue}
     Last Name: ${lnameValue}
-    City: ${cityValue},  Country: ${userSelected}
+    City: ${cityValue}
+    Country: ${userSelected}
     Address: ${addressValue}
     ZIPCode: ${zipCodeValue}`;
     orderDescription.innerText = userDetails;

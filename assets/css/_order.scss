@@ -1,21 +1,20 @@
 @import 'breakpoints';
 
 @mixin gradientClr {
-  background: var(--color-btn2);
+  color: #d3436c;
   -webkit-background-clip: text;
   background-clip: text;
-  color: transparent;
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
 }
 @mixin gradientClr2 {
-  background: var(--color-main2);
+  color: #d86c7e;
   -webkit-background-clip: text;
   background-clip: text;
-  color: transparent;
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
 }
+
 .main__container {
   margin-top: 3rem;
   display: flex;
@@ -32,8 +31,8 @@
   }
   &__label {
     color: black;
-    font-size: 1.2rem;
-    font-size: clamp(1rem, 2vw, 1.2rem);
+    font-size: 1.25rem;
+    font-size: clamp(1.1rem, 2vw, 1.25rem);
     transition: all 100ms linear;
 
     &:focus-within {
@@ -181,8 +180,8 @@
 
   &__result {
     color: black;
-    font-size: 1.4rem;
-    font-size: clamp(1.2rem, 2vw, 1.4rem);
+    font-size: 1.5rem;
+    font-size: clamp(1.3rem, 2vw, 1.5rem);
     margin-top: 2rem;
     text-align: center;
     @include gradientClr();
@@ -313,12 +312,14 @@
   h2 {
     margin-bottom: 1rem;
     text-transform: uppercase;
+    font-size: 1.35rem;
+    font-size: clamp(1.1rem, 2vw, 1.35rem);
   }
   &__text {
     display: flex;
     flex-direction: column;
-    font-size: 1.3rem;
-    font-size: clamp(1rem, 2vw, 1.3rem);
+    font-size: 1rem;
+    font-size: clamp(0.9rem, 2vw, 1rem);
     font-weight: bold;
   }
 }
