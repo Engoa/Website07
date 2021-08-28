@@ -5,12 +5,16 @@
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
 }
 @mixin gradientClr2 {
   background: var(--color-main2);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
 }
 .main__container {
   margin-top: 3rem;
@@ -110,7 +114,7 @@
     animation: itemsload 1s ease;
 
     &__chevron {
-      transition: transform 150ms linear 50ms;
+      transition: transform 150ms linear;
       color: black;
       transform: scale(0.9);
     }
