@@ -451,10 +451,12 @@
 }
 
 .main__container__items__chevron {
-  -webkit-transition: -webkit-transform 150ms linear;
-  transition: -webkit-transform 150ms linear;
-  transition: transform 150ms linear;
-  transition: transform 150ms linear, -webkit-transform 150ms linear;
+  font-size: 1.5rem;
+  font-size: clamp(1.35rem, 2vw, 1.5rem);
+  -webkit-transition: -webkit-transform 250ms linear;
+  transition: -webkit-transform 250ms linear;
+  transition: transform 250ms linear;
+  transition: transform 250ms linear, -webkit-transform 250ms linear;
   color: black;
   -webkit-transform: scale(0.9);
           transform: scale(0.9);
@@ -492,8 +494,8 @@
 
 .main__container__items label:hover .main__container__items__chevron,
 .main__container__items label:focus .main__container__items__chevron {
-  -webkit-transform: translateY(10px) scale(1.05);
-          transform: translateY(10px) scale(1.05);
+  -webkit-transform: translateY(8px) scale(1.05);
+          transform: translateY(8px) scale(1.05);
 }
 
 .main__container__items label:hover, .main__container__items label:focus {
@@ -790,8 +792,8 @@
 .main__container__description h2 {
   margin-bottom: 1rem;
   text-transform: uppercase;
-  font-size: 1.35rem;
-  font-size: clamp(1.1rem, 2vw, 1.35rem);
+  font-size: 1.4rem;
+  font-size: clamp(1.2rem, 2vw, 1.4rem);
 }
 
 .main__container__description__text {
@@ -802,12 +804,12 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  font-size: 1rem;
-  font-size: clamp(0.9rem, 2vw, 1rem);
+  font-size: 1.2rem;
+  font-size: clamp(1.1rem, 2vw, 1.2rem);
   font-weight: bold;
 }
 
-@media (max-width: 549px) {
+@media (max-width: 899px) {
   .main__container__items {
     gap: 1rem;
     -webkit-box-orient: vertical;

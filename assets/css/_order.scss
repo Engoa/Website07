@@ -113,7 +113,9 @@
     animation: itemsload 1s ease;
 
     &__chevron {
-      transition: transform 150ms linear;
+      font-size: 1.5rem;
+      font-size: clamp(1.35rem, 2vw, 1.5rem);
+      transition: transform 250ms linear;
       color: black;
       transform: scale(0.9);
     }
@@ -137,7 +139,7 @@
 
       &:hover .main__container__items__chevron,
       &:focus .main__container__items__chevron {
-        transform: translateY(10px) scale(1.05);
+        transform: translateY(8px) scale(1.05);
       }
       &:hover,
       &:focus {
@@ -312,14 +314,14 @@
   h2 {
     margin-bottom: 1rem;
     text-transform: uppercase;
-    font-size: 1.35rem;
-    font-size: clamp(1.1rem, 2vw, 1.35rem);
+    font-size: 1.4rem;
+    font-size: clamp(1.2rem, 2vw, 1.4rem);
   }
   &__text {
     display: flex;
     flex-direction: column;
-    font-size: 1rem;
-    font-size: clamp(0.9rem, 2vw, 1rem);
+    font-size: 1.2rem;
+    font-size: clamp(1.1rem, 2vw, 1.2rem);
     font-weight: bold;
   }
 }
