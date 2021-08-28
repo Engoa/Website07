@@ -27,7 +27,6 @@
     });
   });
 
-  
   // Get users details for order
   let userSelected = 0;
   dropDownMenu.addEventListener('change', (event) => {
@@ -62,7 +61,7 @@
     totalValue = 0;
     totalResultElement.innerText = 'Goodbye :)';
     totalResultElement === totalValue;
-    youtubePlayer.classList.toggle('hide');
+    youtubePlayer.remove();
   });
   // Reset button
 })();

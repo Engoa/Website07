@@ -26,8 +26,7 @@
   overflow: hidden;
 
   &__header {
-    @include gradientClr();
-    display: block;
+    color: black;
   }
   &__label {
     color: black;
@@ -209,7 +208,6 @@
     margin-top: 3rem;
 
     button {
-      display: block;
       font-family: 'Montserrat', sans-serif;
       border: none;
       cursor: pointer;
