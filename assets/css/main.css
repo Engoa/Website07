@@ -455,8 +455,8 @@
 .main__container__items label {
   margin-top: 2rem;
   color: black;
-  font-size: 2rem;
-  font-size: clamp(1.5rem, 2vw, 2rem);
+  font-size: 1.8rem;
+  font-size: clamp(1.4rem, 2vw, 1.8rem);
   padding: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -517,8 +517,8 @@
 
 .main__container__items input[type='checkbox']:checked + label > img {
   border: 1px solid #fff;
-  -webkit-box-shadow: 0 0 3px 3px #0c73d3;
-          box-shadow: 0 0 3px 3px #0c73d3;
+  -webkit-box-shadow: 0 0 3px 3px #eb355c;
+          box-shadow: 0 0 3px 3px #eb355c;
 }
 
 .main__container__items input[type='checkbox'] + label > img {
@@ -557,6 +557,7 @@
 }
 
 .main__container__buttons {
+  padding: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -588,6 +589,7 @@
   transition: all 150ms linear;
   -webkit-box-shadow: -2px 5px 1rem rgba(0, 0, 0, 0.6);
           box-shadow: -2px 5px 1rem rgba(0, 0, 0, 0.6);
+  font-weight: bold;
 }
 
 .main__container__buttons button:hover, .main__container__buttons button:focus {
@@ -599,7 +601,6 @@
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  font-weight: bold;
 }
 
 .main__container__buttons button:hover::before, .main__container__buttons button:focus::before {
@@ -631,13 +632,18 @@
 }
 
 #anim2 {
-  -webkit-animation: image2 2s ease;
-          animation: image2 2s ease;
+  -webkit-animation: image2 2.2s ease;
+          animation: image2 2.2s ease;
 }
 
 #anim3 {
-  -webkit-animation: image3 1.5s ease;
-          animation: image3 1.5s ease;
+  -webkit-animation: image3 2s ease;
+          animation: image3 2s ease;
+}
+
+#anim4 {
+  -webkit-animation: image4 1.5s ease;
+          animation: image4 1.5s ease;
 }
 
 @-webkit-keyframes image1 {
@@ -695,6 +701,32 @@
 @-webkit-keyframes image3 {
   0% {
     opacity: 0;
+    -webkit-transform: translateY(-25rem);
+            transform: translateY(-25rem);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes image3 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-25rem);
+            transform: translateY(-25rem);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes image4 {
+  0% {
+    opacity: 0;
     -webkit-transform: translateY(-20rem);
             transform: translateY(-20rem);
   }
@@ -705,7 +737,7 @@
   }
 }
 
-@keyframes image3 {
+@keyframes image4 {
   0% {
     opacity: 0;
     -webkit-transform: translateY(-20rem);
@@ -733,7 +765,7 @@
   --color-main: linear-gradient(to right top, #b13c89, #bb4382, #c34c7c, #c95677, #ce6073);
   --color-main2: linear-gradient(to right top, #65dfc9, #6cdbeb);
   --color-btn: linear-gradient(to left, #b13c89, #bb4382, #c34c7c, #c95677, #ce6073);
-  --color-btn2: linear-gradient(to left, #d1399c, #b43677, #d83d7b, #ec4b79, #e04b63);
+  --color-btn2: linear-gradient(to left, #d1399c, #b43677, #d83d7b, #d3436c, #e04b63);
   --box-shadow: -6px 3px 6px rgba(0, 0, 0, 0.63);
   --anim-speed: 300ms ease;
 }

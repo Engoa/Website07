@@ -108,8 +108,8 @@
     label {
       margin-top: 2rem;
       color: black;
-      font-size: 2rem;
-      font-size: clamp(1.5rem, 2vw, 2rem);
+      font-size: 1.8rem;
+      font-size: clamp(1.4rem, 2vw, 1.8rem);
       padding: 1rem;
       display: flex;
       flex-direction: column;
@@ -146,7 +146,7 @@
 
     input[type='checkbox']:checked + label > img {
       border: 1px solid #fff;
-      box-shadow: 0 0 3px 3px #0c73d3;
+      box-shadow: 0 0 3px 3px #eb355c;
     }
     input[type='checkbox'] + label > img {
       margin-top: 1rem;
@@ -159,7 +159,6 @@
       border-radius: 50%;
       border: transparent solid 2px;
       box-shadow: var(--box-shadow);
-      
     }
     input[type='checkbox']:checked + label > img {
       transform: scale(1.05);
@@ -178,6 +177,7 @@
   }
 
   &__buttons {
+    padding: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -197,6 +197,7 @@
       position: relative;
       transition: all 150ms linear;
       box-shadow: -2px 5px 1rem rgba(black, 0.6);
+      font-weight: bold;
 
       &:hover,
       &:focus {
@@ -204,7 +205,6 @@
         outline: 2px solid black;
         outline-offset: -1px;
         @include gradientClr();
-        font-weight: bold;
       }
 
       &:hover::before,
@@ -231,11 +231,14 @@
   animation: image1 2.5s ease;
 }
 #anim2 {
-  animation: image2 2s ease;
+  animation: image2 2.2s ease;
 }
 
 #anim3 {
-  animation: image3 1.5s ease;
+  animation: image3 2s ease;
+}
+#anim4 {
+  animation: image4 1.5s ease;
 }
 @keyframes image1 {
   0% {
@@ -258,6 +261,16 @@
   }
 }
 @keyframes image3 {
+  0% {
+    opacity: 0;
+    transform: translateY(-25rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes image4 {
   0% {
     opacity: 0;
     transform: translateY(-20rem);
