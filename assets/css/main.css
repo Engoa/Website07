@@ -593,14 +593,17 @@
 }
 
 .main__container__buttons button:hover, .main__container__buttons button:focus {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
   outline: 2px solid black;
   outline-offset: -1px;
   background: var(--color-btn2);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+}
+
+.main__container__buttons button:active {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .main__container__buttons button:hover::before, .main__container__buttons button:focus::before {

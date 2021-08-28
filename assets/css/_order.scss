@@ -201,10 +201,13 @@
 
       &:hover,
       &:focus {
-        transform: scale(1.05);
         outline: 2px solid black;
         outline-offset: -1px;
         @include gradientClr();
+      }
+
+      &:active {
+        transform: scale(1.1);
       }
 
       &:hover::before,
