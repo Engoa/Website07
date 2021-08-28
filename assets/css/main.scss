@@ -10,6 +10,10 @@
 //    }
 // }
 
+
+html {
+  scroll-behavior: smooth;
+}
 :root {
   --color-accent: rgba(0, 0, 0, 0.9);
   --color-main: linear-gradient(to right top, #b13c89, #bb4382, #c34c7c, #c95677, #ce6073);
