@@ -7,7 +7,6 @@
   const address = document.getElementById('address');
   const zipCode = document.getElementById('zipcode');
   const totalResultElement = document.getElementById('cost');
-  const orderDescription = document.getElementById('description');
   const youtubePlayer = document.getElementById('player');
 
   const checkBoxes = document.querySelectorAll('input[type=checkbox]');
@@ -28,8 +27,8 @@
     });
   });
 
+  
   // Get users details for order
-
   let userSelected = 0;
   dropDownMenu.addEventListener('change', (event) => {
     userSelected = event.target.value;
@@ -44,7 +43,6 @@
       address: address.value,
       zipcode: zipCode.value,
     };
-    orderDescription.innerText = JSON.stringify(orderDetails, null, 4);
     console.log(orderDetails);
   }
   // Get users details for order
