@@ -1,3 +1,5 @@
+
+
 // Hide/Show Navigation bar on mobile/desktop
 const menuList = document.getElementById('menuList');
 const closeNavElement = document.getElementById('closenav');

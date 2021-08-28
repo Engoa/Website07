@@ -1,0 +1,289 @@
+@import 'breakpoints';
+
+@mixin gradientClr {
+  background: var(--color-btn2);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.main__container {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  align-items: center;
+  justify-content: center;
+
+  &__header {
+    @include gradientClr();
+  }
+  &__label {
+    color: black;
+    font-size: 1.2rem;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    transition: all 100ms linear;
+
+    &:focus-within {
+      font-weight: bold;
+      @include gradientClr();
+    }
+  }
+  &__input {
+    margin-left: 0.5rem;
+    margin-top: 0.3rem;
+    border: 2px solid rgba(255, 255, 255, 0.432);
+    outline: none;
+    width: 200px;
+    padding: 0.1rem 1rem;
+    height: 40px;
+    border-radius: 1.5rem;
+    font-size: 16px;
+    color: #e4e4e4;
+    font-family: 'Montserrat', sns-serif;
+    transition: all 150ms linear;
+
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+      appearance: none;
+      -webkit-appearance: none;
+    }
+
+    &:focus,
+    &:active {
+      border: solid 2px #da179985;
+      box-shadow: var(--box-shadow);
+      transform: scale(1.03);
+      @include gradientClr();
+      font-weight: bold;
+    }
+  }
+
+  &__name {
+    width: 200px;
+  }
+
+  &__select {
+    position: relative;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 2rem;
+    padding: 0.1rem 1rem;
+    outline: none;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    transition: all 0.5s;
+    width: 0;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
+    background-repeat: no-repeat;
+    background-position: right 0.75em top 50%;
+    background-size: 0.6em auto;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    text-align-last: center;
+    text-align: center;
+    margin-left: 1.5rem;
+
+    &:focus-within,
+    &:active {
+      background: #e4e4e4;
+      width: 200px;
+      @include gradientClr();
+      color: #c72159fd;
+    }
+  }
+
+  &__items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6rem;
+    animation: itemsload 1s ease;
+
+    &__chevron {
+      transition: transform 150ms linear 50ms;
+      color: black;
+      transform: scale(0.9);
+    }
+
+    label {
+      margin-top: 2rem;
+      color: black;
+      font-size: 2rem;
+      font-size: clamp(1.4rem, 2vw, 2rem);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      max-width: 130px;
+      cursor: pointer;
+      transition: transform 300ms linear;
+      position: relative;
+      z-index: 1;
+
+      &:hover .main__container__items__chevron,
+      &:focus .main__container__items__chevron {
+        transform: translateY(10px) scale(1.05);
+      }
+      &:hover,
+      &:focus {
+        font-weight: bold;
+        transform: scale(1.03);
+        @include gradientClr();
+      }
+    }
+
+    &__item {
+      align-items: center;
+      justify-content: center;
+      display: flex;
+    }
+    &__hidden {
+      position: absolute;
+      left: -9999px;
+    }
+
+    input[type='checkbox']:checked + label > img {
+      border: 1px solid #fff;
+      box-shadow: 0 0 3px 3px #0c73d3;
+    }
+    input[type='checkbox'] + label > img {
+      margin-top: 1rem;
+      cursor: pointer;
+      width: 270px;
+      height: 270px;
+      background-size: contain;
+      background-position: center;
+      transition: 300ms all;
+      border-radius: 50%;
+      border: transparent solid 2px;
+      box-shadow: var(--box-shadow);
+    }
+    input[type='checkbox']:checked + label > img {
+      transform: scale(1.05);
+    }
+  }
+
+  &__result {
+    color: black;
+    font-weight: bold;
+    font-size: 1.4rem;
+    font-size: clamp(1.2rem, 2vw, 1.4rem);
+    margin-top: 2rem;
+    text-align: center;
+    transform: scale(1.03);
+    @include gradientClr();
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 1.5rem;
+    margin-top: 3rem;
+
+    button {
+      font-family: 'Montserrat', sans-serif;
+      border: none;
+      cursor: pointer;
+      padding: 1rem 1.2rem;
+      border-radius: 0.25rem;
+      font-size: 1rem;
+      color: #e4e4e4;
+      text-align: center;
+      position: relative;
+      transition: all 150ms linear;
+      box-shadow: -2px 5px 1rem rgba(black, 0.6);
+
+      &:hover,
+      &:focus {
+        transform: scale(1.05);
+        outline: 2px solid black;
+        outline-offset: -1px;
+        @include gradientClr();
+        font-weight: bold;
+      }
+
+      &:hover::before,
+      &:focus::before {
+        transform: scale(1);
+      }
+
+      &::before {
+        position: absolute;
+        content: '\f077';
+        font-family: 'Font Awesome 5 Free';
+        font-weight: bold;
+        bottom: 3%;
+        font-size: 0.9rem;
+        left: 45%;
+        transform: scale(0);
+        @include gradientClr();
+        transition: all 150ms linear;
+      }
+    }
+  }
+}
+#anim1 {
+  animation: image1 2.5s ease;
+}
+#anim2 {
+  animation: image2 2s ease;
+}
+
+#anim3 {
+  animation: image3 1.5s ease;
+}
+@keyframes image1 {
+  0% {
+    opacity: 0;
+    transform: translateY(-35rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes image2 {
+  0% {
+    opacity: 0;
+    transform: translateY(-30rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes image3 {
+  0% {
+    opacity: 0;
+    transform: translateY(-20rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@include media('<smd') {
+  .main__container {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+    &__select {
+      margin: 0;
+    }
+    &__input {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+    &__items {
+      flex-direction: column;
+    }
+  }
+}
