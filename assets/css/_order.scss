@@ -70,6 +70,7 @@
       box-shadow: var(--box-shadow);
       transform: scale(1.03);
       @include gradientClr();
+      color: #3b3b3b;
       font-weight: bold;
     }
   }
@@ -351,7 +352,6 @@
 .hide {
   display: none;
 }
-
 
 @include media('<smd') {
   .main__container {

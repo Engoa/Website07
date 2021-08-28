@@ -9,7 +9,6 @@
   const totalResultElement = document.getElementById('cost');
   const orderDescription = document.getElementById('description');
   const youtubePlayer = document.getElementById('player');
-  
 
   const checkBoxes = document.querySelectorAll('input[type=checkbox]');
   let totalValue = 0;
