@@ -2,7 +2,7 @@
 <html lang="en">
   <head></head>
   <body>
-    <form id="form" required>
+    <form id="form" required spellcheck="false">
       <div class="main__container">
         <div class="main__container__header">
           <h1>Fill the order: </h1>
@@ -405,23 +405,26 @@
           </div>
         </div>
       </div>
-        <div class="main__container__result" id="result">
-          <p class="main__container__result__cost">
-            Total Amount:
-            <p id="cost" class="main__container__result__cost">0$</p>
-          </p>
-        </div>
-        <div class="main__container__buttons">
-          <div>
-            <button id="submitbtn" type="submit">Finish</button>
-          </div>
-          <div>
-            <button id="resetbtn" type="reset">Reset</button>
-          </div>
-        </div>
-
-        <div class="main__container__description"></div>
+      <div class="main__container__result" id="result">
+        <p class="main__container__result__cost">
+          Total Amount:
+          <p id="cost" class="main__container__result__cost">0$</p>
+        </p>
       </div>
-    </form>
+      <div class="main__container__buttons">
+        <div>
+          <button id="submitbtn" type="submit">Finish</button>
+        </div>
+        <div>
+          <button id="resetbtn" type="reset">Reset</button>
+        </div>
+      </div>
+      
+    </div>
+  </form>
+  <div class="main__container__description">
+    <h2>Order details:</h2>
+    <span id="description" class="main__container__description__text"></span>
+  </div>
   </body>
 </html>
