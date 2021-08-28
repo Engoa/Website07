@@ -7,19 +7,21 @@
   const address = document.getElementById('address');
   const zipCode = document.getElementById('zipcode');
   const totalResultElement = document.getElementById('cost');
-  let orderDescription = document.getElementById('description');
+  const orderDescription = document.getElementById('description');
 
   const checkBoxes = document.querySelectorAll('input[type=checkbox]');
   let totalValue = 0;
   checkBoxes.forEach((checkBox) => {
     checkBox.addEventListener('click', () => {
       if (checkBox.checked) {
+        totalResultElement.style.opacity = 1;
         totalValue += Number(checkBox.value);
-        totalResultElement.innerText = totalValue.toFixed(2) + '$';
+        totalResultElement.innerText = 'Total Result: ' + '\n' + totalValue.toFixed(2) + '$';
         console.log('Added:' + checkBox.id);
       } else {
+        totalResultElement.style.opacity = 1;
         totalValue -= Number(checkBox.value);
-        totalResultElement.innerText = totalValue.toFixed(2) + '$';
+        totalResultElement.innerText = 'Total Result: ' + '\n' + totalValue.toFixed(2) + '$';
         console.log('Removed:' + checkBox.id);
       }
     });
@@ -33,20 +35,16 @@
   });
 
   function getUserDetails() {
-    let fnameValue = fname.value;
-    let lnameValue = lname.value;
-    let cityValue = city.value;
-    let addressValue = address.value;
-    let zipCodeValue = +zipCode.value;
-    let userDetails = `
-    First Name: ${fnameValue}
-    Last Name: ${lnameValue}
-    City: ${cityValue}
-    Country: ${userSelected}
-    Address: ${addressValue}
-    ZIPCode: ${zipCodeValue}`;
-    orderDescription.innerText = userDetails;
-    console.log(userDetails);
+    const orderDetails = {
+      firstname: fname.value,
+      lastname: lname.value,
+      city: city.value,
+      country: userSelected,
+      address: address.value,
+      zipcode: zipCode.value,
+    };
+    orderDescription.innerText = JSON.stringify(orderDetails, null, 4);
+    console.log(orderDetails);
   }
   // Get users details for order
 
@@ -60,9 +58,10 @@
   // Reset button
   const resetBtn = document.getElementById('resetbtn');
   resetBtn.addEventListener('click', () => {
+    totalResultElement.style.opacity = 0;
     totalValue = 0;
-    totalResultElement.innerText = totalValue + '$';
-    orderDescription.innerText = '';
+    totalResultElement.innerText = 'Goodbye :)';
+    totalResultElement === totalValue;
   });
   // Reset button
 })();
