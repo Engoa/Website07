@@ -2,19 +2,23 @@
 <html lang="en">
   <head></head>
   <body>
-    <form id="form">
+    <form id="form" required>
       <div class="main__container">
         <div class="main__container__header">
-          <h1>Complete the order: </h1>
+          <h1>Fill the order: </h1>
         </div>
         <div class="main__container__">
           <label for="fname" class="main__container__label"
             >First Name:
             <input
+              required
               type="text"
               name="fname"
               id="fname"
               class="main__container__input main__container__name"
+              minlength="3"
+              maxlength="15"
+            
             />
           </label>
         </div>
@@ -23,10 +27,13 @@
           <label for="lname" class="main__container__label"
             >Last Name:
             <input
+              required
               type="text"
               name="lname"
               id="lname"
               class="main__container__input main__container__name"
+              minlength="3"
+              maxlength="15"
             />
           </label>
         </div>
@@ -34,7 +41,14 @@
         <div class="main__container__">
           <label for="city" class="main__container__label"
             >City:
-            <input type="texton" name="city" id="city" class="main__container__input" />
+            <input 
+            type="texton"
+            name="city"
+            id="city"
+            class="main__container__input"
+            required
+            minlength="3"
+            maxlength="15"/>
           </label>
         </div>
 
@@ -42,7 +56,7 @@
           <div>
             <label for="country" class="main__container__label main__container__country">Country: </label>
           </div>
-          <select name="country" id="country" class="main__container__select">
+          <select  name="country" id="country" class="main__container__select" required>
             <option value="" selected>Select a Country</option>
             <option value="Afganistan">Afghanistan</option>
             <option value="Albania">Albania</option>
@@ -296,17 +310,27 @@
         <div class="main__container__">
           <label for="address" class="main__container__label"
             >Address:
-            <input type="text" name="address" id="address" class="main__container__input" />
+            <input 
+            type="text"
+            name="address"
+            id="address"
+            class="main__container__input"
+            minlength="3"
+            maxlength="25"
+            required />
           </label>
+        </div>
+        <div class="main__container__">        
           <label for="zipcode" class="main__container__label"
             >ZIP:
             <input
-              type="number"
+              required
+              type="text"
               name="zipcode"
               id="zipcode"
               class="main__container__input main__container__zip"
-              maxlength="6"
               minlength="5"
+              maxlength="6"
             />
           </label>
         </div>

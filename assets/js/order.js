@@ -54,8 +54,8 @@
   // Reset button
   const resetBtn = document.getElementById('resetbtn');
   resetBtn.addEventListener('click', () => {
-    let currentResult = 0;
-    totalResultElement.innerText = +currentResult + '$';
+    totalValue = 0
+    totalResultElement.innerText = totalValue + '$'
   });
   // Reset button
 })();
