@@ -4,28 +4,33 @@
   const fname = document.getElementById('fname');
   const lname = document.getElementById('lname');
   const city = document.getElementById('city');
-  const address = document.getElementById('address');
+  const street = document.getElementById('address');
   const zipCode = document.getElementById('zipcode');
   const totalResultElement = document.getElementById('cost');
-  const youtubePlayer = document.getElementById('player');
 
+  // Calculation of items
   const checkBoxes = document.querySelectorAll('input[type=checkbox]');
   let totalValue = 0;
-  checkBoxes.forEach((checkBox) => {
-    checkBox.addEventListener('click', () => {
-      if (checkBox.checked) {
-        totalResultElement.style.opacity = 1;
-        totalValue += Number(checkBox.value);
-        totalResultElement.innerText = 'Total Result: ' + '\n' + totalValue.toFixed(2) + '$';
-        console.log('Added:' + checkBox.id);
+  checkBoxes.forEach((checkbox) => {
+    checkbox.addEventListener('click', () => {
+      const checkBoxValue = Number(checkbox.value);
+      if (checkbox.checked) {
+        handleCalculation((totalValue += checkBoxValue));
+        console.log('Added:' + checkbox.id);
       } else {
-        totalResultElement.style.opacity = 1;
-        totalValue -= Number(checkBox.value);
-        totalResultElement.innerText = 'Total Result: ' + '\n' + totalValue.toFixed(2) + '$';
-        console.log('Removed:' + checkBox.id);
+        handleCalculation((totalValue -= checkBoxValue));
+        console.log('Removed:' + checkbox.id);
       }
     });
   });
+
+  const handleCalculation = (calculation) => {
+    totalResultElement.style.opacity = 1;
+    totalResultElement.innerText = 'Total Result: ' + '\n' + totalValue.toFixed(2) + '$';
+    // calculation;
+  };
+
+  // Calculation of items
 
   // Get users details for order
   let userSelected = 0;
@@ -33,24 +38,27 @@
     userSelected = event.target.value;
   });
 
-  function getUserDetails() {
+  const getUserDetails = () => {
     const orderDetails = {
-      firstname: fname.value,
-      lastname: lname.value,
-      city: city.value,
-      country: userSelected,
-      address: address.value,
-      zipcode: zipCode.value,
+      fullname: {
+        firstname: fname.value,
+        lastname: lname.value,
+      },
+      address: {
+        country: userSelected,
+        city: city.value,
+        street: street.value,
+        zipcode: zipCode.value,
+      },
     };
     console.log(orderDetails);
-  }
+  };
   // Get users details for order
 
   // Submit form
   formElement.addEventListener('submit', (event) => {
     event.preventDefault();
     getUserDetails();
-    youtubePlayer.classList.toggle('hide');
   });
   // Submit form
 
@@ -59,9 +67,7 @@
   resetBtn.addEventListener('click', () => {
     totalResultElement.style.opacity = 0;
     totalValue = 0;
-    totalResultElement.innerText = 'Goodbye :)';
     totalResultElement === totalValue;
-    youtubePlayer.remove();
   });
   // Reset button
 })();
