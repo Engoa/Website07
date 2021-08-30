@@ -40,6 +40,11 @@
     margin: 1rem 0;
     width: 100%;
     max-width: calc(500px - 2rem);
+
+    &:focus-within label {
+      font-weight: bold;
+      @include gradientClr();
+    }
   }
 
   &__header {
@@ -51,11 +56,6 @@
     font-size: clamp(1.1rem, 2vw, 1.25rem);
     transition: all 100ms linear;
     text-align: left;
-
-    &:focus-within {
-      font-weight: bold;
-      @include gradientClr();
-    }
   }
   &__input {
     display: flex;
@@ -79,7 +79,7 @@
     &:active {
       border: solid 2px #da179985;
       box-shadow: var(--box-shadow);
-      transform: scale(1.03);
+      transform: scale(1.015);
       @include gradientClr();
       font-weight: bold;
     }
@@ -111,7 +111,7 @@
     }
 
     &:hover {
-      transform: scale(1.03);
+      transform: scale(1.015);
     }
   }
 
@@ -132,7 +132,6 @@
     }
 
     label {
-      margin-top: 2rem;
       color: black;
       font-size: 1.5rem;
       font-size: clamp(1.2rem, 2vw, 1.5rem);
@@ -349,12 +348,13 @@
     &__input {
       width: unset;
       padding: 0;
+      padding-left: 0.5rem;
     }
 
     &__select {
       width: unset;
       padding: 0;
-      width: 214px;
+      width: 222px;
     }
 
     &__wrapper {
@@ -364,6 +364,11 @@
     &__input--wrapper {
       margin: 1rem auto;
       max-width: 340px;
+    }
+
+    input[type='checkbox'] + label > img {
+      width: 200px;
+      height: 200px;
     }
   }
 }
