@@ -433,6 +433,7 @@
   -webkit-appearance: none;
   background: transparent;
   text-align-last: center;
+  text-align: center;
   margin-left: auto;
   color: #d3436c;
   -webkit-background-clip: text;
