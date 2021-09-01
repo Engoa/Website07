@@ -26,7 +26,7 @@
   overflow: hidden;
 
   &__wrapper {
-    background-color: #efefef;
+    background-color: var(--darkmode-text);
     max-width: 500px;
     width: 100%;
     height: 100%;
@@ -48,28 +48,29 @@
   }
 
   &__header {
-    color: black;
+    color: var(--darkmode-card2);
   }
   &__label {
-    color: black;
+    color: var(--darkmode-card2);
     font-size: 1.25rem;
     font-size: clamp(1.1rem, 2vw, 1.25rem);
     transition: all 100ms linear;
     text-align: left;
+    font-weight: bold;
   }
   &__input {
     display: flex;
     flex-direction: row;
     margin-left: 0.5rem;
     margin-top: 0.3rem;
-    border: 2px solid black;
+    border: 2px solid var(--darkmode-cta);
     outline: none;
     width: 280px;
     padding: 0.1rem 1rem;
     height: 40px;
     border-radius: 1.5rem;
     font-size: 16px;
-    color: #e4e4e4;
+    color: var(--darkmode-text);
     font-family: 'Montserrat', sns-serif;
     transition: all 150ms linear;
     margin-left: auto;
@@ -88,8 +89,7 @@
   &__select {
     font-size: 16px;
     border-radius: 2rem;
-    padding: 0.1rem 1rem;
-    border: 2px solid black;
+    border: 2px solid var(--darkmode-cta);
     outline: none;
     font-family: 'Montserrat', sans-serif;
     cursor: pointer;
@@ -128,12 +128,12 @@
       font-size: 1.5rem;
       font-size: clamp(1.35rem, 2vw, 1.5rem);
       transition: transform 250ms linear;
-      color: black;
+      color: var(--darkmode-text);
       transform: scale(0.9);
     }
 
     label {
-      color: black;
+      color: var(--darkmode-text);
       font-size: 1.5rem;
       font-size: clamp(1.2rem, 2vw, 1.5rem);
       padding: 1rem;
@@ -148,7 +148,6 @@
       position: relative;
       z-index: 1;
       font-weight: bold;
-      color: black;
 
       &:hover .main__container__items__chevron,
       &:focus .main__container__items__chevron {
@@ -172,7 +171,6 @@
     }
 
     input[type='checkbox']:checked + label > img {
-      border: 1px solid #fff;
       box-shadow: 0 0 3px 3px #eb355c;
     }
 
@@ -187,6 +185,7 @@
       border-radius: 50%;
       border: transparent solid 2px;
       box-shadow: var(--box-shadow);
+      border: 2px solid var(--darkmode-cta);
     }
     input[type='checkbox']:checked + label > img {
       transform: scale(1.05);
@@ -197,12 +196,11 @@
   }
 
   &__result {
-    color: black;
     font-size: 1.5rem;
     font-size: clamp(1.3rem, 2vw, 1.5rem);
     margin-top: 2rem;
     text-align: center;
-    @include gradientClr();
+    color: var(--darkmode-cta);
     margin-top: 2rem;
     .costanim {
       font-weight: bold;
@@ -236,10 +234,11 @@
       // outline: 2px solid black;
       // outline-offset: -1px;
       border-radius: 1rem;
-      @include gradientClr();
       background: #efefef;
+      color: var(--darkmode-cta);
+
       &:nth-of-type(2) {
-        color: black;
+        color: var(--darkmode-card);
       }
 
       &:active,
@@ -261,7 +260,7 @@
         font-size: 0.9rem;
         left: 45%;
         transform: scale(0);
-        @include gradientClr();
+        color: var(--darkmode-card2);
         transition: all 150ms linear;
       }
     }
