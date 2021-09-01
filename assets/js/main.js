@@ -18,7 +18,6 @@
   // When the user scrolls down 20px from the top of the document, show the button
   const isScrolled = () => {
     const docScrollTop = document.documentElement.scrollTop;
-    console.log(docScrollTop);
     if (docScrollTop >= 400) {
       goToTopBtn.style.display = 'flex';
       gotoTopWrapper.style.opacity = 1;

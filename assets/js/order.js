@@ -15,19 +15,18 @@
     checkbox.addEventListener('click', () => {
       const checkBoxValue = Number(checkbox.value);
       if (checkbox.checked) {
-        handleCalculation((totalValue += checkBoxValue));
-        console.log('Added:' + checkbox.id);
+        totalValue += checkBoxValue;
+        handleCalculation(console.log('Added:' + checkbox.id));
       } else {
-        handleCalculation((totalValue -= checkBoxValue));
-        console.log('Removed:' + checkbox.id);
+        handleCalculation(console.log('Removed:' + checkbox.id));
+        totalValue -= checkBoxValue;
       }
     });
   });
 
-  const handleCalculation = (calculation) => {
+  const handleCalculation = (log) => {
     totalResultElement.style.opacity = 1;
     totalResultElement.innerText = 'Total Result: ' + '\n' + totalValue.toFixed(2) + '$';
-    // calculation;
   };
 
   // Calculation of items
