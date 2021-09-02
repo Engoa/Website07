@@ -71,7 +71,7 @@ nav {
 .link::before {
   content: '';
   position: absolute;
-  background: var(--darkmode-text);
+  background: #fe5000;
   height: 2.2px;
   left: 0;
   right: 0;
@@ -97,6 +97,11 @@ nav {
       width: 4rem;
       filter: drop-shadow(3px 4px 4px rgba(0, 0, 0, 0.63));
       fill: var(--darkmode-text);
+      transition: fill var(--anim-speed);
+
+      &:hover {
+        fill: #fe5000;
+      }
     }
   }
 

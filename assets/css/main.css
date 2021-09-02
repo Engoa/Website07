@@ -887,7 +887,7 @@ nav .hamburger-menu {
 .link::before {
   content: '';
   position: absolute;
-  background: var(--darkmode-text);
+  background: #fe5000;
   height: 2.2px;
   left: 0;
   right: 0;
@@ -928,6 +928,12 @@ nav .logo svg {
   -webkit-filter: drop-shadow(3px 4px 4px rgba(0, 0, 0, 0.63));
           filter: drop-shadow(3px 4px 4px rgba(0, 0, 0, 0.63));
   fill: var(--darkmode-text);
+  -webkit-transition: fill var(--anim-speed);
+  transition: fill var(--anim-speed);
+}
+
+nav .logo svg:hover {
+  fill: #fe5000;
 }
 
 nav .navlinks {
