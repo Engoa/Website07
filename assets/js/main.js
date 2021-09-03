@@ -13,18 +13,21 @@ function closeNav() {
 }
 // Close Navbar on mobile when clicking links
 
+// Go-to top button
+
+const goToTopVisibility = (visibility, opacity) => {
+  gotoTopWrapper.style.opacity = opacity;
+  gotoTopWrapper.style.visibility = visibility;
+};
 const goToTopBtn = document.getElementById('gototop');
 const gotoTopWrapper = document.querySelector('.gototop');
 // When the user scrolls down 20px from the top of the document, show the button
 const isScrolled = () => {
   const docScrollTop = document.documentElement.scrollTop;
   if (docScrollTop >= 400) {
-    goToTopBtn.style.display = 'flex';
-    gotoTopWrapper.style.opacity = 1;
-    gotoTopWrapper.style.visibility = 'visible';
+    goToTopVisibility('visible', 1);
   } else {
-    gotoTopWrapper.style.opacity = 0;
-    gotoTopWrapper.style.visibility = 'hidden';
+    goToTopVisibility('hidden', 0);
   }
 };
 
@@ -39,26 +42,41 @@ goToTopBtn.addEventListener('click', () => {
 });
 
 // Delay clicks on links
+
 const delayLinks = (URL) => {
-  setTimeout(function () {
+  setTimeout(() => {
     window.location = URL;
   }, 500);
 };
+
 // Delay clicks on links
 
 // DarkMode Toggle
-const checkbox = document.getElementById('themebtn');
 
-checkbox.addEventListener('click', () => {
+// Switch body class to light/dark themes
+// const controllersVisiblity = (hidden, visible) => {
+//   const blackController = document.querySelector('#blackcontroller');
+//   const whiteController = document.querySelector('#whitecontroller');
+//   blackController.style.visibility = hidden;
+//   whiteController.style.visibility = visible;
+//   return
+// };
+
+const themeBtn = document.getElementById('themebtn');
+themeBtn.addEventListener('click', () => {
   document.body.classList.toggle('bglight');
   let isLight = document.body.classList.contains('bglight');
+  // if (isLight === false) {
+  //   controllersVisiblity('visible', 'hidden');
+  // } else {
+  //   controllersVisiblity('hidden', 'visible');
+  // }
   localStorage.setItem('lightTheme', isLight);
 });
 
+// Save to Local Storage
 const isLightTheme = JSON.parse(localStorage.getItem('lightTheme'));
 if (isLightTheme) {
   document.body.classList.add('bglight');
-  checkbox.checked = true;
+  themeBtn.checked = true;
 }
-
-// DarkMode Toggle

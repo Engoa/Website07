@@ -8,6 +8,7 @@
   --color-underline: #fe5000;
   --color-buttons: hsl(230, 17%, 14%);
   --color-checkbox: hsl(230, 34%, 40%);
+  --color-socials: #e4e4e4d2;
 }
 
 .bglight {
@@ -20,11 +21,12 @@
   --color-underline: hsl(234, 67%, 48%);
   --color-buttons: hsl(230, 17%, 14%);
   --color-checkbox: hsl(230, 34%, 40%);
+  --color-socials: hsl(230, 23%, 15%);
 }
 
 // Extra Vars:
 :root {
-  --box-shadow: -1px 4px 6px rgba(0, 0, 0, 0.205);
+  --box-shadow: -3px 6px 6px rgba(0, 0, 0, 0.253);
   --box-shadow-wrapper: -7px 7px 6px rgba(0, 0, 0, 0.205);
   --color-btn: linear-gradient(to left, #b13c89, #bb4382, #c34c7c, #c95677, #d86c7e);
 }

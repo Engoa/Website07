@@ -18,6 +18,10 @@
 
     * {
       fill: var(--color-text);
+
+      &:hover * {
+        fill: var(--color-underline);
+      }
     }
   }
 }

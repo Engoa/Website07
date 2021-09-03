@@ -56,9 +56,8 @@ nav {
   position: relative;
   transition: all $anim--speed;
 
-  &:hover {
-    transform: translateY(-2px);
-    font-weight: bold;
+  &:active {
+    transform: scale(1.1);
   }
   &:hover::before {
     transform: scale(1);
@@ -94,7 +93,7 @@ nav {
       width: 4rem;
       filter: drop-shadow(3px 4px 4px rgba(0, 0, 0, 0.63));
       fill: var(--color-text);
-      transition: fill $anim--speed;
+      transition: all $anim--speed;
 
       &:hover {
         fill: var(--color-underline);
@@ -115,9 +114,8 @@ nav {
     a {
       text-decoration: none;
       color: var(--color-text);
-      font-size: 1.25rem;
-      font-size: clamp(1.1rem, 2vw, 1.25rem);
-      font-weight: lighter;
+      font-size: 1.2rem;
+      font-size: clamp(1rem, 2vw, 1.2rem);
     }
   }
 
@@ -127,20 +125,19 @@ nav {
     position: absolute;
     width: 100%;
     top: 2.5rem;
-    right: -0.2rem;
+    right: 0;
     display: flex;
     z-index: 4;
     padding: 1rem 1.2rem 1rem 1.2rem;
-    border-radius: 0.5rem;
+    border-radius: 1rem;
     background: var(--color-accent);
     justify-content: space-between;
     align-items: center;
     overflow: hidden;
-    transition: 0.65s ease;
+    transition: all 700ms ease;
 
     a {
       font-weight: bold;
-      font-size: 0.73rem;
       color: var(--color-textdark);
     }
   }
@@ -173,7 +170,7 @@ nav {
       top: 0.5rem;
       content: '';
       box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.63);
-      animation: bar-load 1.5s ease;
+      animation: leftBarLoad 1.5s ease;
     }
 
     h1 {
@@ -203,7 +200,7 @@ nav {
     border-radius: 1rem;
     height: 35vh;
     width: 40vw;
-    box-shadow: var(--box-shadow);
+    box-shadow: inset 0 0 6px var(--color-buttons);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -247,10 +244,33 @@ nav {
     width: 90%;
     z-index: 3;
     filter: drop-shadow(3px 4px 4px rgba(0, 0, 0, 0.63));
-    animation: loadPage 1.5s ease;
+    animation: controllerAnim 1.5s ease;
   }
 }
-@keyframes loadPage {
+
+// Hide Controllers on load, for each theme!
+
+.bglight {
+  #whitecontroller {
+    visibility: visible !important;
+    margin-bottom: 4rem;
+  }
+
+  #blackcontroller {
+    visibility: hidden !important;
+  }
+}
+.bgdark {
+  #whitecontroller {
+    visibility: hidden;
+  }
+  #blackcontroller {
+    visibility: visible;
+  }
+}
+
+// Hide Controllers on load, for each theme!
+@keyframes controllerAnim {
   0% {
     transform: translateY(-20rem);
     opacity: 0;
@@ -261,7 +281,7 @@ nav {
     opacity: 1;
   }
 }
-@keyframes bar-load {
+@keyframes leftBarLoad {
   0% {
     height: 0%;
   }
@@ -341,7 +361,7 @@ footer {
 
     &__icon {
       &:not(:hover) {
-        color: var(--color-text);
+        color: var(--color-socials);
         opacity: 0.95;
       }
       &:hover,
@@ -419,42 +439,41 @@ footer {
 .theme--wrapper {
   display: flex;
   align-items: center;
-  margin-top: 0.3rem;
+  margin-top: 0.5rem;
+  flex-grow: 2;
 
   &_btn {
     box-shadow: var(--box-shadow);
     cursor: pointer;
     -webkit-appearance: none;
-    appaerance: none;
+    appearance: none;
     position: relative;
     width: 60px;
     height: 30px;
-    border: 2px solid #ccdbdc;
+    border: 2px solid var(--color-text);
     outline: none;
-    border-radius: 30px;
-    transition: all 300ms ease;
-
+    border-radius: 2rem;
+    transition: all 350ms ease;
+    opacity: 0.8;
     &:hover {
-      transform: translateY(-2px);
+      transform: translatey(2px);
+      opacity: 1;
     }
 
     &::before {
       content: '';
       position: absolute;
-      top: 1.2px;
+      top: 1.55px;
       left: 2.5px;
       width: 22px;
       height: 22px;
-      background: var(--color-cta);
+      background: var(--color-text);
       border-radius: 50%;
-      transition: background-color 300ms ease, transform 300ms ease;
+      transition: all 350ms ease;
     }
     &:checked::before {
       transform: translateX(30px);
       background-color: var(--color-text);
-    }
-    &:checked {
-      border-color: var(--color-text);
     }
   }
 }
@@ -469,7 +488,7 @@ footer {
 }
 
 @media only screen and (max-width: 1300px) {
-  @keyframes bar-load {
+  @keyframes leftBarLoad {
     0% {
       height: 0%;
     }
@@ -512,20 +531,20 @@ footer {
   }
 }
 
-@media only screen and (max-width: 950px) {
+@media only screen and (max-width: 1000px) {
   .theme--wrapper {
     &_btn {
-      width: 46px;
+      margin-left: auto;
+      width: 43px;
       height: 22px;
-      margin-left: 4rem;
       &::before {
-        top: 1px;
+        top: 1.2px;
         left: 2px;
         width: 15px;
         height: 15px;
       }
       &:checked::before {
-        transform: translateX(22px);
+        transform: translateX(20px);
       }
     }
   }
@@ -540,7 +559,7 @@ footer {
   }
   // Hide go to top button when on mobile
 
-  @keyframes bar-load {
+  @keyframes leftBarLoad {
     0% {
       height: 0%;
     }
@@ -571,6 +590,10 @@ footer {
       position: relative;
       bottom: 60%;
       right: -2.6%;
+
+      #whitecontroller {
+        margin-top: 4rem;
+      }
 
       img {
         max-width: 90%;
@@ -632,7 +655,7 @@ footer {
       color: black;
     }
   }
-  @keyframes loadPage {
+  @keyframes controllerAnim {
     0% {
       transform: translateY(-12rem);
       opacity: 0;
@@ -646,13 +669,6 @@ footer {
 }
 
 @media only screen and (max-width: 340px) {
-  nav {
-    .mobilebtn {
-      a {
-        font-size: 0.65rem;
-      }
-    }
-  }
   .image-container {
     bottom: 55%;
 
