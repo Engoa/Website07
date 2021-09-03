@@ -261,7 +261,7 @@
   };
 
   // Calculation of items
-  const checkBoxes = document.querySelectorAll('input[type=checkbox]');
+  const checkBoxes = formElement.querySelectorAll('input[type=checkbox]');
   let totalValue = 0;
   checkBoxes.forEach((checkbox) => {
     checkbox.addEventListener('click', () => {
@@ -270,8 +270,8 @@
         totalValue += checkBoxValue;
         handleCalculation(console.log('Added:' + checkbox.id));
       } else {
-        handleCalculation(console.log('Removed:' + checkbox.id));
         totalValue -= checkBoxValue;
+        handleCalculation(console.log('Removed:' + checkbox.id));
       }
     });
   });

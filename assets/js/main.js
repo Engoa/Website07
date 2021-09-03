@@ -37,3 +37,28 @@ goToTopBtn.addEventListener('click', () => {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 });
+
+// Delay clicks on links
+const delayLinks = (URL) => {
+  setTimeout(function () {
+    window.location = URL;
+  }, 500);
+};
+// Delay clicks on links
+
+// DarkMode Toggle
+const checkbox = document.getElementById('themebtn');
+
+checkbox.addEventListener('click', () => {
+  document.body.classList.toggle('bglight');
+  let isLight = document.body.classList.contains('bglight');
+  localStorage.setItem('lightTheme', isLight);
+});
+
+const isLightTheme = JSON.parse(localStorage.getItem('lightTheme'));
+if (isLightTheme) {
+  document.body.classList.add('bglight');
+  checkbox.checked = true;
+}
+
+// DarkMode Toggle

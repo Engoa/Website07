@@ -3,7 +3,7 @@
     border-radius: 2rem;
     padding: 0.1rem 1rem;
     outline: none;
-    border: 2px solid black;
+    border: 2px solid var(--color-text);
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     font-size: 16px;
@@ -14,6 +14,7 @@
     background-repeat: no-repeat;
     background-position: right 0.73em top 50%;
     background-size: 0.6em auto;
+    background-color: var(--color-text);
     appearance: none;
     -moz-appearance: none;
     -webkit-appearance: none;
@@ -23,9 +24,11 @@
     &:hover {
       transform: scale(1.05);
     }
-    &:focus,
+    &:focus-within,
     &:active {
       width: 250px;
+      background-color: var(--color-textdark);
+
     }
   }
 
@@ -33,18 +36,12 @@
     padding: 0.3rem 3rem;
   }
   &__label {
-    color: black;
+    color: var(--color-text);
     display: flex;
     align-items: center;
     flex-direction: column;
     gap: 0.4rem;
     font-weight: bold;
     font-size: 0.9rem;
-  }
-
-  #totalresult {
-    display: flex;
-    flex-direction: column;
-    margin-top: 0.5rem;
   }
 }
