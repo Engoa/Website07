@@ -132,11 +132,11 @@ nav {
     z-index: 4;
     padding: 1rem 1.2rem 1rem 1.2rem;
     border-radius: 0.5rem;
-    background: var(--color-text);
+    background: var(--color-accent);
     justify-content: space-between;
     align-items: center;
     overflow: hidden;
-    transition: 500ms ease;
+    transition: 0.65s ease;
 
     a {
       font-weight: bold;
@@ -313,6 +313,7 @@ footer {
   justify-content: center;
   height: 30vh;
   gap: 0.2rem;
+  padding: 1rem;
   a {
     font-size: 3rem;
     font-size: clamp(2.6rem, 3vw, 3rem);
@@ -352,7 +353,6 @@ footer {
 
   .engoa {
     position: relative;
-    margin-bottom: 3rem;
 
     a {
       color: var(--color-text);
@@ -390,11 +390,11 @@ footer {
 .gototop {
   opacity: 0;
   position: fixed;
-  bottom: 1rem;
-  right: 2.5%;
+  bottom: 1.5%;
+  right: 3.5%;
   z-index: 99;
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
   border-radius: 50%;
   background-color: var(--color-text);
   cursor: pointer;
@@ -407,7 +407,7 @@ footer {
     border: none;
     outline: none;
     cursor: pointer;
-    font-size: 1.45rem;
+    font-size: 1.2rem;
     transition: all 300ms ease;
     color: var(--color-bg);
 
@@ -419,9 +419,10 @@ footer {
 .theme--wrapper {
   display: flex;
   align-items: center;
-  margin-top: 0.5rem;
+  margin-top: 0.3rem;
 
   &_btn {
+    box-shadow: var(--box-shadow);
     cursor: pointer;
     -webkit-appearance: none;
     appaerance: none;
@@ -440,10 +441,10 @@ footer {
     &::before {
       content: '';
       position: absolute;
-      top: 1px;
-      left: 2px;
-      width: 23px;
-      height: 23px;
+      top: 1.2px;
+      left: 2.5px;
+      width: 22px;
+      height: 22px;
       background: var(--color-cta);
       border-radius: 50%;
       transition: background-color 300ms ease, transform 300ms ease;
@@ -530,7 +531,12 @@ footer {
   }
   // Hide go to top button when on mobile
   .gototop {
-    display: none;
+    width: 30px;
+    height: 30px;
+
+    &--cta {
+      font-size: 0.9rem;
+    }
   }
   // Hide go to top button when on mobile
 

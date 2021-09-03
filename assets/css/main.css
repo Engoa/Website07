@@ -204,7 +204,6 @@
 }
 
 .result__container__equation {
-  padding: 0.1rem 2.5rem 0.1rem 2.5rem;
   font-size: 2rem;
 }
 
@@ -218,12 +217,17 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  max-width: 80%;
-  margin: 0 auto;
+  margin: 1rem auto;
+  max-width: 100%;
 }
 
-.image__container img {
-  width: 70%;
+.image__container svg {
+  width: 30rem;
+  height: 10rem;
+}
+
+.image__container svg * {
+  fill: var(--color-text);
 }
 
 .input__container .input__container__dropdown {
@@ -308,6 +312,8 @@
   height: 100%;
   padding: 2rem;
   border-radius: 1rem;
+  -webkit-box-shadow: var(--box-shadow-wrapper);
+          box-shadow: var(--box-shadow-wrapper);
 }
 
 .main__container__input--wrapper {
@@ -352,7 +358,8 @@
   border: 2px solid var(--color-cta);
   outline: none;
   width: 280px;
-  height: 40px;
+  padding: 0.5rem 0.1rem;
+  padding-left: 0.1rem;
   border-radius: 1.5rem;
   font-size: 16px;
   color: var(--color-text);
@@ -380,8 +387,9 @@
   cursor: pointer;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-  height: 40px;
   width: 280px;
+  padding: 0.5rem 0.1rem;
+  padding-left: 0.1rem;
   appearance: none;
   -moz-appearance: none;
   -webkit-appearance: none;
@@ -396,6 +404,7 @@
 .main__container__select:focus-within, .main__container__select:active {
   -webkit-box-shadow: var(--box-shadow);
           box-shadow: var(--box-shadow);
+  font-weight: bold;
 }
 
 .main__container__select:hover {
@@ -500,16 +509,17 @@
   border: transparent solid 2px;
   -webkit-box-shadow: var(--box-shadow);
           box-shadow: var(--box-shadow);
-  border: 5px solid var(--color-cta);
+  border: 5px solid var(--color-accent);
 }
 
 .main__container__items input[type='checkbox']:checked + label > img {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
+  border: 5px solid var(--color-text);
 }
 
 .main__container__items input[type='checkbox']:checked + label {
-  color: var(--color-cta);
+  color: var(--color-checkbox);
 }
 
 .main__container__result {
@@ -561,7 +571,7 @@
           box-shadow: var(--box-shadow);
   font-weight: bold;
   border-radius: 0.5rem;
-  color: var(--color-bg);
+  color: var(--color-buttons);
   background-color: var(--color-textdark);
 }
 
@@ -585,13 +595,9 @@
   left: 45%;
   -webkit-transform: scale(0);
           transform: scale(0);
-  color: var(--color-accent);
+  color: var(--color-buttons);
   -webkit-transition: all 150ms linear;
   transition: all 150ms linear;
-}
-
-#cost {
-  font-weight: bold;
 }
 
 #anim1 {
@@ -720,7 +726,7 @@
 
 @media (max-width: 899px) {
   .main__container {
-    padding: 1rem;
+    padding: 1.4rem;
   }
   .main__container__items {
     gap: 1rem;
@@ -731,12 +737,9 @@
   }
   .main__container__input {
     width: unset;
-    padding: 0;
-    padding-left: 0.5rem;
+    width: 222px;
   }
   .main__container__select {
-    width: unset;
-    padding: 0;
     width: 222px;
   }
   .main__container__wrapper {
@@ -747,33 +750,38 @@
     max-width: 340px;
   }
   .main__container input[type='checkbox'] + label > img {
-    width: 200px;
-    height: 200px;
+    width: 230px;
+    height: 230px;
   }
 }
 
 .bgdark {
   --color-bg: hsl(230, 17%, 14%);
   --color-card: hsl(232, 19%, 15%);
-  --color-accent: hsl(228, 28%, 20%);
-  --color-cta: hsla(228, 34%, 66%, 0.664);
+  --color-accent: hsl(230, 34%, 40%);
+  --color-cta: hsla(228, 34%, 66%, 0.747);
   --color-text: #e4e4e4d2;
   --color-textdark: #e4e4e4d2;
   --color-underline: #fe5000;
+  --color-buttons: hsl(230, 17%, 14%);
+  --color-checkbox: hsl(230, 34%, 40%);
 }
 
 .bglight {
-  --color-bg: #adadad;
+  --color-bg: #cecece;
   --color-card: #e4e4e425;
   --color-accent: hsla(230, 17%, 14%, 0.952);
   --color-cta: hsla(228, 26%, 45%, 0.801);
   --color-text: hsl(230, 17%, 14%);
   --color-textdark: #e4e4e4d2;
-  --color-underline: hsl(345, 57%, 56%);
+  --color-underline: hsl(234, 67%, 48%);
+  --color-buttons: hsl(230, 17%, 14%);
+  --color-checkbox: hsl(230, 34%, 40%);
 }
 
 :root {
-  --box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.205);
+  --box-shadow: -1px 4px 6px rgba(0, 0, 0, 0.205);
+  --box-shadow-wrapper: -7px 7px 6px rgba(0, 0, 0, 0.205);
   --color-btn: linear-gradient(to left, #b13c89, #bb4382, #c34c7c, #c95677, #d86c7e);
 }
 
@@ -914,7 +922,7 @@ nav .mobilebtn {
   z-index: 4;
   padding: 1rem 1.2rem 1rem 1.2rem;
   border-radius: 0.5rem;
-  background: var(--color-text);
+  background: var(--color-accent);
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -922,8 +930,8 @@ nav .mobilebtn {
       -ms-flex-align: center;
           align-items: center;
   overflow: hidden;
-  -webkit-transition: 500ms ease;
-  transition: 500ms ease;
+  -webkit-transition: 0.65s ease;
+  transition: 0.65s ease;
 }
 
 nav .mobilebtn a {
@@ -1189,6 +1197,7 @@ footer {
           justify-content: center;
   height: 30vh;
   gap: 0.2rem;
+  padding: 1rem;
 }
 
 footer a {
@@ -1239,7 +1248,6 @@ footer .icons__icon:hover, footer .icons__icon:focus {
 
 footer .engoa {
   position: relative;
-  margin-bottom: 3rem;
 }
 
 footer .engoa a {
@@ -1280,11 +1288,11 @@ footer .engoa:hover::before {
 .gototop {
   opacity: 0;
   position: fixed;
-  bottom: 1rem;
-  right: 2.5%;
+  bottom: 1.5%;
+  right: 3.5%;
   z-index: 99;
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
   border-radius: 50%;
   background-color: var(--color-text);
   cursor: pointer;
@@ -1305,7 +1313,7 @@ footer .engoa:hover::before {
   border: none;
   outline: none;
   cursor: pointer;
-  font-size: 1.45rem;
+  font-size: 1.2rem;
   -webkit-transition: all 300ms ease;
   transition: all 300ms ease;
   color: var(--color-bg);
@@ -1326,10 +1334,12 @@ footer .engoa:hover::before {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 0.5rem;
+  margin-top: 0.3rem;
 }
 
 .theme--wrapper_btn {
+  -webkit-box-shadow: var(--box-shadow);
+          box-shadow: var(--box-shadow);
   cursor: pointer;
   -webkit-appearance: none;
   appaerance: none;
@@ -1351,10 +1361,10 @@ footer .engoa:hover::before {
 .theme--wrapper_btn::before {
   content: '';
   position: absolute;
-  top: 1px;
-  left: 2px;
-  width: 23px;
-  height: 23px;
+  top: 1.2px;
+  left: 2.5px;
+  width: 22px;
+  height: 22px;
   background: var(--color-cta);
   border-radius: 50%;
   -webkit-transition: background-color 300ms ease, -webkit-transform 300ms ease;
@@ -1466,7 +1476,11 @@ footer .engoa:hover::before {
             transform: translateX(22px);
   }
   .gototop {
-    display: none;
+    width: 30px;
+    height: 30px;
+  }
+  .gototop--cta {
+    font-size: 0.9rem;
   }
   @-webkit-keyframes bar-load {
     0% {

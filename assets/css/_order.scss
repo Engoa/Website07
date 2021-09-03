@@ -1,8 +1,5 @@
 @import 'breakpoints';
 
-@mixin gradientClr {
-}
-
 .main__container {
   margin-top: 3rem;
   display: flex;
@@ -20,6 +17,7 @@
     height: 100%;
     padding: 2rem;
     border-radius: 1rem;
+    box-shadow: var(--box-shadow-wrapper);
   }
 
   &__input--wrapper {
@@ -52,7 +50,9 @@
     border: 2px solid var(--color-cta);
     outline: none;
     width: 280px;
-    height: 40px;
+    padding: 0.5rem 0.1rem;
+    padding-left: 0.1rem;
+    // height: 40px;
     border-radius: 1.5rem;
     font-size: 16px;
     color: var(--color-text);
@@ -77,8 +77,10 @@
     font-family: 'Montserrat', sans-serif;
     cursor: pointer;
     transition: all 0.3s;
-    height: 40px;
+    // height: 40px;
     width: 280px;
+    padding: 0.5rem 0.1rem;
+    padding-left: 0.1rem;
     appearance: none;
     -moz-appearance: none;
     -webkit-appearance: none;
@@ -92,6 +94,7 @@
     &:focus-within,
     &:active {
       box-shadow: var(--box-shadow);
+      font-weight: bold;
     }
 
     &:hover {
@@ -162,13 +165,14 @@
       border-radius: 50%;
       border: transparent solid 2px;
       box-shadow: var(--box-shadow);
-      border: 5px solid var(--color-cta);
+      border: 5px solid var(--color-accent);
     }
     input[type='checkbox']:checked + label > img {
       transform: scale(1.05);
+      border: 5px solid var(--color-text);
     }
     input[type='checkbox']:checked + label {
-      color: var(--color-cta);
+      color: var(--color-checkbox);
     }
   }
 
@@ -207,7 +211,7 @@
       box-shadow: var(--box-shadow);
       font-weight: bold;
       border-radius: 0.5rem;
-      color: var(--color-bg);
+      color: var(--color-buttons);
       background-color: var(--color-textdark);
 
       &:active,
@@ -229,14 +233,11 @@
         font-size: 0.9rem;
         left: 45%;
         transform: scale(0);
-        color: var(--color-accent);
+        color: var(--color-buttons);
         transition: all 150ms linear;
       }
     }
   }
-}
-#cost {
-  font-weight: bold;
 }
 
 #anim1 {
@@ -295,7 +296,7 @@
 
 @include media('<smd') {
   .main__container {
-    padding: 1rem;
+    padding: 1.4rem;
     &__items {
       gap: 1rem;
       flex-direction: column;
@@ -303,13 +304,10 @@
 
     &__input {
       width: unset;
-      padding: 0;
-      padding-left: 0.5rem;
+      width: 222px;
     }
 
     &__select {
-      width: unset;
-      padding: 0;
       width: 222px;
     }
 
@@ -323,8 +321,8 @@
     }
 
     input[type='checkbox'] + label > img {
-      width: 200px;
-      height: 200px;
+      width: 230px;
+      height: 230px;
     }
   }
 }

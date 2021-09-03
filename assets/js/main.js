@@ -20,7 +20,7 @@ const isScrolled = () => {
   const docScrollTop = document.documentElement.scrollTop;
   if (docScrollTop >= 400) {
     goToTopBtn.style.display = 'flex';
-    gotoTopWrapper.style.opacity = 0.9;
+    gotoTopWrapper.style.opacity = 1;
     gotoTopWrapper.style.visibility = 'visible';
   } else {
     gotoTopWrapper.style.opacity = 0;

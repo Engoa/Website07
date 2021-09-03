@@ -1,26 +1,31 @@
 .bgdark {
   --color-bg: hsl(230, 17%, 14%);
   --color-card: hsl(232, 19%, 15%);
-  --color-accent: hsl(228, 28%, 20%);
-  --color-cta: hsla(228, 34%, 66%, 0.664);
+  --color-accent: hsl(230, 34%, 40%);
+  --color-cta: hsla(228, 34%, 66%, 0.747);
   --color-text: #e4e4e4d2;
   --color-textdark: #e4e4e4d2;
   --color-underline: #fe5000;
+  --color-buttons: hsl(230, 17%, 14%);
+  --color-checkbox: hsl(230, 34%, 40%);
 }
 
 .bglight {
-  --color-bg: #adadad;
+  --color-bg: #cecece;
   --color-card: #e4e4e425;
   --color-accent: hsla(230, 17%, 14%, 0.952);
   --color-cta: hsla(228, 26%, 45%, 0.801);
   --color-text: hsl(230, 17%, 14%);
   --color-textdark: #e4e4e4d2;
-  --color-underline: hsl(345, 57%, 56%);
+  --color-underline: hsl(234, 67%, 48%);
+  --color-buttons: hsl(230, 17%, 14%);
+  --color-checkbox: hsl(230, 34%, 40%);
 }
 
 // Extra Vars:
 :root {
-  --box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.205);
+  --box-shadow: -1px 4px 6px rgba(0, 0, 0, 0.205);
+  --box-shadow-wrapper: -7px 7px 6px rgba(0, 0, 0, 0.205);
   --color-btn: linear-gradient(to left, #b13c89, #bb4382, #c34c7c, #c95677, #d86c7e);
 }
 
