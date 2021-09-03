@@ -123,8 +123,8 @@
 .input__container .button__container .btn--rounded {
   font-size: 1.1rem;
   border: 2px solid var(--color-cta);
-  color: var(--color-bg);
-  background-color: var(--color-text);
+  color: var(--color-text);
+  background-color: var(--color-bg);
   outline: none;
   padding: 0.3rem 2rem 0.3rem 2rem;
   border-radius: 2rem;
@@ -233,7 +233,7 @@
   border-radius: 2rem;
   padding: 0.1rem 1rem;
   outline: none;
-  border: 2px solid var(--color-text);
+  border: 2px solid var(--color-cta);
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
   font-size: 16px;
@@ -245,7 +245,7 @@
   background-repeat: no-repeat;
   background-position: right 0.73em top 50%;
   background-size: 0.6em auto;
-  background-color: var(--color-text);
+  background-color: var(--color-bg);
   appearance: none;
   -moz-appearance: none;
   -webkit-appearance: none;
@@ -260,7 +260,6 @@
 
 .input__container .input__container__dropdown:focus-within, .input__container .input__container__dropdown:active {
   width: 250px;
-  background-color: var(--color-textdark);
 }
 
 .input__container #kg {
