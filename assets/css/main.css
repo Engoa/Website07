@@ -774,6 +774,7 @@
   --color-buttons: hsl(230, 17%, 14%);
   --color-checkbox: hsl(230, 34%, 40%);
   --color-socials: #e4e4e4d2;
+  --color-mobilemenu: hsl(230, 34%, 40%);
 }
 
 .bglight {
@@ -783,10 +784,11 @@
   --color-cta: hsla(228, 26%, 45%, 0.801);
   --color-text: hsl(230, 17%, 14%);
   --color-textdark: #e4e4e4d2;
-  --color-underline: hsl(234, 67%, 48%);
+  --color-underline: hsla(234, 67%, 48%, 0.74);
   --color-buttons: hsl(230, 17%, 14%);
   --color-checkbox: hsl(230, 34%, 40%);
   --color-socials: hsl(230, 23%, 15%);
+  --color-mobilemenu: hsl(229, 30%, 24%);
 }
 
 :root {
@@ -922,15 +924,15 @@ nav .mobilebtn {
   visibility: hidden;
   position: absolute;
   width: 100%;
-  top: 2.5rem;
-  right: 0;
+  top: 2.7rem;
+  right: -0.2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   z-index: 4;
   padding: 1rem 1.2rem 1rem 1.2rem;
   border-radius: 1rem;
-  background: var(--color-accent);
+  background: var(--color-mobilemenu);
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -952,15 +954,11 @@ nav .mobilebtn a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   width: 80%;
-  margin: auto;
+  margin: 2rem auto;
 }
 
 .container .content-info {
@@ -974,9 +972,6 @@ nav .mobilebtn a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -1312,8 +1307,8 @@ footer .engoa:hover::before {
 .gototop {
   opacity: 0;
   position: fixed;
-  bottom: 1.5%;
-  right: 5.5%;
+  bottom: 2%;
+  right: 6.5%;
   z-index: 99;
   height: 40px;
   width: 40px;
@@ -1329,8 +1324,8 @@ footer .engoa:hover::before {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
 }
 
 .gototop--cta {
@@ -1338,6 +1333,7 @@ footer .engoa:hover::before {
   outline: none;
   cursor: pointer;
   font-size: 1.2rem;
+  font-size: 0.7rem, 3vw, 1.2rem;
   -webkit-transition: all 300ms ease;
   transition: all 300ms ease;
   color: var(--color-bg);
@@ -1379,7 +1375,7 @@ footer .engoa:hover::before {
   border-radius: 2rem;
   -webkit-transition: all 350ms ease;
   transition: all 350ms ease;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 .theme--wrapper_btn:hover {
@@ -1407,7 +1403,7 @@ footer .engoa:hover::before {
   background-color: var(--color-text);
 }
 
-@media only screen and (max-width: 1600px) {
+@media (max-width: 1599px) {
   .container .image-container {
     width: 55vh;
     right: 30%;
@@ -1415,7 +1411,7 @@ footer .engoa:hover::before {
   }
 }
 
-@media only screen and (max-width: 1300px) {
+@media (max-width: 1199px) {
   @-webkit-keyframes leftBarLoad {
     0% {
       height: 0%;
@@ -1483,7 +1479,7 @@ footer .engoa:hover::before {
   }
 }
 
-@media only screen and (max-width: 1000px) {
+@media (max-width: 959px) {
   .theme--wrapper_btn {
     margin-left: auto;
     width: 43px;
@@ -1500,11 +1496,8 @@ footer .engoa:hover::before {
             transform: translateX(20px);
   }
   .gototop {
-    width: 30px;
-    height: 30px;
-  }
-  .gototop--cta {
-    font-size: 0.9rem;
+    width: 35px;
+    height: 35px;
   }
   @-webkit-keyframes leftBarLoad {
     0% {
@@ -1631,7 +1624,7 @@ footer .engoa:hover::before {
   }
 }
 
-@media only screen and (max-width: 340px) {
+@media (max-width: 319px) {
   .image-container {
     bottom: 55%;
   }

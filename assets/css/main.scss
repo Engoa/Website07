@@ -124,13 +124,13 @@ nav {
     visibility: hidden;
     position: absolute;
     width: 100%;
-    top: 2.5rem;
-    right: 0;
+    top: 2.7rem;
+    right: -0.2rem;
     display: flex;
     z-index: 4;
     padding: 1rem 1.2rem 1rem 1.2rem;
     border-radius: 1rem;
-    background: var(--color-accent);
+    background: var(--color-mobilemenu);
     justify-content: space-between;
     align-items: center;
     overflow: hidden;
@@ -146,16 +146,14 @@ nav {
 .container {
   height: 70vh;
   display: flex;
-  flex-direction: row;
   align-items: center;
   width: 80%;
-  margin: auto;
+  margin: 2rem auto;
 
   .content-info {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
     flex: 1;
     margin-right: 2rem;
     position: relative;
@@ -410,8 +408,8 @@ footer {
 .gototop {
   opacity: 0;
   position: fixed;
-  bottom: 1.5%;
-  right: 5.5%;
+  bottom: 2%;
+  right: 6.5%;
   z-index: 99;
   height: 40px;
   width: 40px;
@@ -421,13 +419,14 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.2s ease;
+  transition: all 0.25s ease;
 
   &--cta {
     border: none;
     outline: none;
     cursor: pointer;
     font-size: 1.2rem;
+    font-size: (0.7rem, 3vw, 1.2rem);
     transition: all 300ms ease;
     color: var(--color-bg);
 
@@ -454,7 +453,7 @@ footer {
     outline: none;
     border-radius: 2rem;
     transition: all 350ms ease;
-    opacity: 0.8;
+    opacity: 0.9;
     &:hover {
       transform: translatey(2px);
       opacity: 1;
@@ -477,7 +476,15 @@ footer {
     }
   }
 }
-@media only screen and (max-width: 1600px) {
+
+// @include media('<lg', '<md') {
+//    * {
+//       outline: 1px solid red !important;
+//    }
+// }
+
+// Media Queries!
+@include media('<xl') {
   .container {
     .image-container {
       width: 55vh;
@@ -487,7 +494,7 @@ footer {
   }
 }
 
-@media only screen and (max-width: 1300px) {
+@include media('<lg') {
   @keyframes leftBarLoad {
     0% {
       height: 0%;
@@ -531,7 +538,7 @@ footer {
   }
 }
 
-@media only screen and (max-width: 1000px) {
+@include media('<md') {
   .theme--wrapper {
     &_btn {
       margin-left: auto;
@@ -548,16 +555,10 @@ footer {
       }
     }
   }
-  // Hide go to top button when on mobile
   .gototop {
-    width: 30px;
-    height: 30px;
-
-    &--cta {
-      font-size: 0.9rem;
-    }
+    width: 35px;
+    height: 35px;
   }
-  // Hide go to top button when on mobile
 
   @keyframes leftBarLoad {
     0% {
@@ -668,7 +669,7 @@ footer {
   }
 }
 
-@media only screen and (max-width: 340px) {
+@include media('<sm') {
   .image-container {
     bottom: 55%;
 
