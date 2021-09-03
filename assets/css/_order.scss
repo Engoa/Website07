@@ -165,11 +165,11 @@
       border-radius: 50%;
       border: transparent solid 2px;
       box-shadow: var(--box-shadow);
-      border: 5px solid var(--color-accent);
+      border: 5px solid var(--color-text);
     }
     input[type='checkbox']:checked + label > img {
       transform: scale(1.05);
-      border: 5px solid var(--color-text);
+      border: 5px solid var(--color-accent);
     }
     input[type='checkbox']:checked + label {
       color: var(--color-checkbox);
