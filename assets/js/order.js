@@ -9,7 +9,7 @@
   const totalResultElement = document.getElementById('cost');
 
   const countriesList = {
-    null: 'Select a Country',
+    null: '',
     AFG: 'Afghanistan',
     ALB: 'Albania',
     DZA: 'Algeria',

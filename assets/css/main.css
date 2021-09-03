@@ -399,19 +399,19 @@
   -moz-appearance: none;
   -webkit-appearance: none;
   background: transparent;
-  text-align-last: center;
-  text-align: center;
   margin-left: auto;
   background-color: var(--color-bg);
   color: var(--color-text);
+  text-align-last: center;
+  text-align: center;
+  -ms-text-align-last: center;
+  -moz-text-align-last: center;
 }
 
 .main__container__select:focus-within, .main__container__select:active {
   -webkit-box-shadow: var(--box-shadow);
           box-shadow: var(--box-shadow);
   font-weight: bold;
-  text-align: center;
-  text-align-last: center;
   border: 2px solid var(--color-socials);
 }
 
