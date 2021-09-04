@@ -1172,6 +1172,23 @@ nav .mobilebtn a {
           transform: translateX(-5px);
 }
 
+.availability--wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  width: 200px;
+}
+
+.availability--wrapper__text {
+  position: absolute;
+  top: -8rem;
+  color: var(--color-text);
+  font-size: 0.95rem;
+  font-size: clamp(0.7rem, 1.8vw, 0.95rem);
+  opacity: 0.6;
+}
+
 .bglight #whiteitems {
   visibility: visible !important;
   margin-bottom: 4rem;
@@ -1273,7 +1290,7 @@ nav .mobilebtn a {
 .btn--wrapper .btn:hover::after {
   -webkit-transform: translateX(5px);
           transform: translateX(5px);
-  color: var(--color-text);
+  color: var(--color-underline);
 }
 
 footer {
@@ -1521,20 +1538,14 @@ footer .engoa:hover::before {
   .container .card {
     width: 450px;
     height: 200px;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    margin-bottom: 5rem;
   }
 }
 
 @media (max-width: 959px) {
+  .availability--wrapper__text {
+    top: 1rem;
+  }
   .container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1588,8 +1599,8 @@ footer .engoa:hover::before {
     margin-top: 4rem;
   }
   .container .card {
-    height: 200px;
-    width: 350px;
+    height: 170px;
+    width: 270px;
   }
   .container .content-info {
     -webkit-box-align: center;

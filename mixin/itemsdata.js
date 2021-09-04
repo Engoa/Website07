@@ -7,6 +7,7 @@ const homeProducts = [
     price_eu: '42.99',
     image_dark: 'assets/images/controller.png',
     image_light: 'assets/images/controller2.png',
+    availability: 'Available in limited stock',
   },
   {
     name: 'Corsair Virtuoso XT',
@@ -16,6 +17,7 @@ const homeProducts = [
     price_eu: '109.99',
     image_dark: 'assets/images/headphones.png',
     image_light: 'assets/images/headphones2.png',
+    availability: '',
   },
   {
     name: 'Logitech G915 TKL Keyboard',
@@ -25,6 +27,7 @@ const homeProducts = [
     price_eu: '299.99',
     image_dark: 'assets/images/keyboard.png',
     image_light: 'assets/images/keyboard2.png',
+    availability: 'Available in limited stock',
   },
   {
     name: 'Xbox Series X Bundle',
@@ -34,6 +37,7 @@ const homeProducts = [
     price_eu: '569.99',
     image_dark: 'assets/images/xbox.png',
     image_light: 'assets/images/xbox2.png',
+    availability: '',
   },
   {
     name: 'Logitech G-Pro Wireless',
@@ -43,5 +47,6 @@ const homeProducts = [
     price_eu: '169.99',
     image_dark: 'assets/images/mouse.png',
     image_light: 'assets/images/mouse2.png',
+    availability: '',
   },
 ];

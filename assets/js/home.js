@@ -27,9 +27,11 @@
             <img
               id="whiteitems"
               src="${product.image_light}"
-              alt="Items images"
-            />
+              alt="Items images"/>
           </div>
+        </div>
+        <div class='availability--wrapper'>
+        <span class='availability--wrapper__text'>${product.availability}</span>
         </div>
     `;
     });

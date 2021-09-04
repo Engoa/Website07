@@ -306,6 +306,19 @@ nav {
     }
   }
 }
+.availability--wrapper {
+  display: flex;
+  position: relative;
+  width: 200px;
+  &__text {
+    position: absolute;
+    top: -8rem;
+    color: var(--color-text);
+    font-size: 0.95rem;
+    font-size: clamp(0.7rem, 1.8vw, 0.95rem);
+    opacity: 0.6;
+  }
+}
 
 // Hide Items on load, for each theme!
 
@@ -380,7 +393,7 @@ nav {
     }
     &:hover::after {
       transform: translateX(5px);
-      color: var(--color-text);
+      color: var(--color-underline);
     }
   }
 }
@@ -582,14 +595,17 @@ footer {
     .card {
       width: 450px;
       height: 200px;
-      align-items: center;
-      flex-direction: column;
-      justify-content: center;
+      margin-bottom: 5rem;
     }
   }
 }
 
 @include media('<md') {
+  .availability--wrapper {
+    &__text {
+      top: 1rem;
+    }
+  }
   .container {
     flex-direction: column;
     .image-container {
@@ -647,8 +663,8 @@ footer {
     }
 
     .card {
-      height: 200px;
-      width: 350px;
+      height: 170px;
+      width: 270px;
     }
 
     .content-info {

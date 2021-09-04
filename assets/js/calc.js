@@ -1,29 +1,11 @@
 (() => {
   const $result = $('#result__container__p');
-  // Flag if result is shown on screen
-  // let isShown = false;
-  // Hide result on load
-  // $result.hide();
 
   let result = 0;
 
   function getValue() {
     return Number(document.getElementById('container__input1').value);
   }
-
-  // function fadeIn() {
-  //   if (!isShown) {
-  //     $result.fadeIn();
-  //     isShown = true;
-  //   }
-  // }
-
-  // function fadeOut() {
-  //   if (isShown) {
-  //     $result.fadeOut();
-  //     isShown = false;
-  //   }
-  // }
 
   // Should receive an operator, evaluate the result
   // and returns a number
@@ -33,8 +15,6 @@
   }
 
   function handleCalculate(operator) {
-    // Show result if not shown
-    // fadeIn();
     !getValue()
       ? alert('Input fields need to have some value')
       : (result = calculate(operator));
@@ -61,7 +41,6 @@
   resetBtn.addEventListener('click', () => {
     result = 'Result: ' + 0;
     $result.text(result);
-    // fadeOut();
   });
 
   // Prevents reload of page on click
