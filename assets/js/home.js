@@ -20,7 +20,7 @@
             <img
               id="blackitems"
               src="${product.image_dark}"
-              alt="Controller image"
+              alt="Items image"
             />
           </div>
           <div class="image-container">
