@@ -1,7 +1,8 @@
-const drawProducts = () => {
-  const mainContainer = document.querySelector('.home--container');
-  homeProducts.map((product, index) => {
-    mainContainer.innerHTML += `
+(() => {
+  const drawProducts = () => {
+    const mainContainer = document.querySelector('.home--container');
+    homeProducts.map((product, index) => {
+      mainContainer.innerHTML += `
         <div class="container ${index % 2 !== 0 ? 'container2' : ''}">
           <div class="content-info">
             <h1 id="header">${product.name}</h1>
@@ -17,21 +18,22 @@ const drawProducts = () => {
           </div>
           <div class="image-container">
             <img
-              id="blackcontroller"
+              id="blackitems"
               src="${product.image_dark}"
               alt="Controller image"
             />
           </div>
           <div class="image-container">
             <img
-              id="whitecontroller"
+              id="whiteitems"
               src="${product.image_light}"
-              alt="Controller image"
+              alt="Items images"
             />
           </div>
         </div>
     `;
-  });
-};
+    });
+  };
 
-drawProducts();
+  drawProducts();
+})();

@@ -163,6 +163,13 @@ nav {
   }
 }
 
+.home--container {
+  gap: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 .container {
   height: 70vh;
   display: flex;
@@ -170,7 +177,7 @@ nav {
   width: 80%;
   margin: 0 auto;
   position: relative;
-  margin-top: 10rem;
+  margin-top: 3rem;
   border: 2px solid var(--color-text);
   border-radius: 0.5rem;
   padding: 2rem;
@@ -195,7 +202,7 @@ nav {
     h1 {
       font-weight: bold;
       font-size: 3rem;
-      font-size: clamp(1.2rem, 3vw, 3rem);
+      font-size: clamp(1.5rem, 3vw, 3rem);
     }
     p {
       font-size: 1.3rem;
@@ -206,13 +213,13 @@ nav {
       margin-top: 0.3rem;
       opacity: 0.7;
       font-size: 0.95rem;
-      font-size: clamp(0.9rem, 3vw, 0.95rem);
+      font-size: clamp(0.8rem, 3vw, 0.95rem);
     }
     .price {
       opacity: 1;
       font-weight: bold;
       font-size: 3rem;
-      font-size: clamp(1.1rem, 3vw, 3rem);
+      font-size: clamp(1.3rem, 3vw, 3rem);
     }
   }
 
@@ -261,7 +268,7 @@ nav {
   max-width: 100%;
   position: absolute;
   right: 35%;
-  bottom: -2rem;
+  bottom: 2rem;
   display: flex;
   pointer-events: none;
 
@@ -301,58 +308,21 @@ nav {
 // Hide Controllers on load, for each theme!
 
 .bglight {
-  #whitecontroller {
+  #whiteitems {
     visibility: visible !important;
     margin-bottom: 4rem;
   }
-  #whiteheadphones {
-    visibility: visible !important;
-  }
-  #whitemouse {
-    visibility: visible !important;
-  }
-  #whitexbox {
-    visibility: visible !important;
-  }
-  #blackcontroller {
-    visibility: hidden !important;
-  }
 
-  #blackheadphones {
-    visibility: hidden !important;
-  }
-  #blackmouse {
-    visibility: hidden !important;
-  }
-  #blackxbox {
+  #blackitems {
     visibility: hidden !important;
   }
 }
 
 .bgdark {
-  #blackcontroller {
+  #blackitems {
     visibility: visible;
   }
-  #blackmouse {
-    visibility: visible;
-  }
-  #blackheadphones {
-    visibility: visible;
-  }
-  #blackxbox {
-    visibility: visible;
-  }
-  #whitecontroller {
-    visibility: hidden;
-  }
-  #whitexbox {
-    visibility: hidden;
-  }
-  #whiteheadphones {
-    visibility: hidden;
-  }
-
-  #whitemouse {
+  #whiteitems {
     visibility: hidden;
   }
 }
@@ -419,7 +389,7 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 30vh;
+  height: 50vh;
   gap: 0.2rem;
   padding: 1rem;
   a {
@@ -625,11 +595,11 @@ footer {
     flex-direction: column;
     .image-container {
       right: 51%;
-      bottom: -5.3rem;
+      bottom: -8rem;
       transform: translate(50%, 50%);
 
       img {
-        width: 180px;
+        width: 270px;
       }
     }
   }
@@ -668,9 +638,11 @@ footer {
       }
     }
   }
-  .container {
-    margin-bottom: 12rem;
 
+  .home--container {
+    gap: 14rem;
+  }
+  .container {
     #whitecontroller {
       margin-top: 4rem;
     }
@@ -690,8 +662,6 @@ footer {
         margin-top: 1rem;
       }
       .btn {
-        margin-right: 2.8rem;
-
         &::after {
           font-size: 1rem;
           top: 0.8rem;

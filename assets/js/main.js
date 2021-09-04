@@ -25,7 +25,7 @@ const goToTopBtnStylings = (visibility, opacity, transform) => {
 // When the user scrolls down 20px from the top of the document, show the button
 const isScrolled = () => {
   const docScrollTop = document.documentElement.scrollTop;
-  if (docScrollTop >= 400) {
+  if (docScrollTop >= 1200) {
     goToTopBtnStylings('visible', 1, 'translateY(-15px)');
   } else {
     goToTopBtnStylings('hidden', 0, 'translateY(50px)');

@@ -972,6 +972,23 @@ nav .mobilebtn a {
   color: var(--color-textdark);
 }
 
+.home--container {
+  gap: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .container {
   height: 70vh;
   display: -webkit-box;
@@ -983,7 +1000,7 @@ nav .mobilebtn a {
   width: 80%;
   margin: 0 auto;
   position: relative;
-  margin-top: 10rem;
+  margin-top: 3rem;
   border: 2px solid var(--color-text);
   border-radius: 0.5rem;
   padding: 2rem;
@@ -1022,7 +1039,7 @@ nav .mobilebtn a {
 .container .content-info h1 {
   font-weight: bold;
   font-size: 3rem;
-  font-size: clamp(1.2rem, 3vw, 3rem);
+  font-size: clamp(1.5rem, 3vw, 3rem);
 }
 
 .container .content-info p {
@@ -1034,14 +1051,14 @@ nav .mobilebtn a {
   margin-top: 0.3rem;
   opacity: 0.7;
   font-size: 0.95rem;
-  font-size: clamp(0.9rem, 3vw, 0.95rem);
+  font-size: clamp(0.8rem, 3vw, 0.95rem);
 }
 
 .container .content-info .price {
   opacity: 1;
   font-weight: bold;
   font-size: 3rem;
-  font-size: clamp(1.1rem, 3vw, 3rem);
+  font-size: clamp(1.3rem, 3vw, 3rem);
 }
 
 .container .card {
@@ -1110,7 +1127,7 @@ nav .mobilebtn a {
   max-width: 100%;
   position: absolute;
   right: 35%;
-  bottom: -2rem;
+  bottom: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1152,68 +1169,20 @@ nav .mobilebtn a {
           transform: translateX(-5px);
 }
 
-.bglight #whitecontroller {
+.bglight #whiteitems {
   visibility: visible !important;
   margin-bottom: 4rem;
 }
 
-.bglight #whiteheadphones {
-  visibility: visible !important;
-}
-
-.bglight #whitemouse {
-  visibility: visible !important;
-}
-
-.bglight #whitexbox {
-  visibility: visible !important;
-}
-
-.bglight #blackcontroller {
+.bglight #blackitems {
   visibility: hidden !important;
 }
 
-.bglight #blackheadphones {
-  visibility: hidden !important;
-}
-
-.bglight #blackmouse {
-  visibility: hidden !important;
-}
-
-.bglight #blackxbox {
-  visibility: hidden !important;
-}
-
-.bgdark #blackcontroller {
+.bgdark #blackitems {
   visibility: visible;
 }
 
-.bgdark #blackmouse {
-  visibility: visible;
-}
-
-.bgdark #blackheadphones {
-  visibility: visible;
-}
-
-.bgdark #blackxbox {
-  visibility: visible;
-}
-
-.bgdark #whitecontroller {
-  visibility: hidden;
-}
-
-.bgdark #whitexbox {
-  visibility: hidden;
-}
-
-.bgdark #whiteheadphones {
-  visibility: hidden;
-}
-
-.bgdark #whitemouse {
+.bgdark #whiteitems {
   visibility: hidden;
 }
 
@@ -1319,7 +1288,7 @@ footer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 30vh;
+  height: 50vh;
   gap: 0.2rem;
   padding: 1rem;
 }
@@ -1577,12 +1546,12 @@ footer .engoa:hover::before {
   }
   .container .image-container {
     right: 51%;
-    bottom: -5.3rem;
+    bottom: -8rem;
     -webkit-transform: translate(50%, 50%);
             transform: translate(50%, 50%);
   }
   .container .image-container img {
-    width: 180px;
+    width: 270px;
   }
   .theme--wrapper_btn {
     margin-left: auto;
@@ -1615,8 +1584,8 @@ footer .engoa:hover::before {
   nav .mobilebtn a {
     font-size: 0.7rem;
   }
-  .container {
-    margin-bottom: 12rem;
+  .home--container {
+    gap: 14rem;
   }
   .container #whitecontroller {
     margin-top: 4rem;
@@ -1640,9 +1609,6 @@ footer .engoa:hover::before {
   }
   .container .content-info .price {
     margin-top: 1rem;
-  }
-  .container .content-info .btn {
-    margin-right: 2.8rem;
   }
   .container .content-info .btn::after {
     font-size: 1rem;
