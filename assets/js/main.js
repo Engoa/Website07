@@ -14,14 +14,14 @@ function closeNav() {
 // Close Navbar on mobile when clicking links
 
 // Go-to top button
+const goToTopBtn = document.getElementById('gototop');
+const gotoTopWrapper = document.querySelector('.gototop');
 
 const goToTopBtnStylings = (visibility, opacity, transform) => {
   gotoTopWrapper.style.opacity = opacity;
   gotoTopWrapper.style.visibility = visibility;
   gotoTopWrapper.style.transform = transform;
 };
-const goToTopBtn = document.getElementById('gototop');
-const gotoTopWrapper = document.querySelector('.gototop');
 // When the user scrolls down 20px from the top of the document, show the button
 const isScrolled = () => {
   const docScrollTop = document.documentElement.scrollTop;
