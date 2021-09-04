@@ -193,7 +193,6 @@ nav {
 
   .card {
     position: relative;
-    z-index: -4;
     background: var(--color-accent);
     border-radius: 1rem;
     height: 35vh;
@@ -237,6 +236,7 @@ nav {
   right: 27%;
   bottom: 5%;
   display: flex;
+  pointer-events: none;
 
   img {
     width: 90%;

@@ -15,7 +15,7 @@ function closeNav() {
 
 // Go-to top button
 
-const goToTopVisibility = (visibility, opacity, transform) => {
+const goToTopBtnStylings = (visibility, opacity, transform) => {
   gotoTopWrapper.style.opacity = opacity;
   gotoTopWrapper.style.visibility = visibility;
   gotoTopWrapper.style.transform = transform;
@@ -26,9 +26,9 @@ const gotoTopWrapper = document.querySelector('.gototop');
 const isScrolled = () => {
   const docScrollTop = document.documentElement.scrollTop;
   if (docScrollTop >= 400) {
-    goToTopVisibility('visible', 1, 'translateY(-25px)');
+    goToTopBtnStylings('visible', 1, 'translateY(-15px)');
   } else {
-    goToTopVisibility('hidden', 0, 'translateY(50px)');
+    goToTopBtnStylings('hidden', 0, 'translateY(50px)');
   }
 };
 
