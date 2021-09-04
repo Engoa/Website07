@@ -767,7 +767,7 @@
   --color-bg: hsl(230, 17%, 14%);
   --color-card: hsl(230, 34%, 40%);
   --color-accent: hsl(230, 34%, 40%);
-  --color-cta: hsla(228, 34%, 66%, 0.747);
+  --color-cta: hsla(228, 28%, 54%, 0.897);
   --color-cta2: rgba(60, 73, 128, 0.918);
   --color-text: #e4e4e4d2;
   --color-textdark: #e4e4e4d2;
@@ -782,7 +782,7 @@
   --color-bg: #cecece;
   --color-card: hsl(230, 26%, 19%);
   --color-accent: hsla(230, 17%, 14%, 0.952);
-  --color-cta: hsla(228, 26%, 45%, 0.801);
+  --color-cta: hsla(228, 28%, 54%, 0.911);
   --color-cta2: rgba(60, 73, 128, 0.918);
   --color-text: hsl(230, 17%, 14%);
   --color-textdark: #e4e4e4d2;
@@ -1021,26 +1021,27 @@ nav .mobilebtn a {
 
 .container .content-info h1 {
   font-weight: bold;
-  font-size: 2.9rem;
-  font-size: clamp(2.2rem, 3vw, 2.9rem);
+  font-size: 3rem;
+  font-size: clamp(1.2rem, 3vw, 3rem);
 }
 
 .container .content-info p {
-  font-size: 1.6rem;
-  font-size: clamp(1rem, 1.8vw, 1.6rem);
+  font-size: 1.3rem;
+  font-size: clamp(1rem, 1.8vw, 1.3rem);
 }
 
 .container .content-info span {
   margin-top: 0.3rem;
   opacity: 0.7;
   font-size: 0.95rem;
-  font-size: clamp(0.75rem, 3vw, 0.95rem);
+  font-size: clamp(0.9rem, 3vw, 0.95rem);
 }
 
 .container .content-info .price {
   opacity: 1;
   font-weight: bold;
-  font-size: clamp(2rem, 3vw, 3.5rem);
+  font-size: 3rem;
+  font-size: clamp(1.1rem, 3vw, 3rem);
 }
 
 .container .card {
@@ -1276,8 +1277,8 @@ nav .mobilebtn a {
 }
 
 .btn--wrapper .btn {
-  font-size: 2.6rem;
-  font-size: clamp(2rem, 3vw, 2.6rem);
+  font-size: 3rem;
+  font-size: clamp(2rem, 3vw, 3rem);
   font-weight: bold;
   color: var(--color-cta);
   text-decoration: none;
@@ -1521,13 +1522,13 @@ footer .engoa:hover::before {
             flex-direction: column;
   }
   .container .image-container {
-    right: 53%;
+    right: 50%;
     bottom: -3.5rem;
     -webkit-transform: translate(50%, 50%);
             transform: translate(50%, 50%);
   }
   .container .image-container img {
-    width: 270px;
+    width: 250px;
   }
   .container .content-info {
     -webkit-box-orient: vertical;
@@ -1552,8 +1553,8 @@ footer .engoa:hover::before {
     left: -2rem;
   }
   .container .card {
-    width: 500px;
-    height: 250px;
+    width: 450px;
+    height: 200px;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -1568,6 +1569,21 @@ footer .engoa:hover::before {
 }
 
 @media (max-width: 959px) {
+  .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .container .image-container {
+    right: 51%;
+    bottom: -5.3rem;
+    -webkit-transform: translate(50%, 50%);
+            transform: translate(50%, 50%);
+  }
+  .container .image-container img {
+    width: 180px;
+  }
   .theme--wrapper_btn {
     margin-left: auto;
     width: 43px;
@@ -1606,7 +1622,8 @@ footer .engoa:hover::before {
     margin-top: 4rem;
   }
   .container .card {
-    height: 250px;
+    height: 200px;
+    width: 350px;
   }
   .container .content-info {
     -webkit-box-align: center;
