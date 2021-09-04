@@ -1125,7 +1125,6 @@ nav .mobilebtn a {
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
-  margin-bottom: 12rem;
 }
 
 .container2 .content-info {
