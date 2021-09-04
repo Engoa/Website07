@@ -603,7 +603,10 @@ footer {
 @include media('<md') {
   .availability--wrapper {
     &__text {
+      width: 200px;
       top: 1rem;
+      right: 47%;
+      transform: translateX(50%);
     }
   }
   .container {

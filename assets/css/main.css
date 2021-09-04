@@ -1544,7 +1544,11 @@ footer .engoa:hover::before {
 
 @media (max-width: 959px) {
   .availability--wrapper__text {
+    width: 200px;
     top: 1rem;
+    right: 47%;
+    -webkit-transform: translateX(50%);
+            transform: translateX(50%);
   }
   .container {
     -webkit-box-orient: vertical;
