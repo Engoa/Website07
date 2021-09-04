@@ -1,5 +1,5 @@
-const checkForRest = (number) => {
-  for (let i = 0; i <= number; i++) {
+const checkForRest = (num) => {
+  for (let i = 0; i <= num; i++) {
     if (i % 3 === 0) {
       console.log(`First Function: ${i}`);
     }
@@ -14,26 +14,38 @@ const checkForNumbers = (num1, num2) => {
 };
 checkForNumbers(11, 21);
 
-const isNumberPrime = (num) => {
-  for (let i = 2; i < num; i++)
-    if (num % i === 0) {
-      return 'Third function: ' + false;
-    } else {
-      return 'Third function: ' + true;
+function isPrimeNumber(num) {
+  let isPrime = true;
+  if (num === 1) {
+    console.log(`1 is not a valid number to check for Prime`);
+    return;
+  }
+  if (num > 1) {
+    for (let i = 2; i < num; i++) {
+      if (num % i === 0) {
+        isPrime = false;
+        break;
+      }
     }
-};
-console.log(isNumberPrime(372));
+  }
+  if (isPrime) {
+    console.log(`Third Function: ${num} Is a prime number`);
+  } else {
+    console.log(`Third Function: ${num} Is not a prime number`);
+  }
+}
+isPrimeNumber(9);
 
 const sumFunction = (num1, num2) => {
   for (let i = num1; i <= num2; i++) {
     if (num1 % num2 === 0) {
-      return 'Fourth function: ' + false;
+      return false;
     } else {
-      return 'Fourth function: ' + true;
+      return true;
     }
   }
 };
-console.log(sumFunction(4, 12));
+console.log(`Fourth Function: ` + sumFunction(5, 12));
 
 const loveNotLove = (n) => {
   for (let i = 0; i <= n; i++) {
