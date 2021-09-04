@@ -260,6 +260,7 @@
 
 .input__container .input__container__dropdown:focus-within, .input__container .input__container__dropdown:active {
   width: 250px;
+  color: var(--color-text);
 }
 
 .input__container #kg {
@@ -903,8 +904,9 @@ nav .logo {
 }
 
 nav .logo svg {
+  margin-top: 0.2rem;
   max-width: 100%;
-  width: 4rem;
+  width: 3rem;
   -webkit-filter: drop-shadow(3px 4px 4px rgba(0, 0, 0, 0.63));
           filter: drop-shadow(3px 4px 4px rgba(0, 0, 0, 0.63));
   fill: var(--color-text);
@@ -981,7 +983,10 @@ nav .mobilebtn a {
   width: 80%;
   margin: 0 auto;
   position: relative;
-  margin-bottom: 5rem;
+  margin-top: 10rem;
+  border: 2px solid var(--color-text);
+  border-radius: 0.5rem;
+  padding: 2rem;
 }
 
 .container .content-info {
@@ -1104,7 +1109,7 @@ nav .mobilebtn a {
   max-width: 100%;
   position: absolute;
   right: 35%;
-  bottom: 5%;
+  bottom: -2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1112,7 +1117,7 @@ nav .mobilebtn a {
 }
 
 .image-container img {
-  width: 500px;
+  width: 440px;
   z-index: 3;
   -webkit-filter: drop-shadow(3px 4px 4px rgba(0, 0, 0, 0.63));
           filter: drop-shadow(3px 4px 4px rgba(0, 0, 0, 0.63));
@@ -1504,7 +1509,7 @@ footer .engoa:hover::before {
 
 @media (max-width: 1599px) {
   .container img {
-    width: 400px;
+    width: 350px;
   }
 }
 
@@ -1516,13 +1521,13 @@ footer .engoa:hover::before {
             flex-direction: column;
   }
   .container .image-container {
-    right: 50%;
-    bottom: -6rem;
+    right: 53%;
+    bottom: -3.5rem;
     -webkit-transform: translate(50%, 50%);
             transform: translate(50%, 50%);
   }
   .container .image-container img {
-    width: 350px;
+    width: 270px;
   }
   .container .content-info {
     -webkit-box-orient: vertical;
@@ -1547,6 +1552,8 @@ footer .engoa:hover::before {
     left: -2rem;
   }
   .container .card {
+    width: 500px;
+    height: 250px;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -1593,7 +1600,7 @@ footer .engoa:hover::before {
     font-size: 0.7rem;
   }
   .container {
-    margin-bottom: 15rem;
+    margin-bottom: 12rem;
   }
   .container #whitecontroller {
     margin-top: 4rem;

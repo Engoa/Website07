@@ -108,8 +108,9 @@ nav {
     flex: 1;
 
     svg {
+      margin-top: 0.2rem;
       max-width: 100%;
-      width: 4rem;
+      width: 3rem;
       filter: drop-shadow(3px 4px 4px rgba(0, 0, 0, 0.63));
       fill: var(--color-text);
       transition: all $anim--speed;
@@ -169,7 +170,10 @@ nav {
   width: 80%;
   margin: 0 auto;
   position: relative;
-  margin-bottom: 5rem;
+  margin-top: 10rem;
+  border: 2px solid var(--color-text);
+  border-radius: 0.5rem;
+  padding: 2rem;
 
   .content-info {
     display: flex;
@@ -257,12 +261,12 @@ nav {
   max-width: 100%;
   position: absolute;
   right: 35%;
-  bottom: 5%;
+  bottom: -2rem;
   display: flex;
   pointer-events: none;
 
   img {
-    width: 500px;
+    width: 440px;
     z-index: 3;
     filter: drop-shadow(3px 4px 4px rgba(0, 0, 0, 0.63));
     animation: ItemsAnim 1.5s ease;
@@ -573,7 +577,7 @@ footer {
 @include media('<xl') {
   .container {
     img {
-      width: 400px;
+      width: 350px;
     }
   }
 }
@@ -582,12 +586,12 @@ footer {
   .container {
     flex-direction: column;
     .image-container {
-      right: 50%;
-      bottom: -6rem;
+      right: 53%;
+      bottom: -3.5rem;
       transform: translate(50%, 50%);
 
       img {
-        width: 350px;
+        width: 270px;
       }
     }
     .content-info {
@@ -607,6 +611,8 @@ footer {
       }
     }
     .card {
+      width: 500px;
+      height: 250px;
       align-items: center;
       flex-direction: column;
       justify-content: center;
@@ -651,7 +657,7 @@ footer {
     }
   }
   .container {
-    margin-bottom: 15rem;
+    margin-bottom: 12rem;
 
     #whitecontroller {
       margin-top: 4rem;

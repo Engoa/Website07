@@ -27,6 +27,7 @@
     &:focus-within,
     &:active {
       width: 250px;
+      color: var(--color-text);
     }
   }
 
