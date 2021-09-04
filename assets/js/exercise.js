@@ -14,27 +14,15 @@ const checkForNumbers = (num1, num2) => {
 };
 checkForNumbers(11, 21);
 
-function isPrimeNumber(num) {
-  let isPrime = true;
-  if (num === 1) {
-    console.log(`1 is not a valid number to check for Prime`);
-    return;
-  }
-  if (num > 1) {
-    for (let i = 2; i < num; i++) {
-      if (num % i === 0) {
-        isPrime = false;
-        break;
-      }
+const isNumberPrime = (num) => {
+  for (let i = 2; i < num; i++) {
+    if (num % i === 0) {
+      return `${num} Is not a Prime`;
     }
   }
-  if (isPrime) {
-    console.log(`Third Function: ${num} Is a prime number`);
-  } else {
-    console.log(`Third Function: ${num} Is not a prime number`);
-  }
-}
-isPrimeNumber(9);
+  return `${num} Is a Prime`;
+};
+console.log(isNumberPrime(9));
 
 const sumFunction = (num1, num2) => {
   for (let i = num1; i <= num2; i++) {

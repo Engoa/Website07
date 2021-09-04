@@ -15,9 +15,10 @@ function closeNav() {
 
 // Go-to top button
 
-const goToTopVisibility = (visibility, opacity) => {
+const goToTopVisibility = (visibility, opacity, transform) => {
   gotoTopWrapper.style.opacity = opacity;
   gotoTopWrapper.style.visibility = visibility;
+  gotoTopWrapper.style.transform = transform;
 };
 const goToTopBtn = document.getElementById('gototop');
 const gotoTopWrapper = document.querySelector('.gototop');
@@ -25,9 +26,9 @@ const gotoTopWrapper = document.querySelector('.gototop');
 const isScrolled = () => {
   const docScrollTop = document.documentElement.scrollTop;
   if (docScrollTop >= 400) {
-    goToTopVisibility('visible', 1);
+    goToTopVisibility('visible', 1, 'translateY(-25px)');
   } else {
-    goToTopVisibility('hidden', 0);
+    goToTopVisibility('hidden', 0, 'translateY(50px)');
   }
 };
 
@@ -46,32 +47,20 @@ goToTopBtn.addEventListener('click', () => {
 const delayLinks = (URL) => {
   setTimeout(() => {
     window.location = URL;
-  }, 500);
+  }, 400);
 };
 
 // Delay clicks on links
 
 // DarkMode Toggle
 
-// Switch body class to light/dark themes
-// const controllersVisiblity = (hidden, visible) => {
-//   const blackController = document.querySelector('#blackcontroller');
-//   const whiteController = document.querySelector('#whitecontroller');
-//   blackController.style.visibility = hidden;
-//   whiteController.style.visibility = visible;
-//   return
-// };
-
 const themeBtn = document.getElementById('themebtn');
 themeBtn.addEventListener('click', () => {
-  document.body.classList.toggle('bglight');
-  let isLight = document.body.classList.contains('bglight');
-  // if (isLight === false) {
-  //   controllersVisiblity('visible', 'hidden');
-  // } else {
-  //   controllersVisiblity('hidden', 'visible');
-  // }
-  localStorage.setItem('lightTheme', isLight);
+  setTimeout(() => {
+    document.body.classList.toggle('bglight');
+    let isLight = document.body.classList.contains('bglight');
+    localStorage.setItem('lightTheme', isLight);
+  }, 100);
 });
 
 // Save to Local Storage
