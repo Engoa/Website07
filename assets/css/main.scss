@@ -264,7 +264,7 @@ nav {
   position: absolute;
   right: 50%;
   transform: translateX(50%);
-  bottom: -1rem;
+  bottom: 4rem;
   display: flex;
   pointer-events: none;
 
@@ -273,6 +273,9 @@ nav {
     z-index: 3;
     filter: drop-shadow(3px 4px 4px rgba(0, 0, 0, 0.63));
     animation: ItemsAnim 1.5s ease;
+  }
+  .tinifyimages {
+    width: 380px;
   }
 }
 
