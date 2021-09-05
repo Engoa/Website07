@@ -16,23 +16,23 @@
           <div class="card">
             <a class="cardplus" href="#"> <i class="fas fa-plus plus"></i>Add to Cart</a>
           </div>
-          <div class="image-container">
+          <div class="image-container ">
             <img
+              class="${index === 4 || index === 5 || index === 6 ? 'tinifyimages' : ''}"
               id="blackitems"
               src="${product.image_dark}"
-              alt="Items image"
+              alt="Item images"
             />
           </div>
           <div class="image-container">
             <img
+              class="${index === 4 || index === 5 || index === 6 ? 'tinifyimages' : ''}"
               id="whiteitems"
               src="${product.image_light}"
-              alt="Items images"/>
+              alt="Item images"/>
           </div>
         </div>
-        <div class='availability--wrapper'>
         <span class='availability--wrapper__text'>${product.availability}</span>
-        </div>
     `;
     });
   };
