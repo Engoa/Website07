@@ -1,0 +1,240 @@
+.product {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 4rem;
+  margin-top: 4rem;
+
+  &__image {
+    position: relative;
+    max-width: 500px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__wrapper {
+    gap: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--color-text);
+    width: 750px;
+  }
+  &__name {
+    font-size: 3rem;
+    font-size: clamp(1.7rem, 3vw, 3rem);
+  }
+
+  &__description {
+    font-size: 1.1rem;
+    font-size: clamp(0.9rem, 3vw, 1.1rem);
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .price--wrapper {
+    &__price {
+      font-weight: bold;
+      font-size: 2.3rem;
+      font-size: clamp(1.3rem, 3vw, 2.3rem);
+    }
+  }
+
+  .item--count {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin: 1rem 0;
+    font-weight: bold;
+    font-weight: 2rem;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+
+    .add,
+    .remove {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      button {
+        outline: none;
+        border: none;
+        cursor: pointer;
+        padding: 1rem 1.2rem;
+        font-size: 1.2rem;
+        text-align: center;
+        transition: all 300ms ease;
+        font-weight: bold;
+        border-radius: 0.5rem;
+        color: var(--color-text);
+        background-color: var(--color-bg);
+        opacity: 0.7;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &__cta {
+    font-size: 3rem;
+    font-size: clamp(2rem, 3vw, 3rem);
+    font-weight: bold;
+    color: var(--color-cta);
+    text-decoration: none;
+    margin-bottom: 2rem;
+    transition: all 200ms ease;
+
+    &::after {
+      content: '\f054';
+      font-weight: bold;
+      font-family: 'Font Awesome 5 Free';
+      font-size: 1.3rem;
+      position: absolute;
+      background: var(--color-cta);
+      -webkit-background-clip: text;
+      right: -1rem;
+      top: 1.4rem;
+      transition: transform $anim--speed;
+    }
+    &:hover::after {
+      transform: translateX(5px);
+      color: var(--color-underline);
+    }
+    &:hover {
+      color: var(--color-text);
+    }
+  }
+
+  .features--wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 7rem;
+    text-align: center;
+    color: var(--color-text);
+    flex-wrap: wrap;
+    padding: 2rem;
+    text-align: left;
+    h3 {
+      font-size: 2rem;
+      font-size: clamp(1.4rem, 3vw, 2rem);
+    }
+    p,
+    ul {
+    }
+    font-size: 1.1rem;
+    font-size: clamp(0.9rem, 3vw, 1.1rem);
+
+    &__texts {
+      gap: 1rem;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      .features__text1 {
+        max-width: 700px;
+        margin: 1rem 0;
+      }
+      .features__text2 {
+        max-width: 700px;
+      }
+    }
+    .inthebox {
+      ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 300px;
+      }
+      &__li {
+        list-style-type: none;
+        margin-top: 1rem;
+
+        span {
+          font-size: 0.7rem;
+          font-size: clamp(0.6rem, 3vw, 0.7rem);
+        }
+      }
+    }
+  }
+
+  .product__images {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row-reverse;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+
+    &--right {
+      img {
+        width: 450px;
+        height: 360px;
+      }
+    }
+
+    &--left {
+      gap: 0.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      img {
+        width: 277px;
+        height: 174px;
+      }
+    }
+  }
+  .productimage {
+    border-radius: 1rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: 3px solid var(--color-accent);
+  }
+}
+
+@include media('<lg') {
+  .product {
+    gap: unset;
+    .features--wrapper {
+      text-align: center;
+    }
+    .features--wrapper {
+      .inthebox {
+        ul {
+          width: 100%;
+        }
+      }
+    }
+
+    &__image {
+      width: 300px;
+    }
+    &__wrapper {
+      width: 100%;
+    }
+
+    &__cta {
+      &::after {
+        right: -1.1rem;
+        top: 0.7rem;
+      }
+    }
+    .product__images {
+      margin-top: 3rem;
+      img {
+        max-width: 300px;
+        width: 100%;
+        height: unset;
+      }
+    }
+  }
+}

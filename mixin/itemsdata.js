@@ -1,13 +1,27 @@
 const homeProducts = [
   {
     name: 'PS5 DualSense',
-    description: 'Wireless Controller for Playstation 5',
+    summary: 'Wireless Controller for Playstation 5',
+    description1: `Feel physically responsive feedback to your in-game actions with dual actuators which
+          replace traditional rumble motors. In your hands, these dynamic vibrations can
+          simulate the feeling of everything from environments to the recoil of different
+          weapons.`,
+    description2: `Experience varying levels of force and tension as you interact with your in-game gear
+          and environments. From pulling back an increasingly tight bowstring to hitting the
+          brakes on a speeding car, feel physically connected to your on-screen actions.`,
     compatibility: 'Compatible for Playstation 4 Pro',
-    price_us: '49.99',
-    price_eu: '42.99',
+    box: [
+      { text: 'dsd', quantity: 'dsd' },
+      { text: 'd', quantity: 'd' },
+      { text: 'd', quantity: 'd' },
+      { text: 'd', quantity: 'd' },
+    ],
+    price_us: '89.99',
+    price_eu: '79.99',
     image_dark: 'assets/images/controller.png',
     image_light: 'assets/images/controller2.png',
     availability: 'Available in limited stock',
+    id: 'dualsense',
   },
   {
     name: 'ASUS Zephyrus G17',
@@ -18,6 +32,7 @@ const homeProducts = [
     image_dark: 'assets/images/laptop.png',
     image_light: 'assets/images/laptop2.png',
     availability: '',
+    id: 'zephyrus',
   },
   {
     name: 'Logitech G915 TKL',
@@ -28,6 +43,7 @@ const homeProducts = [
     image_dark: 'assets/images/keyboard.png',
     image_light: 'assets/images/keyboard2.png',
     availability: 'Available in limited stock',
+    id: 'g915',
   },
   {
     name: 'Xbox Series X Bundle',
@@ -38,6 +54,7 @@ const homeProducts = [
     image_dark: 'assets/images/xbox.png',
     image_light: 'assets/images/xbox2.png',
     availability: '',
+    id: 'seriesx',
   },
   {
     name: 'Logitech G-Pro Wireless',
@@ -48,6 +65,7 @@ const homeProducts = [
     image_dark: 'assets/images/mouse.png',
     image_light: 'assets/images/mouse2.png',
     availability: 'Available in limited stock',
+    id: 'gprowireless',
   },
   {
     name: 'Apple Watch Series 6',
@@ -58,6 +76,7 @@ const homeProducts = [
     image_dark: 'assets/images/watch.png',
     image_light: 'assets/images/watch2.png',
     availability: 'Available in limited stock',
+    id: 'applewatch',
   },
   {
     name: 'Corsair Virtuoso XT',
@@ -68,5 +87,6 @@ const homeProducts = [
     image_dark: 'assets/images/headphones.png',
     image_light: 'assets/images/headphones2.png',
     availability: '',
+    id: 'virtuoso',
   },
 ];
