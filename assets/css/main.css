@@ -1133,7 +1133,7 @@ nav .mobilebtn a {
   right: 50%;
   -webkit-transform: translateX(50%);
           transform: translateX(50%);
-  bottom: 4rem;
+  bottom: 3.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1141,7 +1141,7 @@ nav .mobilebtn a {
 }
 
 .image-container img {
-  width: 450px;
+  width: 500px;
   z-index: 3;
   -webkit-filter: drop-shadow(3px 4px 4px rgba(0, 0, 0, 0.63));
           filter: drop-shadow(3px 4px 4px rgba(0, 0, 0, 0.63));
@@ -1150,7 +1150,7 @@ nav .mobilebtn a {
 }
 
 .image-container .tinifyimages {
-  width: 380px;
+  width: 340px;
 }
 
 .container2 {

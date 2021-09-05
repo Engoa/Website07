@@ -10,7 +10,7 @@ const homeProducts = [
     availability: 'Available in limited stock',
   },
   {
-    name: 'ASUS Zephyrus G17 Laptop',
+    name: 'ASUS Zephyrus G17',
     description: 'Best Gaming Laptop on the market!',
     compatibility: '144hz, Full DLSS and RTX support',
     price_us: '429.99',

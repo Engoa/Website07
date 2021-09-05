@@ -264,18 +264,18 @@ nav {
   position: absolute;
   right: 50%;
   transform: translateX(50%);
-  bottom: 4rem;
+  bottom: 3.5rem;
   display: flex;
   pointer-events: none;
 
   img {
-    width: 450px;
+    width: 500px;
     z-index: 3;
     filter: drop-shadow(3px 4px 4px rgba(0, 0, 0, 0.63));
     animation: ItemsAnim 1.5s ease;
   }
   .tinifyimages {
-    width: 380px;
+    width: 340px;
   }
 }
 
