@@ -25,81 +25,87 @@
     <title>Playstation Store</title>
   </head>
   <body class="bgdark">
-    <nav>
-      <div class="logo">
-        <a href="javascript:delayLinks('#')" onclick="closeNav()">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 288.8">
-            <path
-              d="M432,240a83.7,83.7,0,0,0-16.7,1.7c-7.2-72.9-68.7-130.1-143.3-130.1a16.1,16.1,0,0,0-16,16.1V384.3a16.1,16.1,0,0,0,16,16.1H432A80.2,80.2,0,0,0,432,240ZM208,143.7a16,16,0,0,0-16,16V384.3a16,16,0,1,0,32,0V159.7A16,16,0,0,0,208,143.7Zm-64,64.2a16,16,0,0,0-16,16V384.3a16,16,0,1,0,32,0V223.9A16,16,0,0,0,144,207.9Zm-64,0a16,16,0,0,0-16,16V384.3a16,16,0,1,0,32,0V223.9A16,16,0,0,0,80,207.9ZM16,256A16,16,0,0,0,0,272v96.3a16,16,0,0,0,32,0V272A16,16,0,0,0,16,256Z"
-              transform="translate(0 -111.6)"
-            />
-          </svg>
-        </a>
-      </div>
-      <div class="theme--wrapper">
-        <input type="checkbox" id="themebtn" class="theme--wrapper_btn" />
-      </div>
-      <div class="navlinks">
-        <div>
-          <ul class="desktop" id="menuList">
-            <li class="contact link">
-              <div class="anchor--wrapper">
-                <a onclick="closeNav()" href="#order">Order</a>
-              </div>
-            </li>
-            <li class="link">
-              <div class="anchor--wrapper">
-                <a onclick="closeNav()" href="#calc">Calculator</a>
-              </div>
-            </li>
-            <li class="link">
-              <div class="anchor--wrapper">
-                <a onclick="closeNav()" href="#equation">Quad Equation</a>
-              </div>
-            </li>
-            <li class="link">
-              <div class="anchor--wrapper">
-                <a onclick="closeNav()" href="#fruitshop">Fruit Shop</a>
-              </div>
-            </li>
-          </ul>
+    <div class="page__container">
+      <nav>
+        <div class="logo">
+          <a href="javascript:delayLinks('#')" onclick="closeNav()">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 288.8">
+              <path
+                d="M432,240a83.7,83.7,0,0,0-16.7,1.7c-7.2-72.9-68.7-130.1-143.3-130.1a16.1,16.1,0,0,0-16,16.1V384.3a16.1,16.1,0,0,0,16,16.1H432A80.2,80.2,0,0,0,432,240ZM208,143.7a16,16,0,0,0-16,16V384.3a16,16,0,1,0,32,0V159.7A16,16,0,0,0,208,143.7Zm-64,64.2a16,16,0,0,0-16,16V384.3a16,16,0,1,0,32,0V223.9A16,16,0,0,0,144,207.9Zm-64,0a16,16,0,0,0-16,16V384.3a16,16,0,1,0,32,0V223.9A16,16,0,0,0,80,207.9ZM16,256A16,16,0,0,0,0,272v96.3a16,16,0,0,0,32,0V272A16,16,0,0,0,16,256Z"
+                transform="translate(0 -111.6)"
+              />
+            </svg>
+          </a>
+          <div class="theme--wrapper">
+            <input type="checkbox" id="themebtn" class="theme--wrapper_btn" />
+          </div>
+          <div class="cart--wrapper">
+            <button type="button" id="cart" class="cart--wrapper__btn">
+              <i class="fas fa-cart-plus"></i>
+            </button>
+          </div>
         </div>
 
+        <ul class="desktop navlinks" id="menuList">
+          <li class="contact link">
+            <div class="anchor--wrapper">
+              <a onclick="closeNav()" href="#order">Order</a>
+            </div>
+          </li>
+          <li class="link">
+            <div class="anchor--wrapper">
+              <a onclick="closeNav()" href="#calc">Calculator</a>
+            </div>
+          </li>
+          <li class="link">
+            <div class="anchor--wrapper">
+              <a onclick="closeNav()" href="#equation">Quad Equation</a>
+            </div>
+          </li>
+          <li class="link">
+            <div class="anchor--wrapper">
+              <a onclick="closeNav()" href="#fruitshop">Fruit Shop</a>
+            </div>
+          </li>
+        </ul>
+
         <i class="fas fa-bars hamburger-menu" id="menubtn" onclick="menuToggle()"></i>
-      </div>
-    </nav>
+      </nav>
 
-    <div id="app"></div>
+      <div id="app"></div>
 
-    <footer>
-      <div class="icons">
-        <a
-          class="icons__facebook icons__icon"
-          href="javascript:delayLinks('https://www.facebook.com/')"
-          ><i class="fab fa-facebook-square"></i
-        ></a>
-        <a
-          class="icons__instagram icons__icon"
-          href="javascript:delayLinks('https://www.instagram.com/idobenzaken1/')"
-          ><i class="fab fa-instagram-square"></i
-        ></a>
-        <a
-          class="icons__twitter icons__icon"
-          href="javascript:delayLinks('https://twitter.com/Engoa97')"
-          ><i class="fab fa-twitter-square"></i
-        ></a>
+      <div class="socials">
+        <footer>
+          <div class="icons">
+            <a
+              class="icons__facebook icons__icon"
+              href="javascript:delayLinks('https://www.facebook.com/')"
+              ><i class="fab fa-facebook-square"></i
+            ></a>
+            <a
+              class="icons__instagram icons__icon"
+              href="javascript:delayLinks('https://www.instagram.com/idobenzaken1/')"
+              ><i class="fab fa-instagram-square"></i
+            ></a>
+            <a
+              class="icons__twitter icons__icon"
+              href="javascript:delayLinks('https://twitter.com/Engoa97')"
+              ><i class="fab fa-twitter-square"></i
+            ></a>
+          </div>
+          <div class="engoa">
+            <a href="javascript:delayLinks('https://www.linkedin.com/in/idobenzaken/')"
+              ><span class="engoa__text">By Engoa</span>
+            </a>
+          </div>
+        </footer>
       </div>
-      <div class="engoa">
-        <a href="javascript:delayLinks('https://www.linkedin.com/in/idobenzaken/')"
-          ><span class="engoa__text">By Engoa</span>
-        </a>
-      </div>
-    </footer>
 
-    <button class="gototop--cta" id="gototop" title="Go To Top">
-      <div class="gototop">
-        <i class="fas fa-arrow-up"></i>
-      </div>
-    </button>
+      <button class="gototop--cta" id="gototop" title="Go To Top">
+        <div class="gototop">
+          <i class="fas fa-arrow-up"></i>
+        </div>
+      </button>
+    </div>
   </body>
 </html>

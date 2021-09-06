@@ -25,7 +25,7 @@ const goToTopBtnStylings = (visibility, opacity, transform) => {
 // When the user scrolls down 20px from the top of the document, show the button
 const isScrolled = () => {
   const docScrollTop = document.documentElement.scrollTop;
-  if (docScrollTop >= 1200) {
+  if (docScrollTop >= 800) {
     goToTopBtnStylings('visible', 1, 'translateY(-15px)');
   } else {
     goToTopBtnStylings('hidden', 0, 'translateY(50px)');
@@ -69,3 +69,19 @@ if (isLightTheme) {
   document.body.classList.add('bglight');
   themeBtn.checked = true;
 }
+
+const cartElement = document.querySelector('#cart');
+let cartClicked = true;
+const checkAndMoveCart = (boolean, width) => {
+  cartClicked = boolean;
+  cartElement.style.transform = width;
+};
+cartElement.addEventListener('click', () => {
+  if (cartClicked && document.documentElement.clientWidth >= 1250) {
+    checkAndMoveCart(false, 'translateX(100px)');
+  } else if (cartClicked && document.documentElement.clientWidth <= 1250) {
+    checkAndMoveCart(false, 'translateX(30px)');
+  } else {
+    checkAndMoveCart(true, 'translateX(0px)');
+  }
+});

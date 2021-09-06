@@ -1,15 +1,23 @@
 .product {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
   gap: 4rem;
   margin-top: 4rem;
 
+  .main--product {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row-reverse;
+    gap: 4rem;
+    flex-wrap: wrap;
+  }
   &__image {
     position: relative;
-    max-width: 500px;
+    max-width: 450px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -24,11 +32,13 @@
     justify-content: center;
     text-align: center;
     color: var(--color-text);
-    width: 750px;
+    border: 2px solid var(--color-text);
+    border-radius: 1rem;
+    padding: 1rem 0.5rem 0rem 0.5rem;
   }
   &__name {
-    font-size: 3rem;
-    font-size: clamp(1.7rem, 3vw, 3rem);
+    font-size: 2.3rem;
+    font-size: clamp(1.7rem, 3vw, 2.3rem);
   }
 
   &__description {
@@ -41,8 +51,8 @@
   .price--wrapper {
     &__price {
       font-weight: bold;
-      font-size: 2.3rem;
-      font-size: clamp(1.3rem, 3vw, 2.3rem);
+      font-size: 2.5rem;
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
     }
   }
 
@@ -55,7 +65,7 @@
     margin: 1rem 0;
     font-weight: bold;
     font-weight: 2rem;
-    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-size: clamp(1.8rem, 3vw, 2rem);
 
     .add,
     .remove {
@@ -66,28 +76,40 @@
         outline: none;
         border: none;
         cursor: pointer;
-        padding: 1rem 1.2rem;
-        font-size: 1.2rem;
+        font-size: 1rem;
         text-align: center;
-        transition: all 300ms ease;
+        transition: all 500ms linear;
         font-weight: bold;
-        border-radius: 0.5rem;
         color: var(--color-text);
-        background-color: var(--color-bg);
-        opacity: 0.7;
+        background-color: transparent;
 
-        &:hover {
+        &:hover,
+        &:active {
           opacity: 1;
         }
+
+        &:active {
+          transform: scale(1.3);
+        }
       }
+    }
+
+    #quantity {
+      transition: all 200ms ease;
+    }
+    &:active #quantity {
+      color: var(--color-underline);
     }
   }
 
   &__cta {
-    font-size: 3rem;
-    font-size: clamp(2rem, 3vw, 3rem);
+    font-size: 1rem;
+    font-size: clamp(0.9rem, 3vw, 1rem);
     font-weight: bold;
     color: var(--color-cta);
+    background-color: var(--color-text);
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
     text-decoration: none;
     margin-bottom: 2rem;
     transition: all 200ms ease;
@@ -96,12 +118,12 @@
       content: '\f054';
       font-weight: bold;
       font-family: 'Font Awesome 5 Free';
-      font-size: 1.3rem;
+      font-size: 1rem;
       position: absolute;
       background: var(--color-cta);
       -webkit-background-clip: text;
-      right: -1rem;
-      top: 1.4rem;
+      right: 1.1rem;
+      top: 1.1rem;
       transition: transform $anim--speed;
     }
     &:hover::after {
@@ -109,15 +131,15 @@
       color: var(--color-underline);
     }
     &:hover {
-      color: var(--color-text);
+      color: var(--color-bg);
     }
   }
 
   .features--wrapper {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 7rem;
-    text-align: center;
     color: var(--color-text);
     flex-wrap: wrap;
     padding: 2rem;
@@ -146,21 +168,19 @@
       }
     }
     .inthebox {
+      text-align: center;
+      width: 300px;
       ul {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        width: 300px;
       }
       &__li {
         list-style-type: none;
         margin-top: 1rem;
-
-        span {
-          font-size: 0.7rem;
-          font-size: clamp(0.6rem, 3vw, 0.7rem);
-        }
+        font-size: 1rem;
+        font-size: clamp(0.9rem, 3vw, 1.1rem);
       }
     }
   }
@@ -199,35 +219,38 @@
     background-size: contain;
     border: 3px solid var(--color-accent);
   }
+  #availability--product {
+    bottom: unset;
+    top: -1.7rem;
+    position: relative;
+    font-size: 0.8rem;
+    font-size: clamp(0.7rem, 1vw, 0.8rem);
+  }
 }
 
 @include media('<lg') {
   .product {
     gap: unset;
-    .features--wrapper {
-      text-align: center;
+    .main--product {
+      gap: unset;
     }
     .features--wrapper {
+      text-align: center;
       .inthebox {
+        width: 100%;
         ul {
-          width: 100%;
         }
       }
     }
 
     &__image {
-      width: 300px;
+      max-width: 350px;
+      width: 100%;
     }
     &__wrapper {
       width: 100%;
     }
 
-    &__cta {
-      &::after {
-        right: -1.1rem;
-        top: 0.7rem;
-      }
-    }
     .product__images {
       margin-top: 3rem;
       img {
