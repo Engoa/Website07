@@ -1,15 +1,20 @@
 // Hide/Show Navigation bar on mobile/desktop
 const menuList = document.getElementById('menuList');
+const menuBtn = document.getElementById('menubtn');
 const closeNavElement = document.getElementById('closenav');
+const xButton = document.querySelector('#menu--close');
+const navbarMobile = document.querySelector('.navbar--mobile');
 
 function menuToggle() {
-  menuList.classList.toggle('mobilebtn');
+  navbarMobile.classList.toggle('active');
+  xButton.classList.toggle('menu--open');
+  menuBtn.classList.toggle('hide');
 }
 // Hide/Show Navigation bar on mobile/desktop
 
 // Close Navbar on mobile when clicking links
 function closeNav() {
-  menuList.classList.remove('mobilebtn');
+  navbarMobile.classList.remove('active');
 }
 // Close Navbar on mobile when clicking links
 
@@ -80,7 +85,7 @@ cartElement.addEventListener('click', () => {
   if (cartClicked && document.documentElement.clientWidth >= 1250) {
     checkAndMoveCart(false, 'translateX(100px)');
   } else if (cartClicked && document.documentElement.clientWidth <= 1250) {
-    checkAndMoveCart(false, 'translateX(30px)');
+    checkAndMoveCart(false, 'translateX(50px)');
   } else {
     checkAndMoveCart(true, 'translateX(0px)');
   }
