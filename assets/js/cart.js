@@ -30,18 +30,20 @@ const Cart = {
       this.items.push(item);
     }
 
+    let cartTotalItems = document.querySelector('#totalquantity');
+    cartTotalItems.innerHTML = localStorage.getItem('totalquantity');
+
+    // Styling and animation - Popup for when clicking on add to cart
     Snackbar.show({
       pos: 'bottom-center',
-      text: `${item.name} added to cart`,
-      textColor: 'var(--color-bg)',
-      backgroundColor: 'var(--color-text)',
+      text: `${item.quantity}x ${item.name} added to cart`,
+      textColor: 'var(--color-textdark)',
       actionTextColor: 'var(--color-cta)',
       customClass: 'sb',
     });
-    console.log(this.items);
     gsap
       .timeline({ yoyo: true, repeat: 1 })
-      .to('#cart', { x: 200, overwrite: 'all' });
+      .to('#cart', { scaleX: 1.7, scaleY: 1.7, overwrite: 'all', duration: 0.1 });
 
     this.updateLS();
   },
@@ -49,5 +51,6 @@ const Cart = {
   // Saves cart to local storage
   updateLS() {
     localStorage.setItem('cart', JSON.stringify(this.items));
+    localStorage.setItem('totalquantity', this.cartQuantity);
   },
 };

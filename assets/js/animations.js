@@ -3,9 +3,9 @@ function animatePage(selector) {
     .from(document.querySelectorAll(selector), {
       autoAlpha: 0,
       y: 100,
-      ease: Power1.easeIn,
+      ease: Power1.ease,
       stagger: 0.2,
       clearProps: 'all',
     })
-    .totalDuration(0.8);
+    .totalDuration(1.5);
 }

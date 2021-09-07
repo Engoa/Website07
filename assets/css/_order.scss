@@ -55,7 +55,6 @@
     border-radius: 1.5rem;
     font-size: 16px;
     color: var(--color-text);
-    font-family: 'Montserrat', sns-serif;
     transition: all 150ms linear;
     margin-left: auto;
     background-color: var(--color-bg);
@@ -75,7 +74,6 @@
     border-radius: 2rem;
     border: 2px solid var(--color-cta);
     outline: none;
-    font-family: 'Montserrat', sans-serif;
     cursor: pointer;
     transition: all 0.3s;
     width: 240px;
@@ -203,7 +201,6 @@
     margin-top: 3rem;
 
     button {
-      font-family: 'Montserrat', sans-serif;
       border: none;
       cursor: pointer;
       padding: 1rem 1.2rem;

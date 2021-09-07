@@ -1,6 +1,7 @@
 (() => {
   const product = homeProducts.find((x) => x.id === Router.getCurrentQuery().q);
   let itemQuantity = 1;
+  let chosenQuantity = 1;
 
   const drawProduct = () => {
     document.getElementById('product').innerHTML = `
@@ -30,7 +31,7 @@
       </div>
       <div class="item--count">
         <div class="add"><button id='add'type="button">+</button></div>
-        <div class="count"><span id='quantity'>${itemQuantity}</span></div>
+        <div class="count"><span id='quantity'>${chosenQuantity}</span></div>
         <div class="remove"><button id='remove' type="button">-</button></div>
       </div>
       <button class="product__cta btn link" id="buy-btn">Buy Product</button>
@@ -94,7 +95,7 @@
               <span>${boxItem.quantity}x - ${boxItem.text}</span>
             </li>
           </div>
-        `;
+          `;
     });
   };
   drawInTheBox();
@@ -104,26 +105,24 @@
   const removeItem = document.querySelector('#remove');
   const itemsPriceElement = document.querySelector('#itemprice');
 
-  // Add product quantity
   const changeItemCount = (operator) => {
     itemQuantityElement.innerHTML = operator;
     let itemPrice = product.price_us;
-    let totalPrice = itemQuantity * itemPrice;
+    let totalPrice = chosenQuantity * itemPrice;
     itemsPriceElement.innerHTML = '$' + totalPrice.toFixed(2);
   };
 
   addItem.addEventListener('click', () => {
-    changeItemCount(itemQuantity++);
+    changeItemCount(chosenQuantity++);
     itemQuantityElement.innerHTML++;
   });
 
-  // Remove product quantity
   removeItem.addEventListener('click', () => {
-    if (itemQuantity <= 1) {
-      itemQuantity = 1;
-      itemQuantityElement.innerHTML = itemQuantity;
+    if (chosenQuantity <= 1) {
+      chosenQuantity = 1;
+      itemQuantityElement.innerHTML = chosenQuantity;
     } else {
-      changeItemCount(itemQuantity--);
+      changeItemCount(chosenQuantity--);
       itemQuantityElement.innerHTML--;
     }
   });
@@ -133,7 +132,7 @@
     Cart.addItem({
       id: product.id,
       name: product.name,
-      quantity: itemQuantity,
+      quantity: chosenQuantity,
     })
   );
 

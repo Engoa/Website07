@@ -2,7 +2,7 @@
   const drawProducts = () => {
     const mainContainer = document.querySelector('.home--container');
     homeProducts.forEach((product, index) => {
-      const tinifyImageClass = index > 3 && index < 7 ? 'tinifyimages' : '';
+      const tinifyImageClass = index > 3 && index < 7 ? 'tinifyimages' : ''; //selector to tinify images by index on page
       mainContainer.innerHTML += `
         <div class="container ${index % 2 !== 0 ? 'container2' : ''}">
           <div class="content-info">
@@ -37,7 +37,7 @@
   };
 
   drawProducts();
-
+  // Add to cart on home screen, quantity is always 1!
   $(`.addtocart`).click((ev) => {
     const clickedItemIndex = ev.currentTarget.getAttribute('data-index');
     const product = homeProducts[clickedItemIndex];
