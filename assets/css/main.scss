@@ -710,16 +710,19 @@ nav {
     }
 
     .menu--close {
-      position: absolute;
-      right: 2rem;
       font-size: 1.5rem;
-      visibility: hidden;
+      display: none;
+
+      &:hover {
+        transform: rotate(-90deg);
+      }
     }
     .menu--open {
-      visibility: visible;
+      transition: all 0.3s ease;
+      display: block;
     }
     .hide {
-      visibility: hidden;
+      display: none;
     }
   }
 }

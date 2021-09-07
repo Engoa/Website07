@@ -1,3 +1,4 @@
+let cartTotalItems = document.querySelector('#totalquantity');
 const Cart = {
   items: [],
 
@@ -30,8 +31,7 @@ const Cart = {
       this.items.push(item);
     }
 
-    let cartTotalItems = document.querySelector('#totalquantity');
-    cartTotalItems.innerHTML = localStorage.getItem('totalquantity');
+    cartTotalItems.innerHTML = this.cartQuantity; //Add items to cart on buy btn click
 
     // Styling and animation - Popup for when clicking on add to cart
     Snackbar.show({
@@ -44,13 +44,15 @@ const Cart = {
     gsap
       .timeline({ yoyo: true, repeat: 1 })
       .to('#cart', { scaleX: 1.7, scaleY: 1.7, overwrite: 'all', duration: 0.1 });
-
     this.updateLS();
   },
 
   // Saves cart to local storage
   updateLS() {
     localStorage.setItem('cart', JSON.stringify(this.items));
-    localStorage.setItem('totalquantity', this.cartQuantity);
+    localStorage.setItem('totalquantity', JSON.stringify(this.cartQuantity));
   },
 };
+// Get total Items quantity from Local Storage and assign it to the cart on load
+const savedQuantity = localStorage.getItem('totalquantity');
+cartTotalItems.innerHTML = savedQuantity;
