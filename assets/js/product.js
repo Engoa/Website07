@@ -1,10 +1,9 @@
 (() => {
-  const productName = Router.getCurrentQuery().q;
-
+  const product = homeProducts.find((x) => x.id === Router.getCurrentQuery().q);
   let itemQuantity = 1;
-  const product = homeProducts.find((x) => x.id === productName);
 
-  document.getElementById('product').innerHTML = `
+  const drawProduct = () => {
+    document.getElementById('product').innerHTML = `
 <div class="product">
   <div class='main--product'>
   <div class="product__image image--anim">
@@ -34,7 +33,7 @@
         <div class="count"><span id='quantity'>${itemQuantity}</span></div>
         <div class="remove"><button id='remove' type="button">-</button></div>
       </div>
-      <a href="#" class="product__cta btn link">Buy Product</a>
+      <button class="product__cta btn link" id="buy-btn">Buy Product</button>
         <span class='availability--text' id='availability--product'>${product.availability}</span>
     </div>
   </div>
@@ -83,43 +82,22 @@
 </div>
 
     `;
+  };
+  drawProduct();
 
   const drawInTheBox = () => {
     const inTheBoxList = document.querySelector('.box--content');
     product.boxes.forEach((boxItem) => {
       inTheBoxList.innerHTML += `
-           <div class="inthebox__li">
-          <li>
-              <span> ${boxItem.quantity}x - ${boxItem.text}</span>
+          <div class="inthebox__li">
+            <li>
+              <span>${boxItem.quantity}x - ${boxItem.text}</span>
             </li>
           </div>
         `;
     });
   };
   drawInTheBox();
-
-  // const drawProductImages = () => {
-  //   const productImages = document.querySelector('.product__images');
-  //   console.log(product.images);
-  //   product.images.map((imageItem) => {
-  //     productImages.innerHTML = `
-  //     <div class="product__images--right">
-  //       <img class="productimage" src="${imageItem.image}" alt="" />
-  //    </div>
-  //   <div class="product__images--left">
-  //     <div class="left__image">
-  //       <img class="productimage" src="${imageItem.image}"  alt="" />
-  //     </div>
-  //     <div class="product__images--left">
-  //       <div class="left__image">
-  //         <img class="productimage" src="${imageItem.image}" alt="" />
-  //       </div>
-  //     </div>
-  // </div>
-  //       `;
-  //   });
-  // };
-  // drawProductImages();
 
   const itemQuantityElement = document.querySelector('#quantity');
   const addItem = document.querySelector('#add');
@@ -147,4 +125,15 @@
       itemQuantityElement.innerHTML--;
     }
   });
+
+  // Add to cart action
+  $('#buy-btn').click(() =>
+    Cart.addItem({
+      id: product.id,
+      name: product.name,
+      quantity: itemQuantity,
+    })
+  );
+
+  animatePage('.main--product, .features--wrapper > *');
 })();

@@ -1,7 +1,7 @@
 (() => {
   const drawProducts = () => {
     const mainContainer = document.querySelector('.home--container');
-    homeProducts.map((product, index) => {
+    homeProducts.forEach((product, index) => {
       const tinifyImageClass = index > 3 && index < 7 ? 'tinifyimages' : '';
       mainContainer.innerHTML += `
         <div class="container ${index % 2 !== 0 ? 'container2' : ''}">
@@ -15,7 +15,7 @@
             </div>
           </div>
           <div class="card">
-            <a class="cardplus" href="#"> <i class="fas fa-plus plus"></i>Add to Cart</a>
+            <button class="cardplus addtocart" data-index="${index}"><i class="fas fa-plus plus"></i>Add to Cart</button>
           </div>
           <div class="image-container image--anim">
             <img
@@ -36,6 +36,17 @@
     });
   };
 
-
   drawProducts();
+
+  $(`.addtocart`).click((ev) => {
+    const clickedItemIndex = ev.currentTarget.getAttribute('data-index');
+    const product = homeProducts[clickedItemIndex];
+    Cart.addItem({
+      id: product.id,
+      name: product.name,
+      quantity: 1,
+    });
+  });
+
+  animatePage('.home--container');
 })();

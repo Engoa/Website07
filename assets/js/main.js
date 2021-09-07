@@ -75,18 +75,6 @@ if (isLightTheme) {
   themeBtn.checked = true;
 }
 
-const cartElement = document.querySelector('#cart');
-let cartClicked = true;
-const checkAndMoveCart = (boolean, width) => {
-  cartClicked = boolean;
-  cartElement.style.transform = width;
-};
-cartElement.addEventListener('click', () => {
-  if (cartClicked && document.documentElement.clientWidth >= 1250) {
-    checkAndMoveCart(false, 'translateX(100px)');
-  } else if (cartClicked && document.documentElement.clientWidth <= 1250) {
-    checkAndMoveCart(false, 'translateX(50px)');
-  } else {
-    checkAndMoveCart(true, 'translateX(0px)');
-  }
-});
+if (localStorage.getItem('cart')) {
+  Cart.setItems(JSON.parse(localStorage.getItem('cart')));
+}

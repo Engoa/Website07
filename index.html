@@ -7,20 +7,29 @@
     <link rel="stylesheet" href="assets/css/main.css" />
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap"
-      rel="stylesheet"
-    />
     <script
       src="https://code.jquery.com/jquery-3.6.0.min.js"
       integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
       crossorigin="anonymous"
     ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"
+      integrity="sha512-UxP+UhJaGRWuMG2YC6LPWYpFQnsSgnor0VUF3BHdD83PS/pOpN+FYbZmrYN+ISX8jnvgVUciqP/fILOXDjZSwg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="/vendors/SnackBar-master/dist/snackbar.min.js" defer></script>
     <script src="https://kit.fontawesome.com/9a80e50f42.js" crossorigin="anonymous"></script>
+    <script src="/assets/js/animations.js" defer></script>
+    <script src="/assets/js/cart.js" defer></script>
     <script src="/assets/js/router.js" defer></script>
     <script src="/mixin/itemsdata.js" defer></script>
     <script src="/assets/js/main.js" defer></script>
     <script src="/assets/js/svg-inject.js" defer></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
 
     <title>Playstation Store</title>
   </head>
@@ -51,50 +60,56 @@
         </ul>
 
         <nav>
-          <div class="logo">
-            <a href="javascript:delayLinks('#')" onclick="closeNav()">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 288.8">
-                <path
-                  d="M432,240a83.7,83.7,0,0,0-16.7,1.7c-7.2-72.9-68.7-130.1-143.3-130.1a16.1,16.1,0,0,0-16,16.1V384.3a16.1,16.1,0,0,0,16,16.1H432A80.2,80.2,0,0,0,432,240ZM208,143.7a16,16,0,0,0-16,16V384.3a16,16,0,1,0,32,0V159.7A16,16,0,0,0,208,143.7Zm-64,64.2a16,16,0,0,0-16,16V384.3a16,16,0,1,0,32,0V223.9A16,16,0,0,0,144,207.9Zm-64,0a16,16,0,0,0-16,16V384.3a16,16,0,1,0,32,0V223.9A16,16,0,0,0,80,207.9ZM16,256A16,16,0,0,0,0,272v96.3a16,16,0,0,0,32,0V272A16,16,0,0,0,16,256Z"
-                  transform="translate(0 -111.6)"
-                />
-              </svg>
-            </a>
-            <div class="theme--wrapper">
-              <input type="checkbox" id="themebtn" class="theme--wrapper_btn" />
+          <div class="container">
+            <div class="logo">
+              <a href="javascript:delayLinks('#')" onclick="closeNav()">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 288.8">
+                  <path
+                    d="M432,240a83.7,83.7,0,0,0-16.7,1.7c-7.2-72.9-68.7-130.1-143.3-130.1a16.1,16.1,0,0,0-16,16.1V384.3a16.1,16.1,0,0,0,16,16.1H432A80.2,80.2,0,0,0,432,240ZM208,143.7a16,16,0,0,0-16,16V384.3a16,16,0,1,0,32,0V159.7A16,16,0,0,0,208,143.7Zm-64,64.2a16,16,0,0,0-16,16V384.3a16,16,0,1,0,32,0V223.9A16,16,0,0,0,144,207.9Zm-64,0a16,16,0,0,0-16,16V384.3a16,16,0,1,0,32,0V223.9A16,16,0,0,0,80,207.9ZM16,256A16,16,0,0,0,0,272v96.3a16,16,0,0,0,32,0V272A16,16,0,0,0,16,256Z"
+                    transform="translate(0 -111.6)"
+                  />
+                </svg>
+              </a>
+              <div class="theme--wrapper">
+                <input type="checkbox" id="themebtn" class="theme--wrapper_btn" />
+              </div>
+              <div class="cart--wrapper">
+                <button type="button" id="cart" class="cart--wrapper__btn">
+                  <i class="fas fa-cart-plus"></i>
+                </button>
+              </div>
             </div>
-            <div class="cart--wrapper">
-              <button type="button" id="cart" class="cart--wrapper__btn">
-                <i class="fas fa-cart-plus"></i>
-              </button>
-            </div>
+
+            <ul class="desktop navlinks" id="menuList">
+              <li class="contact link">
+                <div class="anchor--wrapper">
+                  <a onclick="closeNav()" href="#order">Order</a>
+                </div>
+              </li>
+              <li class="link">
+                <div class="anchor--wrapper">
+                  <a onclick="closeNav()" href="#calc">Calculator</a>
+                </div>
+              </li>
+              <li class="link">
+                <div class="anchor--wrapper">
+                  <a onclick="closeNav()" href="#equation">Quad Equation</a>
+                </div>
+              </li>
+              <li class="link">
+                <div class="anchor--wrapper">
+                  <a onclick="closeNav()" href="#fruitshop">Fruit Shop</a>
+                </div>
+              </li>
+            </ul>
+
+            <i class="fas fa-bars hamburger-menu" id="menubtn" onclick="menuToggle()"></i>
+            <i
+              class="fas fa-times hamburger-menu menu--close"
+              id="menu--close"
+              onclick="menuToggle()"
+            ></i>
           </div>
-
-          <ul class="desktop navlinks" id="menuList">
-            <li class="contact link">
-              <div class="anchor--wrapper">
-                <a onclick="closeNav()" href="#order">Order</a>
-              </div>
-            </li>
-            <li class="link">
-              <div class="anchor--wrapper">
-                <a onclick="closeNav()" href="#calc">Calculator</a>
-              </div>
-            </li>
-            <li class="link">
-              <div class="anchor--wrapper">
-                <a onclick="closeNav()" href="#equation">Quad Equation</a>
-              </div>
-            </li>
-            <li class="link">
-              <div class="anchor--wrapper">
-                <a onclick="closeNav()" href="#fruitshop">Fruit Shop</a>
-              </div>
-            </li>
-          </ul>
-
-          <i class="fas fa-bars hamburger-menu" id="menubtn" onclick="menuToggle()"></i>
-          <i class="fas fa-times hamburger-menu menu--close" id="menu--close" onclick="menuToggle()"></i>
         </nav>
 
         <div id="app"></div>

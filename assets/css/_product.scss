@@ -2,21 +2,24 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   flex-wrap: wrap;
-  gap: 4rem;
-  margin-top: 4rem;
+  margin-top: 3rem;
+  gap: 5rem;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
 
   .main--product {
     display: flex;
     align-items: center;
-    justify-content: center;
     flex-direction: row-reverse;
-    gap: 4rem;
+    justify-content: space-evenly !important;
+
     flex-wrap: wrap;
+    width: 100%;
+    max-width: 1440px;
   }
   &__image {
-    position: relative;
     max-width: 450px;
     width: 100%;
     display: flex;
@@ -42,8 +45,8 @@
   }
 
   &__description {
-    font-size: 1.1rem;
-    font-size: clamp(0.9rem, 3vw, 1.1rem);
+    font-size: 1.2rem;
+    font-size: clamp(1rem, 3vw, 1.2rem);
     padding-left: 2rem;
     padding-right: 2rem;
   }
@@ -62,7 +65,6 @@
     align-items: center;
     justify-content: center;
     gap: 2rem;
-    margin: 1rem 0;
     font-weight: bold;
     font-weight: 2rem;
     font-size: clamp(1.8rem, 3vw, 2rem);
@@ -105,27 +107,28 @@
   }
 
   &__cta {
-    font-size: 1rem;
-    font-size: clamp(0.9rem, 3vw, 1rem);
+    font-size: 1.5rem;
+    font-size: clamp(1.1rem, 3vw, 1.5rem);
     font-weight: bold;
     color: var(--color-text);
-    background-color: var(--color-cta);
-    padding: 0.5rem 1rem;
+    background: var(--color-bg);
+    padding: 0.5rem 1em;
     border-radius: 0.5rem;
     text-decoration: none;
-    margin-bottom: 2rem;
     transition: all 200ms ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
 
     &::after {
       content: '\f054';
       font-weight: bold;
       font-family: 'Font Awesome 5 Free';
-      font-size: 0.6rem;
-      position: absolute;
-      background: var(--color-cta);
-      -webkit-background-clip: text;
-      right: 0.5rem;
-      top: 0.85rem;
+      font-size: 0.7rem;
       transition: transform $anim--speed;
     }
     &:hover::after {
@@ -133,19 +136,19 @@
       color: var(--color-underline);
     }
     &:hover {
-      color: var(--color-underline);
+      color: var(--color-text);
     }
   }
 
   .features--wrapper {
     display: flex;
-    justify-content: center;
     align-items: center;
-    gap: 6rem;
     color: var(--color-text);
     flex-wrap: wrap;
-    padding: 2rem;
     text-align: left;
+    width: 100%;
+    max-width: 1440px;
+    justify-content: space-evenly !important;
     h3 {
       font-size: 2rem;
       font-size: clamp(1.4rem, 3vw, 2rem);
@@ -157,14 +160,12 @@
     font-size: clamp(0.9rem, 3vw, 1.1rem);
 
     &__texts {
-      gap: 1rem;
+      display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      .features__text1 {
-        max-width: 700px;
-        margin: 1.2rem 0;
-      }
+      gap: 1rem;
+      .features__text1,
       .features__text2 {
         max-width: 700px;
       }
@@ -172,17 +173,21 @@
     .inthebox {
       text-align: center;
       width: 300px;
+      margin-bottom: auto;
+      display: flex;
+      gap: 1rem;
+      flex-direction: column;
+      align-items: center;
       ul {
+        gap: 1rem;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
       }
       &__li {
         list-style-type: none;
-        margin-top: 1rem;
-        font-size: 1.1rem;
-        font-size: clamp(0.9rem, 3vw, 1.1rem);
+        font-size: 1.2rem;
+        font-size: clamp(1rem, 3vw, 1.2rem);
       }
     }
   }
@@ -222,17 +227,23 @@
     border: 3px solid var(--color-accent);
   }
   #availability--product {
-    bottom: unset;
-    top: -1.7rem;
-    position: relative;
-    font-size: 0.8rem;
-    font-size: clamp(0.7rem, 1vw, 0.8rem);
+    font-size: 0.7rem;
+    font-size: clamp(0.6rem, 1vw, 0.7rem);
+    margin-bottom: 0.3rem;
+  }
+}
+
+.sb {
+  //Class for popup when adding items to cart
+  * {
+    font-weight: bold !important;
+    color: var(--color-text);
   }
 }
 
 @include media('<lg') {
   .product {
-    gap: unset;
+    gap: 4rem;
     .main--product {
       gap: unset;
     }
@@ -240,8 +251,6 @@
       text-align: center;
       .inthebox {
         width: 100%;
-        ul {
-        }
       }
     }
 
@@ -249,12 +258,8 @@
       max-width: 350px;
       width: 100%;
     }
-    &__wrapper {
-      width: 100%;
-    }
 
     .product__images {
-      margin-top: 3rem;
       img {
         max-width: 300px;
         width: 100%;
