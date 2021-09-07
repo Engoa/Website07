@@ -104,6 +104,7 @@
   const removeItem = document.querySelector('#remove');
   const itemsPriceElement = document.querySelector('#itemprice');
 
+  // Add product quantity
   const changeItemCount = (operator) => {
     itemQuantityElement.innerHTML = operator;
     let itemPrice = product.price_us;
@@ -116,6 +117,7 @@
     itemQuantityElement.innerHTML++;
   });
 
+  // Remove product quantity
   removeItem.addEventListener('click', () => {
     if (itemQuantity <= 1) {
       itemQuantity = 1;

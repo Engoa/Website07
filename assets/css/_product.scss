@@ -110,8 +110,7 @@
     font-size: 1.5rem;
     font-size: clamp(1.1rem, 3vw, 1.5rem);
     font-weight: bold;
-    color: var(--color-text);
-    background: var(--color-bg);
+    color: var(--color-cta);
     padding: 0.5rem 1em;
     border-radius: 0.5rem;
     text-decoration: none;
@@ -123,6 +122,7 @@
     border: none;
     outline: none;
     cursor: pointer;
+    background-color: transparent;
 
     &::after {
       content: '\f054';
@@ -178,6 +178,7 @@
       gap: 1rem;
       flex-direction: column;
       align-items: center;
+
       ul {
         gap: 1rem;
         display: flex;
@@ -237,7 +238,7 @@
   //Class for popup when adding items to cart
   * {
     font-weight: bold !important;
-    color: var(--color-text);
+    font-size: 0.8rem !important;
   }
 }
 
@@ -251,17 +252,18 @@
       text-align: center;
       .inthebox {
         width: 100%;
+        margin-top: 2rem;
       }
     }
 
     &__image {
-      max-width: 350px;
+      max-width: 300px;
       width: 100%;
     }
 
     .product__images {
       img {
-        max-width: 300px;
+        max-width: 280px;
         width: 100%;
         height: unset;
       }

@@ -967,8 +967,7 @@
   font-size: 1.5rem;
   font-size: clamp(1.1rem, 3vw, 1.5rem);
   font-weight: bold;
-  color: var(--color-text);
-  background: var(--color-bg);
+  color: var(--color-cta);
   padding: 0.5rem 1em;
   border-radius: 0.5rem;
   text-decoration: none;
@@ -987,6 +986,7 @@
   border: none;
   outline: none;
   cursor: pointer;
+  background-color: transparent;
 }
 
 .product__cta::after {
@@ -1156,7 +1156,7 @@
 
 .sb * {
   font-weight: bold !important;
-  color: var(--color-text);
+  font-size: 0.8rem !important;
 }
 
 @media (max-width: 1199px) {
@@ -1171,13 +1171,14 @@
   }
   .product .features--wrapper .inthebox {
     width: 100%;
+    margin-top: 2rem;
   }
   .product__image {
-    max-width: 350px;
+    max-width: 300px;
     width: 100%;
   }
   .product .product__images img {
-    max-width: 300px;
+    max-width: 280px;
     width: 100%;
     height: unset;
   }
@@ -1363,7 +1364,7 @@ a {
   height: 2.2px;
   left: 0;
   right: 0;
-  bottom: -0.5rem;
+  bottom: -0.15rem;
   -webkit-transition: opacity 250ms ease, -webkit-transform 250ms ease;
   transition: opacity 250ms ease, -webkit-transform 250ms ease;
   transition: opacity 250ms ease, transform 250ms ease;
@@ -1583,6 +1584,7 @@ nav .cart--wrapper__btn:hover, nav .cart--wrapper__btn:active {
   color: var(--color-text);
   gap: 0.3rem;
   text-align: center;
+  padding: 1rem;
 }
 
 .home--container .container .content-info::before {
@@ -1604,26 +1606,26 @@ nav .cart--wrapper__btn:hover, nav .cart--wrapper__btn:active {
 .home--container .container .content-info h1 {
   font-weight: bold;
   font-size: 2.5rem;
-  font-size: clamp(1.4rem, 1.5vw, 2.5rem);
+  font-size: clamp(1.3rem, 1.5vw, 2.3rem);
 }
 
 .home--container .container .content-info p {
   font-size: 1.3rem;
-  font-size: clamp(0.9rem, 1.5vw, 1.3rem);
+  font-size: clamp(0.8rem, 1.5vw, 1.3rem);
 }
 
 .home--container .container .content-info span {
   margin-top: 0.3rem;
   opacity: 0.7;
   font-size: 0.95rem;
-  font-size: clamp(0.8rem, 1.5vw, 0.95rem);
+  font-size: clamp(0.7rem, 1.5vw, 0.95rem);
 }
 
 .home--container .container .content-info .price {
   opacity: 1;
   font-weight: bold;
   font-size: 3rem;
-  font-size: clamp(1.8rem, 1.5vw, 3rem);
+  font-size: clamp(1.7rem, 1.5vw, 3rem);
 }
 
 .home--container .container .card {
@@ -2021,9 +2023,6 @@ nav .cart--wrapper__btn:hover, nav .cart--wrapper__btn:active {
 }
 
 @media (max-width: 1199px) {
-  .home--container .container {
-    max-width: 800px;
-  }
   .home--container .container .content-info {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -2055,7 +2054,6 @@ nav .cart--wrapper__btn:hover, nav .cart--wrapper__btn:active {
     gap: 15rem;
   }
   .home--container .container {
-    max-width: 600px;
     gap: 0.5rem;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -2066,8 +2064,8 @@ nav .cart--wrapper__btn:hover, nav .cart--wrapper__btn:active {
     width: 10px;
   }
   .home--container .container .card {
-    height: 150px;
-    max-width: 350px;
+    height: 100px;
+    max-width: 300px;
     margin-bottom: 1rem;
   }
   .home--container .container .image-container {
