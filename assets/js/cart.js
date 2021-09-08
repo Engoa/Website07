@@ -39,14 +39,14 @@ const Cart = {
       cartWrapper.style.display = 'flex';
     }
 
-    // // Styling and animation - Popup for when clicking on add to cart
-    // Snackbar.show({
-    //   pos: 'bottom-center',
-    //   text: `${item.quantity}x ${item.name} added to cart`,
-    //   textColor: 'var(--color-textdark)',
-    //   actionTextColor: 'var(--color-cta)',
-    //   customClass: 'sb',
-    // });
+    // Styling and animation - Popup for when clicking on add to cart
+    Snackbar.show({
+      pos: 'bottom-center',
+      text: `${item.quantity}x ${item.name} added to cart`,
+      textColor: 'var(--color-textdark)',
+      actionTextColor: 'var(--color-cta)',
+      customClass: 'sb',
+    });
     gsap
       .timeline({ yoyo: true, repeat: 1 })
       .to('#cart', { scaleX: 1.7, scaleY: 1.7, overwrite: 'all', duration: 0.1 });
