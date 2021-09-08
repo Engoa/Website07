@@ -35,7 +35,6 @@
 
   form.addEventListener('submit', quadEquationSolver);
 
-    animatePage('.input__container > *');
 })();
 
 // $('#Text').click(() => {

@@ -48,5 +48,4 @@
     });
   });
 
-  animatePage('.home--container');
 })();

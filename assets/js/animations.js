@@ -1,4 +1,4 @@
-// function animatePage(selector) {
+// function (selector) {
 //   gsap
 //     .from(document.querySelectorAll(selector), {
 //       autoAlpha: 0,

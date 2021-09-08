@@ -329,5 +329,4 @@
   // Reset button
 
   drawCountries();
-  animatePage('.main__container__wrapper > *');
 })();

@@ -23,5 +23,4 @@
     currentResult = 0;
     totalResultElement.innerText = currentResult;
   });
-  animatePage('.main__container > *');
 })();

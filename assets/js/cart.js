@@ -1,4 +1,5 @@
 let cartTotalItems = document.querySelector('#totalquantity');
+var cartWrapper = document.querySelector('.cart__quantity');
 const Cart = {
   items: [],
 
@@ -31,7 +32,14 @@ const Cart = {
       this.items.push(item);
     }
 
-    cartTotalItems.innerHTML = this.cartQuantity; //Add items to cart on buy btn click
+    if (!Cart.items.length) {
+      cartWrapper.style.display = 'none';
+      console.log('test');
+    } else {
+      cartTotalItems.innerHTML = this.cartQuantity;
+      cartWrapper.style.display = 'flex';
+      console.log('test2');
+    }
 
     // Styling and animation - Popup for when clicking on add to cart
     Snackbar.show({
@@ -53,6 +61,14 @@ const Cart = {
     localStorage.setItem('totalquantity', JSON.stringify(this.cartQuantity));
   },
 };
-// Get total Items quantity from Local Storage and assign it to the cart on load
+
 const savedQuantity = localStorage.getItem('totalquantity');
-cartTotalItems.innerHTML = savedQuantity;
+if (savedQuantity <= null) {
+  cartWrapper.style.display = 'none';
+  console.log('test');
+} else {
+  cartTotalItems.innerHTML = savedQuantity;
+  cartWrapper.style.display = 'flex';
+  console.log('test2');
+}
+// Get total Items quantity from Local Storage and assign it to the cart on load

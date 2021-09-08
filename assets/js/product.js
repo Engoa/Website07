@@ -135,6 +135,4 @@
       quantity: chosenQuantity,
     })
   );
-
-  animatePage('.main--product, .features--wrapper > *');
 })();

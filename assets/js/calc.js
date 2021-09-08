@@ -48,6 +48,5 @@
     event.preventDefault();
   });
 
-  animatePage('.input__container > *');
   // Prevents reload of page on click
 })();
