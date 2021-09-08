@@ -1635,8 +1635,8 @@ nav .cart--wrapper .cart__quantity__text {
 .home--container .container .content-info h1 {
   font-weight: bold;
   font-size: 2.5rem;
-  font-size: clamp(1.1rem, 1.5vw, 2.5rem);
-  margin-top: 1rem;
+  font-size: clamp(1.5rem, 1.5vw, 2.5rem);
+  word-spacing: 2px;
 }
 
 .home--container .container .content-info p {
@@ -2090,14 +2090,28 @@ nav .cart--wrapper .cart__quantity__text {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    height: unset;
   }
   .home--container .container .content-info::before {
     width: 10px;
   }
   .home--container .container .card {
-    height: 70px;
-    max-width: 250px;
+    height: unset;
+    max-width: 200px;
     margin-bottom: 1rem;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    border-radius: 0.5rem;
+  }
+  .home--container .container .card .cardplus {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 1rem;
+  }
+  .home--container .container .card .cardplus .fa-plus {
+    font-size: 1rem;
   }
   .home--container .container .image-container {
     right: 51%;
@@ -2126,7 +2140,7 @@ nav .cart--wrapper .cart__quantity__text {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    width: 50%;
+    width: 60%;
   }
   nav .hamburger-menu {
     font-size: 1.25rem;
