@@ -73,13 +73,13 @@ nav {
   border: 2px solid var(--color-text);
   min-height: 500px;
   max-width: 500px;
-  width: 80%;
   z-index: 150;
   position: fixed;
+  overflow: scroll;
   visibility: hidden;
   opacity: 0;
   transition: opacity 300ms ease;
-  overflow: scroll;
+  width: 90%;
 
   &__exit {
     display: flex;
@@ -97,8 +97,8 @@ nav {
       display: flex;
       align-items: center;
       justify-content: center;
-      transition: transform 200ms linear;
-      &:hover {
+      transition: transform 150ms linear;
+      &:active {
         transform: rotate(90deg);
       }
     }
@@ -109,10 +109,11 @@ nav {
     align-items: center;
     color: var(--color-text);
     letter-spacing: 1.5px;
-    font-size: 1.4rem;
-    font-size: clamp(1rem, 3vw, 1.4rem);
+    font-size: 1.5rem;
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
     margin-top: 1rem;
     text-transform: uppercase;
+    text-align: center;
   }
 
   &__items {
@@ -135,36 +136,65 @@ nav {
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    max-width: 400px;
+    max-width: 450px;
     border-bottom: 2px solid var(--color-text);
 
     .modal__image {
       max-width: 70px;
       min-width: 70px;
+      margin-right: 1rem;
       img {
+        max-width: 70px;
         width: 100%;
-        max-width: 90px;
         border-radius: 50%;
         background-size: contain;
         background-position: center;
       }
     }
     .modal__quantity {
-      max-width: 50px;
-      min-width: 50px;
       font-size: 1rem;
-      font-size: clamp(0.9rem, 3vw, 1rem);
-      position: relative;
-
-      .modal__name {
-        font-size: 1rem;
-        font-size: clamp(0.9rem, 3vw, 1rem);
-        text-transform: uppercase;
-      }
+      font-size: clamp(0.7rem, 1vw, 1rem);
+      font-weight: bold;
+    }
+    .modal__name {
+      font-size: 1rem;
+      font-size: clamp(0.7rem, 1vw, 1rem);
+      text-transform: uppercase;
+      text-align: center;
+      margin-right: 0.5rem;
     }
   }
 }
 
+.item--counts {
+  display: flex;
+  justify-content: center;
+  gap: 0.1rem;
+  align-items: center;
+
+  button {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-size: clamp(0.6rem, 2vw, 0.9rem);
+    text-align: center;
+    transition: transform 300ms linear, opacity 300ms linear, color 300ms linear;
+    font-weight: bold;
+    color: var(--color-text);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    opacity: 0.8;
+    background: transparent;
+    &:hover,
+    &:active {
+      transform: rotate(90deg);
+      color: var(--color-underline);
+      opacity: 1;
+    }
+  }
+}
 .overlay--active {
   visibility: visible;
   opacity: 1;

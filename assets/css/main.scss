@@ -239,7 +239,7 @@ nav {
       }
       p {
         font-size: 1.2rem;
-        font-size: clamp(0.7rem, 1.5vw, 1.2rem);
+        font-size: clamp(0.9rem, 1.5vw, 1.2rem);
         word-spacing: -0.5px;
       }
 
@@ -247,7 +247,7 @@ nav {
         margin-top: 0.3rem;
         opacity: 0.7;
         font-size: 0.95rem;
-        font-size: clamp(0.6rem, 1.5vw, 0.95rem);
+        font-size: clamp(0.7rem, 1.5vw, 0.95rem);
         word-spacing: -0.5px;
       }
       .price {
@@ -582,7 +582,10 @@ nav {
     }
     .image-container {
       .item--image {
-        max-width: 300px;
+        max-width: 320px;
+      }
+      .tinifyimages {
+        max-width: 140px;
       }
     }
   }
@@ -608,7 +611,7 @@ nav {
 }
 @include media('<md') {
   .home--container {
-    gap: 15rem;
+    gap: 11rem;
 
     .container {
       gap: 0.9rem;
@@ -617,6 +620,8 @@ nav {
       .content-info {
         &::before {
           width: 10px;
+          left: -1.5rem;
+          height: 65%;
         }
       }
       .card {
@@ -636,7 +641,7 @@ nav {
         }
       }
       .image-container {
-        bottom: -8rem;
+        bottom: -6rem;
         transform: translate(50%, 50%);
       }
     }

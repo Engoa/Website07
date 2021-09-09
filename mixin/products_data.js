@@ -42,7 +42,7 @@ const Products = {
       id: 'dualsense',
     },
     {
-      name: 'ASUS Zephyrus G17',
+      name: 'Zephyrus G17',
       summary: 'Best Gaming Laptop on the market!',
       compatibility: '144hz, Full DLSS and RTX support',
       description1: `Illuminate your life in RGB. A redesigned light bar increases the density of LEDs to create a more refined underglow beneath the chassis. Personalize your Aura Sync settings to set the ideal gaming mood across an entire ecosystem of compatible devices.`,
@@ -114,7 +114,7 @@ const Products = {
       id: 'g915',
     },
     {
-      name: 'Xbox Series X Bundle',
+      name: 'Xbox Series X',
       summary: 'Gaming Console with Controller',
       compatibility: 'The newest Next-Gen Gaming Consoles',
       description1: `Games built with the Xbox Series X|S development kit showcase significantly reduced load times and stunning visuals at up to 120FPS.*`,
@@ -148,7 +148,7 @@ const Products = {
       id: 'seriesx',
     },
     {
-      name: 'Logitech G-Pro Wireless',
+      name: 'G-Pro Wireless',
       summary: 'Wired & Wireless Gaming Mouse',
       compatibility: 'Best Gaming mouse on the market!',
       description1: `PRO Wireless was designed to be the ultimate gaming mouse for esports professionals.
@@ -187,7 +187,7 @@ const Products = {
       id: 'gprowireless',
     },
     {
-      name: 'Apple Watch Series 6',
+      name: 'Apple Watch 6',
       summary: 'Apple Watch 44mm/40mm',
       compatibility: 'Comes in Black/White with a charger included!',
       description1: `Measure your blood oxygen level with a revolutionary sensor and app.
