@@ -1418,16 +1418,29 @@ nav .cart--wrapper .cart__quantity__text {
   text-transform: uppercase;
   text-align: center;
   margin-right: 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-#modal--link {
+.modal--link {
   text-decoration: none;
   color: var(--color-text);
   -webkit-transition: color 200ms ease;
   transition: color 200ms ease;
 }
 
-#modal--link:hover, #modal--link:active {
+.modal--link:hover, .modal--link:active {
   color: var(--color-underline);
 }
 
@@ -1465,8 +1478,8 @@ nav .cart--wrapper .cart__quantity__text {
 }
 
 .item--counts button:hover, .item--counts button:active {
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
   color: var(--color-underline);
   opacity: 1;
 }

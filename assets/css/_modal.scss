@@ -64,7 +64,6 @@ nav {
   z-index: 5;
 }
 
-
 .modal {
   padding: 1rem;
   top: 96px;
@@ -131,7 +130,6 @@ nav {
     font-size: clamp(0.9rem, 3vw, 1rem);
     font-weight: bold;
     border-top: 2px solid var(--color-accent);
-
   }
   &__item {
     display: flex;
@@ -165,10 +163,14 @@ nav {
       text-transform: uppercase;
       text-align: center;
       margin-right: 0.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
   }
 }
-#modal--link {
+.modal--link {
   text-decoration: none;
   color: var(--color-text);
   transition: color 200ms ease;
@@ -202,7 +204,7 @@ nav {
     background: transparent;
     &:hover,
     &:active {
-      transform: rotate(90deg);
+      transform: rotate(180deg);
       color: var(--color-underline);
       opacity: 1;
     }

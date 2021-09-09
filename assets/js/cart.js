@@ -7,6 +7,7 @@ const hideAndShowCart = (visibility, opacity) => {
   cartWrapper.style.opacity = opacity;
 };
 
+const MAX_CART_QUANTITY = 100;
 const Cart = {
   items: [],
   // GETTERS
@@ -16,6 +17,7 @@ const Cart = {
       ...item,
     }));
   },
+
   // Returns cart quantity
   get cartQuantity() {
     // let sum = 0
@@ -36,23 +38,53 @@ const Cart = {
   // Addes item to cart
   addItem(item) {
     // Returns an index of an item if them given item exists in the items array
-    const foundItemIndex = this.items.findIndex((i) => i.id === item.id);
+    const foundItemIndex = this.getItemIndex(item.id);
+    const cartItem = this.items[foundItemIndex];
 
     // -1 means that is didnt found nothing
     if (foundItemIndex > -1) {
+      // Exit the function if reach max
+      if (cartItem.quantity >= MAX_CART_QUANTITY) return;
       // If item exist in array, just update quantity
-      this.items[foundItemIndex].quantity += item.quantity;
+      cartItem.quantity += item.quantity;
     } else {
       this.items.push(item);
     }
 
-    document.dispatchEvent(new CustomEvent('cart-update'));
+    this.updateLS();
+  },
 
+  getItemIndex(id) {
+    return this.items.findIndex((x) => x.id === id);
+  },
+  getById(id) {
+    return this.items.find((item) => item.id === id);
+  },
+
+  decrementQuantity(id) {
+    const i = this.getItemIndex(id);
+    if (i !== -1) {
+      this.items[i].quantity -= 1;
+      if (this.items[i].quantity === 0) {
+        this.items.splice(i, 1);
+      }
+    }
+    this.updateLS();
+  },
+
+  incrementQuantity(id) {
+    const i = this.getItemIndex(id);
+    if (i !== -1) {
+      if (this.items[i].quantity < MAX_CART_QUANTITY) {
+        this.items[i].quantity += 1;
+      }
+    }
     this.updateLS();
   },
 
   // Saves cart to local storage
   updateLS() {
+    document.dispatchEvent(new CustomEvent('cart-update'));
     localStorage.setItem('cart', JSON.stringify(this.items));
     localStorage.setItem('totalquantity', JSON.stringify(this.cartQuantity));
   },

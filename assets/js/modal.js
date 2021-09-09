@@ -1,10 +1,11 @@
 (() => {
   const drawModal = () => {
     document.querySelector('.modal__items').innerHTML = Cart.computedItems.reduce(
-      (cartItemsList, item) =>
-        (cartItemsList += `
-        <div class="modal__item">
-
+      (cartItemsList, item, index) => {
+        cartItemsList += `
+      
+      <div class="modal__item cart-row--${index}" >
+      
           <div class="modal__image whiteitems">
             <img
               src="${item.image_light}"
@@ -18,23 +19,46 @@
           </div>
 
           <div class="modal__name">
-             <a href="#product?q=${item.id}" id="modal--link">${item.name}</a>
+             <a href="#product?q=${item.id}" class="modal--link">${item.name}</a>
+             <span>${item.price_us}</span>
           </div>
 
           <div class="item--counts">
-          <div class="add--modal"><button id='add--modal'type="button">
-          <i class="fas fa-plus"></i>
-          </button></div>
-          <div class="modal__quantity">
-            <p><span>x</span>${item.quantity}</p>
+
+          <div class="add--modal"type>
+            <button class='increment-quantity' type="button">
+              <i class="fas fa-plus"></i>
+            </button>
           </div>
-        <div class="remove--modal"><button id='remove--modal' type="button">
-          <i class="fas fa-minus"></i>
-        </button></div>
+
+          <div class="modal__quantity">
+            <p class='cart--quantity'>${item.quantity}</p>
+          </div>
+
+        <div class="remove--modal">
+          <button  class='decrement-quantity' type="button">
+            <i class="fas fa-minus"></i>
+          </button>
+        </div>
       </div>
-        </div> `),
+        </div> `;
+
+        return cartItemsList;
+      },
       ''
     );
+
+    Cart.computedItems.forEach((item, index) => {
+      // Increment function
+      $(`.cart-row--${index} button.increment-quantity`).click(() =>
+        Cart.incrementQuantity(item.id)
+      );
+
+      // Decrement function
+      $(`.cart-row--${index} button.decrement-quantity`).click(() =>
+        Cart.decrementQuantity(item.id)
+      );
+    });
   };
 
   drawModal();
@@ -46,7 +70,8 @@
   const cartModal = document.querySelector('#modal--active');
   const cartBtn = document.querySelector('#cart');
   const closeModal = document.querySelector('#modal--close');
-  const modalItemLink = document.querySelector('#modal--link');
+  const modalItemLink = document.querySelector('.modal--link');
+  const modalItemQuantity = document.querySelector('.cart--quantity');
 
   const IsModalActive = true;
   const toggleModal = () => {
@@ -62,14 +87,7 @@
   closeModal.addEventListener('click', () => {
     toggleModal();
   });
-  modalItemLink.addEventListener('click', () => {
-    toggleModal();
-  });
-
-  $(`#add--modal`).click(() => {
-    alert('Still working on it 😒');
-  });
-  $(`#remove--modal`).click(() => {
-    alert('Still working on it 😒');
-  });
+  // modalItemLink.addEventListener('click', () => {
+  //   toggleModal();
+  // });
 })();
