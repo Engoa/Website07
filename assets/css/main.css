@@ -2370,7 +2370,7 @@ nav .theme--wrapper_btn:checked::before {
             transform: translate(50%, 50%);
   }
   .home--container .container .image-container .item--image {
-    max-width: 250px;
+    max-width: 350 px;
     width: 100%;
   }
   .home--container .container .image-container .tinifyimages {
