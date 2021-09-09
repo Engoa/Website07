@@ -1001,7 +1001,7 @@
 }
 
 .product__cta:hover {
-  color: var(--color-text);
+  color: var(--color-textdark);
 }
 
 .product .features--wrapper {
