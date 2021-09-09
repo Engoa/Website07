@@ -64,6 +64,7 @@ nav {
   z-index: 5;
 }
 
+
 .modal {
   padding: 1rem;
   top: 96px;
@@ -72,6 +73,7 @@ nav {
   background-color: var(--color-bg);
   border: 2px solid var(--color-text);
   min-height: 500px;
+  max-height: 500px;
   max-width: 500px;
   z-index: 150;
   position: fixed;
@@ -129,6 +131,7 @@ nav {
     font-size: clamp(0.9rem, 3vw, 1rem);
     font-weight: bold;
     border-top: 2px solid var(--color-accent);
+
   }
   &__item {
     display: flex;
@@ -137,6 +140,7 @@ nav {
     justify-content: space-between;
     width: 100%;
     border-bottom: 2px solid var(--color-text);
+    max-height: 70px;
 
     .modal__image {
       max-width: 70px;
@@ -162,6 +166,16 @@ nav {
       text-align: center;
       margin-right: 0.5rem;
     }
+  }
+}
+#modal--link {
+  text-decoration: none;
+  color: var(--color-text);
+  transition: color 200ms ease;
+
+  &:hover,
+  &:active {
+    color: var(--color-underline);
   }
 }
 

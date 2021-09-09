@@ -1278,6 +1278,7 @@ nav .cart--wrapper .cart__quantity__text {
   background-color: var(--color-bg);
   border: 2px solid var(--color-text);
   min-height: 500px;
+  max-height: 500px;
   max-width: 500px;
   z-index: 150;
   position: fixed;
@@ -1388,6 +1389,7 @@ nav .cart--wrapper .cart__quantity__text {
           justify-content: space-between;
   width: 100%;
   border-bottom: 2px solid var(--color-text);
+  max-height: 70px;
 }
 
 .modal__item .modal__image {
@@ -1416,6 +1418,17 @@ nav .cart--wrapper .cart__quantity__text {
   text-transform: uppercase;
   text-align: center;
   margin-right: 0.5rem;
+}
+
+#modal--link {
+  text-decoration: none;
+  color: var(--color-text);
+  -webkit-transition: color 200ms ease;
+  transition: color 200ms ease;
+}
+
+#modal--link:hover, #modal--link:active {
+  color: var(--color-underline);
 }
 
 .item--counts {
@@ -1593,7 +1606,6 @@ html {
   /* width */
   /* Track */
   /* Handle */
-  /* Handle on hover */
   scroll-behavior: smooth;
 }
 
@@ -1608,6 +1620,10 @@ html ::-webkit-scrollbar-track {
 html ::-webkit-scrollbar-thumb {
   background: var(--color-accent);
   border-radius: 0.05rem;
+}
+
+html ::-webkit-scrollbar-corner {
+  background: var(--color-bg);
 }
 
 *,

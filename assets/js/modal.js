@@ -18,7 +18,7 @@
           </div>
 
           <div class="modal__name">
-            <p>${item.name}</p>
+             <a href="#product?q=${item.id}" id="modal--link">${item.name}</a>
           </div>
 
           <div class="item--counts">
@@ -46,6 +46,7 @@
   const cartModal = document.querySelector('#modal--active');
   const cartBtn = document.querySelector('#cart');
   const closeModal = document.querySelector('#modal--close');
+  const modalItemLink = document.querySelector('#modal--link');
 
   const IsModalActive = true;
   const toggleModal = () => {
@@ -59,6 +60,9 @@
   });
 
   closeModal.addEventListener('click', () => {
+    toggleModal();
+  });
+  modalItemLink.addEventListener('click', () => {
     toggleModal();
   });
 

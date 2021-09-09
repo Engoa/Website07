@@ -30,8 +30,9 @@ html {
     background: var(--color-accent);
     border-radius: 0.05rem;
   }
-
-  /* Handle on hover */
+  ::-webkit-scrollbar-corner {
+    background: var(--color-bg);
+  }
 
   scroll-behavior: smooth;
 }
