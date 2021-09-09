@@ -46,14 +46,6 @@ const Cart = {
       this.items.push(item);
     }
 
-    Snackbar.show({
-      pos: 'bottom-center',
-      text: `${item.quantity}x ${item.name} added to cart`,
-      textColor: 'var(--color-textdark)',
-      actionTextColor: 'var(--color-cta)',
-      customClass: 'sb',
-    });
-
     document.dispatchEvent(new CustomEvent('cart-update'));
 
     this.updateLS();
