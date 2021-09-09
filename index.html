@@ -20,141 +20,164 @@
     ></script>
     <script src="/vendors/SnackBar-master/dist/snackbar.min.js" defer></script>
     <script src="https://kit.fontawesome.com/9a80e50f42.js" crossorigin="anonymous"></script>
-    <script src="/assets/js/animations.js" defer></script>
     <script src="/assets/js/cart.js" defer></script>
     <script src="/assets/js/router.js" defer></script>
-    <script src="/mixin/itemsdata.js" defer></script>
+    <script src="/mixin/products_data.js" defer></script>
     <script src="/assets/js/main.js" defer></script>
+    <script src="/assets/js/index.js" defer></script>
     <script src="/assets/js/svg-inject.js" defer></script>
+    <script src="/assets/js/modal.js" defer></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap"
       rel="stylesheet"
     />
 
-    <title>Playstation Store</title>
+    <title>BZ Project</title>
   </head>
+
   <body class="bgdark">
-    <div class="page__container">
-      <div class="page__container--wrapper" style="position: relative">
-        <ul class="navbar--mobile">
-          <li class="contact link">
-            <div class="anchor--wrapper">
-              <a onclick="closeNav()" href="#order">Order</a>
-            </div>
-          </li>
-          <li class="link">
-            <div class="anchor--wrapper">
-              <a onclick="closeNav()" href="#calc">Calculator</a>
-            </div>
-          </li>
-          <li class="link">
-            <div class="anchor--wrapper">
-              <a onclick="closeNav()" href="#equation">Quad Equation</a>
-            </div>
-          </li>
-          <li class="link">
-            <div class="anchor--wrapper">
-              <a onclick="closeNav()" href="#fruitshop">Fruit Shop</a>
-            </div>
-          </li>
-        </ul>
-
-        <nav>
-          <div class="container">
-            <div class="logo">
-              <a href="javascript:delayLinks('#')" onclick="closeNav()">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 288.8">
-                  <path
-                    d="M432,240a83.7,83.7,0,0,0-16.7,1.7c-7.2-72.9-68.7-130.1-143.3-130.1a16.1,16.1,0,0,0-16,16.1V384.3a16.1,16.1,0,0,0,16,16.1H432A80.2,80.2,0,0,0,432,240ZM208,143.7a16,16,0,0,0-16,16V384.3a16,16,0,1,0,32,0V159.7A16,16,0,0,0,208,143.7Zm-64,64.2a16,16,0,0,0-16,16V384.3a16,16,0,1,0,32,0V223.9A16,16,0,0,0,144,207.9Zm-64,0a16,16,0,0,0-16,16V384.3a16,16,0,1,0,32,0V223.9A16,16,0,0,0,80,207.9ZM16,256A16,16,0,0,0,0,272v96.3a16,16,0,0,0,32,0V272A16,16,0,0,0,16,256Z"
-                    transform="translate(0 -111.6)"
-                  />
-                </svg>
-              </a>
-              <div class="theme--wrapper">
-                <input type="checkbox" id="themebtn" class="theme--wrapper_btn" />
-              </div>
-              <div class="cart--wrapper" id="cart-wrapper">
-                <div class="cart__quantity">
-                  <span class="cart__quantity__text" id="totalquantity"></span>
-                </div>
-                <button type="button" id="cart" class="cart--wrapper__btn">
-                  <svg width="23" height="20" xmlns="http://www.w3.org/2000/svg" class="">
-                    <path
-                      d="M8.625 15.833c1.132 0 2.054.935 2.054 2.084 0 1.148-.922 2.083-2.054 2.083-1.132 0-2.054-.935-2.054-2.083 0-1.15.922-2.084 2.054-2.084zm9.857 0c1.132 0 2.054.935 2.054 2.084 0 1.148-.922 2.083-2.054 2.083-1.132 0-2.053-.935-2.053-2.083 0-1.15.92-2.084 2.053-2.084zm-9.857 1.39a.69.69 0 00-.685.694.69.69 0 00.685.694.69.69 0 00.685-.694.69.69 0 00-.685-.695zm9.857 0a.69.69 0 00-.684.694.69.69 0 00.684.694.69.69 0 00.685-.694.69.69 0 00-.685-.695zM4.717 0c.316 0 .59.215.658.517l.481 2.122h16.47a.68.68 0 01.538.262c.127.166.168.38.11.579l-2.695 9.236a.672.672 0 01-.648.478H7.41a.667.667 0 00-.673.66c0 .364.303.66.674.66h12.219c.372 0 .674.295.674.66 0 .364-.302.66-.674.66H7.412c-1.115 0-2.021-.889-2.021-1.98 0-.812.502-1.511 1.218-1.816L4.176 1.32H.674A.667.667 0 010 .66C0 .296.302 0 .674 0zm16.716 3.958H6.156l1.797 7.917h11.17l2.31-7.917z"
-                      fill="#FFF"
-                      fill-rule="nonzero"
-                    ></path>
-                  </svg>
-                </button>
-              </div>
-            </div>
-
-            <ul class="desktop navlinks" id="menuList">
-              <li class="contact link">
-                <div class="anchor--wrapper">
-                  <a onclick="closeNav()" href="#order">Order</a>
-                </div>
-              </li>
-              <li class="link">
-                <div class="anchor--wrapper">
-                  <a onclick="closeNav()" href="#calc">Calculator</a>
-                </div>
-              </li>
-              <li class="link">
-                <div class="anchor--wrapper">
-                  <a onclick="closeNav()" href="#equation">Quad Equation</a>
-                </div>
-              </li>
-              <li class="link">
-                <div class="anchor--wrapper">
-                  <a onclick="closeNav()" href="#fruitshop">Fruit Shop</a>
-                </div>
-              </li>
-            </ul>
-
-            <i class="fas fa-bars hamburger-menu" id="menubtn" onclick="menuToggle()"></i>
-            <i
-              class="fas fa-times hamburger-menu menu--close"
-              id="menu--close"
-              onclick="menuToggle()"
-            ></i>
-          </div>
-        </nav>
-
-        <div id="app"></div>
-
-        <div class="socials">
-          <footer>
-            <div class="icons">
-              <a
-                class="icons__facebook icons__icon"
-                href="javascript:delayLinks('https://www.facebook.com/')"
-                ><i class="fab fa-facebook-square"></i
-              ></a>
-              <a
-                class="icons__instagram icons__icon"
-                href="javascript:delayLinks('https://www.instagram.com/idobenzaken1/')"
-                ><i class="fab fa-instagram-square"></i
-              ></a>
-              <a
-                class="icons__twitter icons__icon"
-                href="javascript:delayLinks('https://twitter.com/Engoa97')"
-                ><i class="fab fa-twitter-square"></i
-              ></a>
-            </div>
-            <div class="engoa">
-              <a href="javascript:delayLinks('https://www.linkedin.com/in/idobenzaken/')"
-                ><span class="engoa__text">By Engoa</span>
-              </a>
-            </div>
-          </footer>
+    <div class="modal__overlay" id="overlay--active"></div>
+    <div class="cart-modal">
+      <div class="modal" id="modal--active">
+        <div class="modal__exit">
+          <i class="fas fa-times" id="modal--close"> </i>
         </div>
 
-        <button class="gototop--cta" id="gototop" title="Go To Top">
-          <div class="gototop">
-            <i class="fas fa-arrow-up"></i>
+        <div class="modal__header">
+          <h3>Cart</h3>
+        </div>
+        <div class="modal__items"></div>
+      </div>
+    </div>
+
+    <div id="nav__container">
+      <div class="page__container">
+        <div class="page__container--wrapper">
+          <ul class="navbar--mobile">
+            <li class="contact link">
+              <div class="anchor--wrapper">
+                <a onclick="closeNav()" href="#order">Order</a>
+              </div>
+            </li>
+            <li class="link">
+              <div class="anchor--wrapper">
+                <a onclick="closeNav()" href="#calc">Calculator</a>
+              </div>
+            </li>
+            <li class="link">
+              <div class="anchor--wrapper">
+                <a onclick="closeNav()" href="#equation">Quad Equation</a>
+              </div>
+            </li>
+            <li class="link">
+              <div class="anchor--wrapper">
+                <a onclick="closeNav()" href="#fruitshop">Fruit Shop</a>
+              </div>
+            </li>
+          </ul>
+
+          <nav>
+            <div class="nav--container">
+              <div class="logo">
+                <a href="javascript:delayLinks('#')" onclick="closeNav()">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 288.8">
+                    <path
+                      d="M432,240a83.7,83.7,0,0,0-16.7,1.7c-7.2-72.9-68.7-130.1-143.3-130.1a16.1,16.1,0,0,0-16,16.1V384.3a16.1,16.1,0,0,0,16,16.1H432A80.2,80.2,0,0,0,432,240ZM208,143.7a16,16,0,0,0-16,16V384.3a16,16,0,1,0,32,0V159.7A16,16,0,0,0,208,143.7Zm-64,64.2a16,16,0,0,0-16,16V384.3a16,16,0,1,0,32,0V223.9A16,16,0,0,0,144,207.9Zm-64,0a16,16,0,0,0-16,16V384.3a16,16,0,1,0,32,0V223.9A16,16,0,0,0,80,207.9ZM16,256A16,16,0,0,0,0,272v96.3a16,16,0,0,0,32,0V272A16,16,0,0,0,16,256Z"
+                      transform="translate(0 -111.6)"
+                    />
+                  </svg>
+                </a>
+                <div class="theme--wrapper">
+                  <input
+                    type="checkbox"
+                    id="themebtn"
+                    class="theme--wrapper_btn"
+                    title="Switch Theme"
+                  />
+                </div>
+                <div class="cart--wrapper" id="cart-wrapper">
+                  <div class="cart__quantity">
+                    <span class="cart__quantity__text" id="totalquantity"></span>
+                  </div>
+                  <button type="button" id="cart" class="cart--wrapper__btn" title="Cart">
+                    <svg width="23" height="20" xmlns="http://www.w3.org/2000/svg" class="">
+                      <path
+                        d="M8.625 15.833c1.132 0 2.054.935 2.054 2.084 0 1.148-.922 2.083-2.054 2.083-1.132 0-2.054-.935-2.054-2.083 0-1.15.922-2.084 2.054-2.084zm9.857 0c1.132 0 2.054.935 2.054 2.084 0 1.148-.922 2.083-2.054 2.083-1.132 0-2.053-.935-2.053-2.083 0-1.15.92-2.084 2.053-2.084zm-9.857 1.39a.69.69 0 00-.685.694.69.69 0 00.685.694.69.69 0 00.685-.694.69.69 0 00-.685-.695zm9.857 0a.69.69 0 00-.684.694.69.69 0 00.684.694.69.69 0 00.685-.694.69.69 0 00-.685-.695zM4.717 0c.316 0 .59.215.658.517l.481 2.122h16.47a.68.68 0 01.538.262c.127.166.168.38.11.579l-2.695 9.236a.672.672 0 01-.648.478H7.41a.667.667 0 00-.673.66c0 .364.303.66.674.66h12.219c.372 0 .674.295.674.66 0 .364-.302.66-.674.66H7.412c-1.115 0-2.021-.889-2.021-1.98 0-.812.502-1.511 1.218-1.816L4.176 1.32H.674A.667.667 0 010 .66C0 .296.302 0 .674 0zm16.716 3.958H6.156l1.797 7.917h11.17l2.31-7.917z"
+                        fill="#FFF"
+                        fill-rule="nonzero"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+              <ul class="desktop navlinks" id="menuList">
+                <li class="contact link">
+                  <div class="anchor--wrapper">
+                    <a onclick="closeNav()" href="#order">Order</a>
+                  </div>
+                </li>
+                <li class="link">
+                  <div class="anchor--wrapper">
+                    <a onclick="closeNav()" href="#calc">Calculator</a>
+                  </div>
+                </li>
+                <li class="link">
+                  <div class="anchor--wrapper">
+                    <a onclick="closeNav()" href="#equation">Quad Equation</a>
+                  </div>
+                </li>
+                <li class="link">
+                  <div class="anchor--wrapper">
+                    <a onclick="closeNav()" href="#fruitshop">Fruit Shop</a>
+                  </div>
+                </li>
+              </ul>
+
+              <i class="fas fa-bars hamburger-menu" id="menubtn" onclick="menuToggle()"></i>
+              <i
+                class="fas fa-times hamburger-menu menu--close"
+                id="menu--close"
+                onclick="menuToggle()"
+              ></i>
+            </div>
+          </nav>
+
+          <div id="app"></div>
+
+          <div class="socials">
+            <footer>
+              <div class="icons">
+                <a
+                  class="icons__facebook icons__icon"
+                  href="javascript:delayLinks('https://www.facebook.com/')"
+                  ><i class="fab fa-facebook-square"></i
+                ></a>
+                <a
+                  class="icons__instagram icons__icon"
+                  href="javascript:delayLinks('https://www.instagram.com/idobenzaken1/')"
+                  ><i class="fab fa-instagram-square"></i
+                ></a>
+                <a
+                  class="icons__twitter icons__icon"
+                  href="javascript:delayLinks('https://twitter.com/Engoa97')"
+                  ><i class="fab fa-twitter-square"></i
+                ></a>
+              </div>
+              <div class="engoa">
+                <a href="javascript:delayLinks('https://www.linkedin.com/in/idobenzaken/')"
+                  ><span class="engoa__text">By Engoa</span>
+                </a>
+              </div>
+            </footer>
           </div>
-        </button>
+
+          <button class="gototop--cta" id="gototop" title="Go To Top">
+            <div class="gototop">
+              <i class="fas fa-arrow-up"></i>
+            </div>
+          </button>
+        </div>
       </div>
     </div>
   </body>

@@ -1,13 +1,21 @@
 let cartTotalItems = document.querySelector('#totalquantity');
 var cartWrapper = document.querySelector('.cart__quantity');
+
+// Hide cart if quantity is under 0, show if product is added
+const hideAndShowCart = (visibility, opacity) => {
+  cartWrapper.style.visibility = visibility;
+  cartWrapper.style.opacity = opacity;
+};
+
 const Cart = {
   items: [],
-
-  // Updates entire items object with new given items
-  setItems(items) {
-    this.items = items;
+  // GETTERS
+  get computedItems() {
+    return this.items.map((item) => ({
+      ...Products.getById(item.id),
+      ...item,
+    }));
   },
-
   // Returns cart quantity
   get cartQuantity() {
     // let sum = 0
@@ -17,6 +25,12 @@ const Cart = {
     // and holds the state of the value through each iteration,
     // simillar to the code above
     return this.items.reduce((sum, item) => (sum += item.quantity), 0);
+  },
+
+  // METHODS
+  // Updates entire items object with new given items
+  setItems(items) {
+    this.items = items;
   },
 
   // Addes item to cart
@@ -32,24 +46,8 @@ const Cart = {
       this.items.push(item);
     }
 
-    if (!Cart.items.length) {
-      cartWrapper.style.display = 'none';
-    } else {
-      cartTotalItems.innerHTML = this.cartQuantity;
-      cartWrapper.style.display = 'flex';
-    }
+    document.dispatchEvent(new CustomEvent('cart-update'));
 
-    // Styling and animation - Popup for when clicking on add to cart
-    Snackbar.show({
-      pos: 'bottom-center',
-      text: `${item.quantity}x ${item.name} added to cart`,
-      textColor: 'var(--color-textdark)',
-      actionTextColor: 'var(--color-cta)',
-      customClass: 'sb',
-    });
-    gsap
-      .timeline({ yoyo: true, repeat: 1 })
-      .to('#cart', { scaleX: 1.7, scaleY: 1.7, overwrite: 'all', duration: 0.1 });
     this.updateLS();
   },
 
@@ -62,9 +60,31 @@ const Cart = {
 
 const savedQuantity = localStorage.getItem('totalquantity');
 if (savedQuantity <= null) {
-  cartWrapper.style.display = 'none';
+  hideAndShowCart('hidden', 0);
 } else {
   cartTotalItems.innerHTML = savedQuantity;
-  cartWrapper.style.display = 'flex';
+  hideAndShowCart('visible', 1);
 }
+
 // Get total Items quantity from Local Storage and assign it to the cart on load
+document.addEventListener('cart-update', () => {
+  if (!Cart.items.length) {
+    hideAndShowCart('hidden', 0);
+  } else {
+    cartTotalItems.innerHTML = Cart.cartQuantity;
+    hideAndShowCart('visible', 1);
+  }
+
+  // Styling and animation - Popup for when clicking on add to cart
+  // Snackbar.show({
+  //   pos: 'bottom-center',
+  //   text: `${Cart.computedItems.name}x ${Products.name} added to cart`,
+  //   textColor: 'var(--color-textdark)',
+  //   actionTextColor: 'var(--color-cta)',
+  //   customClass: 'sb',
+  // });
+
+  gsap
+    .timeline({ yoyo: true, repeat: 1 })
+    .to('#cart', { scaleX: 1.7, scaleY: 1.7, overwrite: 'all', duration: 0.1 });
+});

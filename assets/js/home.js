@@ -1,9 +1,9 @@
 (() => {
-  const drawProducts = () => {
-    const mainContainer = document.querySelector('.home--container');
-    homeProducts.forEach((product, index) => {
+  const drawHome = () => {
+    const homeContainer = document.querySelector('.home--container');
+    Products.items.forEach((product, index) => {
       const tinifyImageClass = index > 3 && index < 7 ? 'tinifyimages' : ''; //selector to tinify images by index on page
-      mainContainer.innerHTML += `
+      homeContainer.innerHTML += `
         <div class="container ${index % 2 !== 0 ? 'container2' : ''}">
           <div class="content-info">
             <h1 id="header">${product.name}</h1>
@@ -15,7 +15,8 @@
             </div>
           </div>
           <div class="card">
-            <button class="cardplus addtocart" data-index="${index}"><i class="fas fa-plus plus"></i>Add to Cart</button>
+            <button class="cardplus addtocart" data-index="${index}">
+              <i class="fas fa-plus plus"></i>Add to Cart</button>
           </div>
           <div class="image-container image--anim">
             <img
@@ -36,16 +37,15 @@
     });
   };
 
-  drawProducts();
+  drawHome();
   // Add to cart on home screen, quantity is always 1!
   $(`.addtocart`).click((ev) => {
     const clickedItemIndex = ev.currentTarget.getAttribute('data-index');
-    const product = homeProducts[clickedItemIndex];
+    const product = Products.items[clickedItemIndex];
     Cart.addItem({
       id: product.id,
       name: product.name,
       quantity: 1,
     });
   });
-
 })();

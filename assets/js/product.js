@@ -1,5 +1,5 @@
 (() => {
-  const product = homeProducts.find((x) => x.id === Router.getCurrentQuery().q);
+  const product = Products.getById(Router.getCurrentQuery().q);
   let itemQuantity = 1;
   let chosenQuantity = 1;
 
@@ -30,9 +30,13 @@
         <span class="price--wrapper__price" id='itemprice'>$${product.price_us}</span>
       </div>
       <div class="item--count">
-        <div class="add"><button id='add'type="button">+</button></div>
+        <div class="add"><button id='add'type="button">
+          <i class="fas fa-plus"></i>
+        </button></div>
         <div class="count"><span id='quantity'>${chosenQuantity}</span></div>
-        <div class="remove"><button id='remove' type="button">-</button></div>
+        <div class="remove"><button id='remove' type="button">
+          <i class="fas fa-minus"></i>
+        </button></div>
       </div>
       <button class="product__cta btn link" id="buy-btn">Buy Product</button>
         <span class='availability--text' id='availability--product'>${product.availability}</span>
@@ -81,6 +85,8 @@
     </div>
   </div>
 </div>
+
+
 
     `;
   };
