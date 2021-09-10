@@ -6,6 +6,7 @@
 @import 'variables';
 @import 'product';
 @import 'modal';
+@import 'checkout';
 @import '../../vendors/SnackBar-master/src/sass/snackbar';
 
 // @include media('<lg', '<md') {
@@ -376,8 +377,14 @@ nav {
       opacity: 0.8;
     }
   }
+  .checkout__input {
+    opacity: 0.8;
+  }
 }
 .bglight {
+  .checkout__input {
+    opacity: 1;
+  }
   .availability--text {
     opacity: 1;
   }

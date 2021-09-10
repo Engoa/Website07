@@ -15,7 +15,7 @@ async function loadPage(page, oldPage) {
     contentDiv.removeChild('#script_' + oldPage);
   }
   const script = document.createElement('script');
-  script.src = 'assets/js/' + page + '.js';
+  script.src = 'assets/js/templates/' + page + '.js';
   script.type = 'text/javascript';
   script.id = 'script_' + page;
   contentDiv.appendChild(script);

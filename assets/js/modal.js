@@ -2,7 +2,9 @@
   const drawModal = () => {
     document.querySelector('.modal__items').innerHTML = Cart.computedItems.reduce(
       (cartItemsList, item, index) => {
-        cartItemsList += `
+        cartItemsList += 
+        
+        `
       
       <div class="modal__item cart-row--${index}" >
       
@@ -81,9 +83,8 @@
   };
 
   const closeElements = document.querySelectorAll(
-    '#cart, #modal--close, .modal--link, .modal__btn '
+    '.cart--btn, #modal--close, .modal--link, .modal__btn'
   );
-
   closeElements.forEach((el) => el.addEventListener('click', toggleModal));
 
   //
