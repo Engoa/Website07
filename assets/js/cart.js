@@ -28,6 +28,12 @@ const Cart = {
     // simillar to the code above
     return this.items.reduce((sum, item) => (sum += item.quantity), 0);
   },
+  get grandTotal() {
+    return this.computedItems.reduce(
+      (sum, item) => (sum += Number(item.quantity) * Number(item.price_us)),
+      0
+    );
+  },
 
   // METHODS
   // Updates entire items object with new given items

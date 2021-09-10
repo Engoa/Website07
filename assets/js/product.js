@@ -38,7 +38,7 @@
           <i class="fas fa-minus"></i>
         </button></div>
       </div>
-      <button class="product__cta btn link" id="buy-btn">Buy Product</button>
+      <button class="product__cta" id="buy-btn">Buy Product</button>
         <span class='availability--text' id='availability--product'>${product.availability}</span>
     </div>
   </div>

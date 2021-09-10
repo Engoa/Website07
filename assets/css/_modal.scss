@@ -71,15 +71,15 @@ nav {
   transform: translate(-50%);
   background-color: var(--color-bg);
   border: 2px solid var(--color-text);
-  min-height: 500px;
-  max-height: 500px;
-  max-width: 500px;
+  min-height: 700px;
+  max-height: 700px;
   z-index: 150;
   position: fixed;
   overflow: scroll;
   visibility: hidden;
   opacity: 0;
   transition: opacity 300ms ease;
+  max-width: 600px;
   width: 90%;
 
   &__exit {
@@ -99,12 +99,14 @@ nav {
       align-items: center;
       justify-content: center;
       transition: transform 150ms linear;
-      &:active {
+      &:active,
+      &:hover {
         transform: rotate(90deg);
       }
     }
   }
-  &__header {
+  &__header,
+  .modal__total {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -112,7 +114,6 @@ nav {
     letter-spacing: 1.5px;
     font-size: 1.5rem;
     font-size: clamp(1.2rem, 3vw, 1.5rem);
-    margin-top: 1rem;
     text-transform: uppercase;
     text-align: center;
   }
@@ -122,14 +123,32 @@ nav {
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    gap: 1.5rem;
-    margin-top: 2rem;
+    gap: 2rem;
+    margin-top: 1.5rem;
     padding: 1rem;
     color: var(--color-text);
     font-size: 1rem;
     font-size: clamp(0.9rem, 3vw, 1rem);
     font-weight: bold;
     border-top: 2px solid var(--color-accent);
+  }
+  .modal__total {
+    flex-direction: column;
+    gap: 0.6rem;
+
+    p {
+      font-size: 1.2rem;
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      font-weight: bold;
+    }
+    .modal__btn {
+      margin-top: 0.5rem;
+      transition: transform 250ms ease;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
   }
   &__item {
     display: flex;
@@ -141,11 +160,9 @@ nav {
     max-height: 70px;
 
     .modal__image {
-      max-width: 70px;
-      min-width: 70px;
-      margin-right: 1rem;
+      margin-bottom: 1.1rem;
       img {
-        max-width: 75px;
+        max-width: 80px;
         width: 100%;
         border-radius: 50%;
         background-size: contain;
@@ -162,17 +179,17 @@ nav {
       font-size: clamp(0.7rem, 1vw, 1rem);
       text-transform: uppercase;
       text-align: center;
-      margin-right: 0.5rem;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      gap: 0.2rem;
     }
   }
 }
 .modal--link {
   text-decoration: none;
-  color: var(--color-text);
+  color: var(--color-accent);
   transition: color 200ms ease;
 
   &:hover,
@@ -182,9 +199,11 @@ nav {
 }
 
 .item--counts {
+  min-width: 50px;
+  max-width: 50px;
   display: flex;
   justify-content: center;
-  gap: 0.2rem;
+  gap: 0.3rem;
   align-items: center;
 
   button {
@@ -210,6 +229,7 @@ nav {
     }
   }
 }
+
 .overlay--active {
   visibility: visible;
   opacity: 1;

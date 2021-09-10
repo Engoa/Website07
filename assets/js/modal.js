@@ -19,8 +19,8 @@
           </div>
 
           <div class="modal__name">
-             <a href="#product?q=${item.id}" class="modal--link">${item.name}</a>
-             <span>${item.price_us}</span>
+             <a class="modal--link" href="#product?q=${item.id}">${item.name}</a>
+             <span>$${item.price_us}</span>
           </div>
 
           <div class="item--counts">
@@ -48,6 +48,12 @@
       ''
     );
 
+    document.querySelector('.modal__total').innerHTML = `
+     <h3>Total Cost</h3>
+        <p class='totalcost'>$${Cart.grandTotal.toFixed(2)}</p>
+          <a class='modal__btn product__cta' href="#checkout">Check Out</a>
+     `;
+
     Cart.computedItems.forEach((item, index) => {
       // Increment function
       $(`.cart-row--${index} button.increment-quantity`).click(() =>
@@ -68,26 +74,17 @@
 
   const cartModalOverlay = document.querySelector('#overlay--active');
   const cartModal = document.querySelector('#modal--active');
-  const cartBtn = document.querySelector('#cart');
-  const closeModal = document.querySelector('#modal--close');
-  const modalItemLink = document.querySelector('.modal--link');
-  const modalItemQuantity = document.querySelector('.cart--quantity');
 
-  const IsModalActive = true;
   const toggleModal = () => {
     cartModalOverlay.classList.toggle('overlay--active');
     cartModal.classList.toggle('modal--active');
   };
-  cartBtn.addEventListener('click', () => {
-    if (IsModalActive) {
-      toggleModal();
-    }
-  });
 
-  closeModal.addEventListener('click', () => {
-    toggleModal();
-  });
-  // modalItemLink.addEventListener('click', () => {
-  //   toggleModal();
-  // });
+  const closeElements = document.querySelectorAll(
+    '#cart, #modal--close, .modal--link, .modal__btn '
+  );
+
+  closeElements.forEach((el) => el.addEventListener('click', toggleModal));
+
+  //
 })();
