@@ -66,20 +66,20 @@ nav {
 
 .modal {
   padding: 1rem;
-  top: 96px;
+  top: 95px;
   left: 50%;
   transform: translate(-50%);
   background-color: var(--color-bg);
   border: 2px solid var(--color-text);
-  min-height: 700px;
-  max-height: 700px;
+  min-height: 500px;
+  max-height: 600px;
   z-index: 150;
   position: fixed;
   overflow: scroll;
   visibility: hidden;
   opacity: 0;
   transition: opacity 300ms ease;
-  max-width: 600px;
+  max-width: 650px;
   width: 90%;
 
   &__exit {
@@ -98,7 +98,7 @@ nav {
       display: flex;
       align-items: center;
       justify-content: center;
-      transition: transform 150ms linear;
+      transition: transform 130ms linear;
       &:active,
       &:hover {
         transform: rotate(90deg);
@@ -217,13 +217,12 @@ nav {
     font-weight: bold;
     color: var(--color-text);
     border-radius: 50%;
-    width: 20px;
-    height: 20px;
+    width: 23px;
+    height: 23px;
     opacity: 0.8;
     background: transparent;
     &:hover,
     &:active {
-      transform: rotate(180deg);
       color: var(--color-underline);
       opacity: 1;
     }

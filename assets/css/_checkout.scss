@@ -1,3 +1,71 @@
+.checkout--overlay {
+  position: absolute;
+  inset: 0;
+  min-height: 100vh;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.438);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 300ms linear;
+  position: fixed;
+  inset: 0;
+  z-index: 5;
+}
+
+.checkout--modal {
+  padding: 1rem;
+  top: 131px;
+  left: 50%;
+  transform: translate(-50%);
+  background-color: var(--color-bg);
+  border: 2px solid var(--color-text);
+  min-height: 500px;
+  max-height: 700px;
+  z-index: 150;
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  overflow: scroll;
+  transition: opacity 300ms ease;
+  max-width: 800px;
+  width: 90%;
+
+  &__header {
+    color: var(--color-text);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+    max-width: 1000px;
+
+    h3 {
+      text-transform: uppercase;
+    }
+
+    .fa-check {
+      font-size: 4rem;
+      font-size: clamp(2rem, 3vw, 4rem);
+      color: yellowgreen;
+    }
+  }
+
+  .checkout-modal__bought-items {
+    width: 100%;
+    text-align: center;
+
+    .cart--quantity,
+    .modal__name {
+      margin-bottom: 1rem;
+      font-size: 0.9rem;
+      font-size: clamp(0.8rem, 3vw, 0.9rem);
+    }
+  }
+}
+
 .checkout {
   max-width: 1350px;
   margin: 2rem auto;
@@ -157,15 +225,8 @@
       padding: 1rem 2rem;
     }
     &__image {
-      background: #eeeeee;
-      border-radius: 0.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
       img {
         max-width: 80px;
-        padding: 0.3rem;
         width: 100%;
         background-size: contain;
         background-position: center;
@@ -228,6 +289,15 @@
       }
     }
   }
+}
+//  Class toggles for Checkout Confirmation
+.checkout--overlay--active {
+  visibility: visible;
+  opacity: 1;
+}
+.checkout--modal--active {
+  visibility: visible;
+  opacity: 1;
 }
 
 @include media('<xl') {
@@ -297,10 +367,11 @@
           height: unset;
           width: 200px;
           padding: 1rem;
+          transition: all 300ms ease;
 
           &:hover,
           &:active {
-            width: 250px;
+            width: 230px;
           }
         }
       }

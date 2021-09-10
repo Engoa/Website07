@@ -1,10 +1,9 @@
 (() => {
-  const drawModal = () => {
+  //  Cart Modal!
+  const drawCartModal = () => {
     document.querySelector('.modal__items').innerHTML = Cart.computedItems.reduce(
       (cartItemsList, item, index) => {
-        cartItemsList += 
-        
-        `
+        cartItemsList += `
       
       <div class="modal__item cart-row--${index}" >
       
@@ -49,12 +48,7 @@
       },
       ''
     );
-
-    document.querySelector('.modal__total').innerHTML = `
-     <h3>Total Cost</h3>
-        <p class='totalcost'>$${Cart.grandTotal.toFixed(2)}</p>
-          <a class='modal__btn product__cta' href="#checkout">Check Out</a>
-     `;
+    ////////////////////////////////////// Toggle Cart Modal!
 
     Cart.computedItems.forEach((item, index) => {
       // Increment function
@@ -69,10 +63,35 @@
     });
   };
 
-  drawModal();
+  drawCartModal();
 
-  // Event dispatched on every cart update
-  document.addEventListener('cart-update', drawModal);
+  // Checkout Modal Draw
+  const drawCheckoutModal = () => {
+    const checkOutConfirm = document.querySelector('.drawcheckout--modal');
+    checkOutConfirm.innerHTML = `
+  <div class="checkout-modal__bought-items modal__items">
+      <div class="modal__item">
+        <div class="modal__image whiteitems">
+          <img src="${item.image_dark}" alt="Item images" />
+        </div>
+
+        <div class="modal__image blackitems">
+          <img src="${item.image_light}" alt="Item images" />
+        </div>
+
+        <div class="modal__name">
+          <a class="modal--link" href="#home">${item.name}</a>
+          <span>${item.price_us}</span>
+        </div>
+
+        <div class="modal__quantity">
+          <p>QUANTITY</p>
+          <p class="cart--quantity">${item.quantity}</p>
+        </div>
+      </div>
+    </div>
+  `;
+  };
 
   const cartModalOverlay = document.querySelector('#overlay--active');
   const cartModal = document.querySelector('#modal--active');
@@ -83,9 +102,20 @@
   };
 
   const closeElements = document.querySelectorAll(
-    '.cart--btn, #modal--close, .modal--link, .modal__btn'
+    '.cart--btn, .modal--close, .modal--link, .modal__btn'
   );
-  closeElements.forEach((el) => el.addEventListener('click', toggleModal));
+  closeElements.forEach((el) =>
+    el.addEventListener('click', () => {
+      toggleModal();
+    })
+  );
 
-  //
+  document.querySelector('.modal__total').innerHTML = `
+     <h3>Total Cost</h3>
+        <p class='totalcost'>$${Cart.grandTotal.toFixed(2)}</p>
+          <a class='modal__btn product__cta' href="#checkout">CheckOut</a>
+     `;
+
+  // Event dispatched on every cart update
+  document.addEventListener('cart-update', drawCartModal);
 })();

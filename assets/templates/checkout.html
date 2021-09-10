@@ -1,69 +1,106 @@
-<body>
-  <div class="checkout">
-    <form>
-      <div class="checkout__wrapper">
-        <div class="checkout__back">
-          <a href="#home">Go Home</a>
-        </div>
-        <div class="checkout__header">
-          <h2>Checkout</h2>
-        </div>
-        <div class="checkout__inputs">
-          <div class="checkout__details">
-            <h3>Billing details</h3>
-            <fieldset class="checkout__input">
-              <legend for="name">Name</legend>
-              <input type="text" name="name" id="name" />
-            </fieldset>
-            <fieldset class="checkout__input">
-              <legend for="email">Email Address</legend>
-              <input type="email" name="email" id="email" />
-            </fieldset>
-            <fieldset class="checkout__input">
-              <legend for="phone">Phone Number</legend>
-              <input type="number" name="phone" id="phone" />
-            </fieldset>
-          </div>
-          <div class="checkout__shipping">
-            <h3>Shipping information</h3>
-            <fieldset class="checkout__input">
-              <legend for="country">Country</legend>
-              <input type="text" name="country" id="country" />
-            </fieldset>
-            <fieldset class="checkout__input">
-              <legend for="city">City</legend>
-              <input type="text" name="city" id="city" />
-            </fieldset>
-            <fieldset class="checkout__input">
-              <legend for="address">Address</legend>
-              <input type="text" name="address" id="address" />
-            </fieldset>
-            <fieldset class="checkout__input">
-              <legend for="zipcode">ZIPCODE</legend>
-              <input type="number" name="zipcode" id="zipcode" />
-            </fieldset>
-          </div>
-          <div class="checkout__payments">
-            <h3>Payment Details</h3>
-            <div class="checkout__payments--header">
-              <h5>payment method:</h5>
-            </div>
-            <div class="checkout__payment">
-              <label for="paypal">Paypal</label>
-              <input type="radio" name="payments" id="paypal" />
-            </div>
-            <div class="checkout__payment">
-              <label for="crypto">Crypto</label>
-              <input type="radio" name="payments" id="crypto" />
-            </div>
-            <div class="checkout__payment">
-              <label for="visa">VISA</label>
-              <input type="radio" name="payments" id="visa" />
-            </div>
-          </div>
-          <div class="summary" id="summary"></div>
-        </div>
+<div class="checkout--overlay" id="checkout--overlay"></div>
+<div class="checkout--modal" id="checkout--modal">
+  <div class="modal__exit">
+    <i class="fas fa-times checkout__exit"></i>
+  </div>
+  <div class="checkout--modal__header">
+    <i class="fas fa-check"></i>
+    <h3>Thank you for your order</h3>
+    <span
+      >We'll begin processing the items once the payment has been completed on our side.</span
+    >
+    <h3>Your order is as follows:</h3>
+  </div>
+
+  <div class="checkout-modal__bought-items modal__items">
+    <div class="modal__item">
+      <div class="modal__image whiteitems">
+        <img src="/assets/images/controller2.png" alt="Item images" />
       </div>
-      </form>
+
+      <div class="modal__image blackitems">
+        <img src="/assets/images/controller.png" alt="Item images" />
+      </div>
+
+      <div class="modal__name">
+        <a class="modal--link" href="#home">Playstation 5 Controller</a>
+        <span>399$</span>
+      </div>
+
+      <div class="modal__quantity">
+        <p>QUANTITY</p>
+        <p class="cart--quantity">32</p>
+      </div>
     </div>
-</body>
+  </div>
+</div>
+
+<!-- Actual FORM TEXT of CHECKOUT -->
+
+<div class="checkout">
+  <form class="checkout--form">
+    <div class="checkout__wrapper">
+      <div class="checkout__back">
+        <a href="#home">Go Home</a>
+      </div>
+      <div class="checkout__header">
+        <h2>Checkout</h2>
+      </div>
+      <div class="checkout__inputs">
+        <div class="checkout__details">
+          <h3>Billing details</h3>
+          <fieldset class="checkout__input">
+            <legend for="name">Name</legend>
+            <input type="text" name="name" id="name" />
+          </fieldset>
+          <fieldset class="checkout__input">
+            <legend for="email">Email Address</legend>
+            <input type="email" name="email" id="email" />
+          </fieldset>
+          <fieldset class="checkout__input">
+            <legend for="phone">Phone Number</legend>
+            <input type="number" name="phone" id="phone" />
+          </fieldset>
+        </div>
+        <div class="checkout__shipping">
+          <h3>Shipping information</h3>
+          <fieldset class="checkout__input">
+            <legend for="country">Country</legend>
+            <input type="text" name="country" id="country" />
+          </fieldset>
+          <fieldset class="checkout__input">
+            <legend for="city">City</legend>
+            <input type="text" name="city" id="city" />
+          </fieldset>
+          <fieldset class="checkout__input">
+            <legend for="address">Address</legend>
+            <input type="text" name="address" id="address" />
+          </fieldset>
+          <fieldset class="checkout__input">
+            <legend for="zipcode">ZIPCODE</legend>
+            <input type="number" name="zipcode" id="zipcode" />
+          </fieldset>
+        </div>
+        <div class="checkout__payments">
+          <h3>Payment Details</h3>
+          <div class="checkout__payments--header">
+            <h5>payment method:</h5>
+          </div>
+          <div class="checkout__payment">
+            <label for="paypal">Paypal</label>
+            <input type="radio" name="payments" id="paypal" />
+          </div>
+          <div class="checkout__payment">
+            <label for="crypto">Crypto</label>
+            <input type="radio" name="payments" id="crypto" />
+          </div>
+          <div class="checkout__payment">
+            <label for="visa">VISA</label>
+            <input type="radio" name="payments" id="visa" />
+          </div>
+        </div>
+        <div class="summary" id="summary"></div>
+      </div>
+    </div>
+  </form>
+</div>
