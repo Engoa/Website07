@@ -12,27 +12,7 @@
     <h3>Your order is as follows:</h3>
   </div>
 
-  <div class="checkout-modal__bought-items modal__items">
-    <div class="modal__item">
-      <div class="modal__image whiteitems">
-        <img src="/assets/images/controller2.png" alt="Item images" />
-      </div>
-
-      <div class="modal__image blackitems">
-        <img src="/assets/images/controller.png" alt="Item images" />
-      </div>
-
-      <div class="modal__name">
-        <a class="modal--link" href="#home">Playstation 5 Controller</a>
-        <span>399$</span>
-      </div>
-
-      <div class="modal__quantity">
-        <p>QUANTITY</p>
-        <p class="cart--quantity">32</p>
-      </div>
-    </div>
-  </div>
+  <div class="draworder-confirmation"></div>
 </div>
 
 <!-- Actual FORM TEXT of CHECKOUT -->
@@ -99,7 +79,16 @@
             <input type="radio" name="payments" id="visa" />
           </div>
         </div>
+        <h3>Summary</h3>
         <div class="summary" id="summary"></div>
+
+        <div class="summary__finish">
+          <div class="summary__total"></div>
+        </div>
+
+        <div class="summary__btn">
+          <button type="submit">CONTINUE & PAY</button>
+        </div>
       </div>
     </div>
   </form>

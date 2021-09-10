@@ -1,35 +1,71 @@
 (() => {
+  // Draws Summary on checkout form at the bottom!
   const drawCartSummary = () => {
-    document.querySelector('.summary').innerHTML = `
-      <h3>Summary</h3>
+    Products.items.forEach((item) => {
+      document.querySelector('.summary').innerHTML += `
+    
     <div class="summary__item">
       <div class="summary__image blackitems">
-        <img src="/assets/images/controller.png" alt="Product Image" />
+        <img src="${item.image_dark}" alt="Product Image" />
       </div>
       <div class="summary__image whiteitems">
-        <img src="/assets/images/controller2.png" alt="Product Image" />
+        <img src="${item.image_light}" alt="Product Image" />
       </div>
       <div class="summary__description">
-        <h4>Sony controller</h4>
-        <span class="summary--text">$4324</span>
+        <h4>${item.name}</h4>
+        <span class="summary--text">${item.price_us}</span>
       </div>
       <div class="summary__quantity">
         <h4>quantity</h4>
-        <span class="summary--text">x1</span>
+        <span class="summary--text">${Cart.computedItems.quantity}</span>
       </div>
     </div>
-    <div class="summary__finish">
-      <div class="summary__total">
-        <h3>GRAND TOTAL</h3>
-        <span>2999$</span>
-      </div>
-    </div>
-    <div class="summary__btn">
-      <button type="submit">CONTINUE & PAY</button>
-    </div>
+  
     `;
+    });
   };
   drawCartSummary();
+
+  /// Draw Summary total!!
+  const summaryGrandTotal = document.querySelector('.summary__total');
+  summaryGrandTotal.innerHTML = `
+  
+  <h3>GRAND TOTAL</h3>
+  <span>$${Cart.grandTotal.toFixed(2)}</span>
+  `;
+  // Checkout Order confrimation drawing!
+
+  const drawOrderConfirmation = () => {
+    const checkOutConfirm = document.querySelector('.draworder-confirmation');
+    Products.items.forEach((item) => {
+      checkOutConfirm.innerHTML = `
+  <div class="checkout-modal__bought-items modal__items">
+      <div class="modal__item">
+        <div class="modal__image whiteitems">
+          <img src="${item.image_light}" alt="Item images" />
+        </div>
+
+        <div class="modal__image blackitems">
+          <img src="${item.image_dark}" alt="Item images" />
+        </div>
+
+        <div class="modal__name">
+          <a class="modal--link" href="#home"></a>
+          <span>${item.name}</span>
+        </div>
+
+        <div class="modal__quantity">
+          <p>QUANTITY</p>
+          <p class="cart--quantity"><${item.quantity}/p>
+        </div>
+      </div>
+    </div>
+  `;
+    });
+  };
+
+  drawOrderConfirmation();
+
   const checkOutModalOverlay = document.querySelector('.checkout--overlay');
   const checkOutModal = document.querySelector('.checkout--modal');
   const toggleCheckOutModal = () => {

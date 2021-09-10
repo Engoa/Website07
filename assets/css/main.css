@@ -1609,6 +1609,10 @@ nav .cart--wrapper .cart__quantity__text {
   font-size: clamp(0.8rem, 3vw, 0.9rem);
 }
 
+.checkout--modal .checkout-modal__bought-items .modal__item {
+  margin-top: 2rem;
+}
+
 .checkout {
   max-width: 1350px;
   margin: 2rem auto;
@@ -1815,8 +1819,8 @@ nav .cart--wrapper .cart__quantity__text {
   width: 100%;
   max-width: 1350px;
   padding: 0 1.5rem;
-  gap: 0.5rem;
   font-weight: bold;
+  gap: 1.5rem;
 }
 
 .checkout .summary__item {
@@ -1879,6 +1883,10 @@ nav .cart--wrapper .cart__quantity__text {
   margin: 2rem auto;
   text-align: center;
   gap: 1.5rem;
+}
+
+.checkout .summary__finish .summary__total {
+  text-align: center;
 }
 
 .checkout .summary__finish .summary__total h3 {
