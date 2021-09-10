@@ -4,6 +4,39 @@ const Products = {
   },
   items: [
     {
+      name: 'Zephyrus G17',
+      summary: 'Best Gaming Laptop on the market!',
+      compatibility: '144hz, Full DLSS and RTX support',
+      description1: `Illuminate your life in RGB. A redesigned light bar increases the density of LEDs to create a more refined underglow beneath the chassis. Personalize your Aura Sync settings to set the ideal gaming mood across an entire ecosystem of compatible devices.`,
+      description2: `Improve everyday comfort and usability with an active touchpad area that’s 85% larger than previous generations. More space means greater precision along with more comfortable hand movements and gestures while you’re navigating. The glass pad is coated in a matte finish that adds strength with a silky smooth feel.`,
+      boxes: [
+        {
+          text: `ROG backpack`,
+          quantity: '1',
+        },
+        {
+          text: `FHD 1080P@60FPS external camera`,
+          quantity: '2',
+        },
+        {
+          text: `ROG Impact Gaming Mouse`,
+          quantity: '1',
+        },
+        {
+          text: 'TYPE-C, 100W AC Adapter',
+          quantity: '1',
+        },
+      ],
+      price_us: '429.99',
+      image_dark: 'assets/images/laptop.png',
+      image_light: 'assets/images/laptop2.png',
+      product_image1: 'assets/images/laptop-product.png',
+      product_image2: 'assets/images/laptop-product2.png',
+      product_image3: 'assets/images/laptop-product3.png',
+      availability: '',
+      id: 'zephyrus',
+    },
+    {
       name: 'PS5 DualSense',
       summary: 'Wireless Controller for Playstation 5',
       compatibility: 'Compatible for Playstation 4 Pro',
@@ -40,39 +73,6 @@ const Products = {
       product_image3: 'assets/images/controller-product3.jpg',
       availability: 'Available in limited stock',
       id: 'dualsense',
-    },
-    {
-      name: 'Zephyrus G17',
-      summary: 'Best Gaming Laptop on the market!',
-      compatibility: '144hz, Full DLSS and RTX support',
-      description1: `Illuminate your life in RGB. A redesigned light bar increases the density of LEDs to create a more refined underglow beneath the chassis. Personalize your Aura Sync settings to set the ideal gaming mood across an entire ecosystem of compatible devices.`,
-      description2: `Improve everyday comfort and usability with an active touchpad area that’s 85% larger than previous generations. More space means greater precision along with more comfortable hand movements and gestures while you’re navigating. The glass pad is coated in a matte finish that adds strength with a silky smooth feel.`,
-      boxes: [
-        {
-          text: `ROG backpack`,
-          quantity: '1',
-        },
-        {
-          text: `FHD 1080P@60FPS external camera`,
-          quantity: '2',
-        },
-        {
-          text: `ROG Impact Gaming Mouse`,
-          quantity: '1',
-        },
-        {
-          text: 'TYPE-C, 100W AC Adapter',
-          quantity: '1',
-        },
-      ],
-      price_us: '429.99',
-      image_dark: 'assets/images/laptop.png',
-      image_light: 'assets/images/laptop2.png',
-      product_image1: 'assets/images/laptop-product.png',
-      product_image2: 'assets/images/laptop-product2.png',
-      product_image3: 'assets/images/laptop-product3.png',
-      availability: '',
-      id: 'zephyrus',
     },
     {
       name: 'Logitech G915 TKL',
