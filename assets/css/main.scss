@@ -64,6 +64,11 @@ body {
     font-family: 'Montserrat', sans-serif;
   }
 }
+.sb {
+  * {
+    font-weight: bold !important;
+  }
+}
 
 .page__container--wrapper {
   position: relative;
@@ -276,6 +281,13 @@ nav {
       display: flex;
       flex-direction: column;
       align-items: center;
+      transition: all 0.3s ease;
+      perspective: 1000;
+
+      &:hover,
+      &:active {
+        transform: perspective(1000px) scaleY(1) scaleX(1) rotateY(15deg) skewX(-5deg);
+      }
 
       .cardplus {
         margin: auto 0;
@@ -346,6 +358,12 @@ nav {
         left: unset;
       }
     }
+    .card {
+      &:hover,
+      &:active {
+        transform: perspective(1000px) scaleY(1) scaleX(1) rotateY(-15deg) skewX(5deg);
+      }
+    }
 
     .btn--wrapper {
       .btn {
@@ -354,6 +372,7 @@ nav {
         justify-content: center;
         flex-direction: row-reverse;
         gap: 0.3rem;
+
         &::after {
           content: '\f053'; //Chevron on 2nd containers
         }
@@ -449,6 +468,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
+    perspective: 484px;
     gap: 0.3rem;
 
     &:hover {
@@ -642,7 +662,6 @@ nav {
         height: unset;
         max-width: 200px;
         margin-bottom: 1rem;
-        box-shadow: none;
         border-radius: 0.5rem;
 
         .cardplus {

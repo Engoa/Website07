@@ -2301,6 +2301,10 @@ body button {
   font-family: 'Montserrat', sans-serif;
 }
 
+.sb * {
+  font-weight: bold !important;
+}
+
 .page__container--wrapper {
   position: relative;
 }
@@ -2576,6 +2580,15 @@ nav .theme--wrapper_btn:checked::before {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-perspective: 1000;
+          perspective: 1000;
+}
+
+.home--container .container .card:hover, .home--container .container .card:active {
+  -webkit-transform: perspective(1000px) scaleY(1) scaleX(1) rotateY(15deg) skewX(-5deg);
+          transform: perspective(1000px) scaleY(1) scaleX(1) rotateY(15deg) skewX(-5deg);
 }
 
 .home--container .container .card .cardplus {
@@ -2662,6 +2675,11 @@ nav .theme--wrapper_btn:checked::before {
   background: var(--color-accent);
   right: 2rem;
   left: unset;
+}
+
+.home--container .container2 .card:hover, .home--container .container2 .card:active {
+  -webkit-transform: perspective(1000px) scaleY(1) scaleX(1) rotateY(-15deg) skewX(5deg);
+          transform: perspective(1000px) scaleY(1) scaleX(1) rotateY(-15deg) skewX(5deg);
 }
 
 .home--container .container2 .btn--wrapper .btn {
@@ -2795,6 +2813,8 @@ nav .theme--wrapper_btn:checked::before {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-perspective: 484px;
+          perspective: 484px;
   gap: 0.3rem;
 }
 
@@ -3011,8 +3031,6 @@ nav .theme--wrapper_btn:checked::before {
     height: unset;
     max-width: 200px;
     margin-bottom: 1rem;
-    -webkit-box-shadow: none;
-            box-shadow: none;
     border-radius: 0.5rem;
   }
   .home--container .container .card .cardplus {

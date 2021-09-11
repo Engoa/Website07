@@ -52,6 +52,13 @@ const Cart = {
     }
 
     this.updateLS();
+    Snackbar.show({
+      pos: 'bottom-center',
+      text: `${item.quantity}x ${item.name} added to cart`,
+      textColor: 'var(--color-textdark)',
+      actionTextColor: 'var(--color-cta)',
+      customClass: 'sb',
+    });
   },
 
   getItemIndex(id) {
