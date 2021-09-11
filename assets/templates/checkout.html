@@ -18,8 +18,22 @@
 
 <!-- Actual FORM TEXT of CHECKOUT -->
 
-<div class="checkout">
-  <form class="checkout--form" netlify spellcheck="false">
+<form
+  class="checkout--form"
+  netlify
+  spellcheck="false"
+  data-netlify="true"
+  data-netlify-honeypot="bot-field"
+>
+  <input type="hidden" name="form-name" value="contact" />
+  <div hidden>
+    <label>
+      Don’t fill this out:
+      <input name="bot-field" />
+    </label>
+  </div>
+
+  <div class="checkout">
     <div class="checkout__wrapper">
       <div class="checkout__back">
         <a href="#home">Go Home</a>
@@ -92,5 +106,5 @@
         </div>
       </div>
     </div>
-  </form>
-</div>
+  </div>
+</form>
