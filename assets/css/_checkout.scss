@@ -14,7 +14,7 @@
 
 .checkout--modal {
   padding: 1rem;
-  top: 131px;
+  top: 95px;
   left: 50%;
   transform: translate(-50%);
   background-color: var(--color-bg);
@@ -36,7 +36,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
+    gap: 0.5rem;
     margin: 0 auto;
     text-align: center;
     width: 100%;
@@ -44,6 +44,12 @@
 
     h3 {
       text-transform: uppercase;
+      font-size: 1.1rem;
+      font-size: clamp(0.9rem, 1vw, 1.1rem);
+    }
+    span {
+      font-size: 1rem;
+      font-size: clamp(0.7rem, 1vw, 1rem);
     }
 
     .fa-check {
@@ -59,19 +65,28 @@
 
     .cart--quantity,
     .modal__name {
-      margin-bottom: 1rem;
       font-size: 0.9rem;
-      font-size: clamp(0.8rem, 3vw, 0.9rem);
+      font-size: clamp(0.6rem, 1vw, 0.9rem);
     }
     .modal__item {
-      margin-top: 2rem;
+      margin-top: 0.5rem;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    img {
+      width: 100%;
+      max-width: 55px;
     }
   }
 }
 
 .checkout {
   max-width: 1350px;
-  margin: 2rem auto;
+  margin: 3rem auto;
   width: 100%;
 
   &__wrapper {
@@ -91,6 +106,7 @@
       font-size: 1.2rem;
       font-size: clamp(1rem, 2vw, 1.2rem);
       transition: all 500ms ease;
+      position: relative;
 
       &:hover {
         transform: scale(1.02);
@@ -105,6 +121,22 @@
       &:hover::before {
         transform: translateX(-5px);
         color: var(--color-underline);
+      }
+      &::after {
+        //Line on Linkedin link
+        content: '';
+        position: absolute;
+        background: var(--color-text);
+        transform: translateX(50%);
+        right: 0;
+        left: 0.5rem;
+        height: 2px;
+        transition: transform 150ms linear;
+        pointer-events: none;
+        transform: scale(0);
+      }
+      &:hover::after {
+        transform: scale(1.1);
       }
     }
   }
@@ -125,6 +157,7 @@
     align-items: flex-start;
     flex-direction: column;
     gap: 1.5rem;
+    width: 100%;
 
     h3 {
       color: var(--color-underline);
@@ -145,6 +178,7 @@
       font-weight: bold;
       padding: 0.3rem;
       border-radius: 0.5rem;
+      border: 1px solid var(--color-text);
 
       legend {
         margin: 0 3rem;
@@ -176,6 +210,7 @@
     justify-content: center;
     gap: 1rem;
     color: var(--color-text);
+    width: 100%;
 
     &--header {
       color: var(--color-text);
@@ -187,7 +222,7 @@
       justify-content: center;
       align-items: center;
       flex-direction: row-reverse;
-      gap: 1rem;
+      gap: 0.5rem;
 
       label,
       input {
@@ -196,8 +231,8 @@
       }
 
       input[type='radio'] {
-        width: 22px;
-        height: 22px;
+        width: 15px;
+        height: 15px;
         transition: all 300ms ease;
       }
       input[type='radio']:checked {
@@ -215,8 +250,21 @@
     max-width: 1350px;
     padding: 0 1.5rem;
     font-weight: bold;
-    gap: 1.5rem;
+    gap: 1rem;
+
+    h3 {
+      color: var(--color-underline);
+      text-transform: uppercase;
+      font-size: 1.6rem;
+      font-size: clamp(1rem, 2vw, 1.6rem);
+      margin-bottom: 0.5rem;
+      word-spacing: -1.5px;
+      font-weight: bold;
+      text-align: center;
+      width: 100%;
+    }
     &__item {
+      height: 120px;
       max-width: 1350px;
       width: 100%;
       display: flex;
@@ -226,6 +274,11 @@
       border: 2px solid var(--color-text);
       border-radius: 3rem 0.5rem;
       padding: 1rem 2rem;
+    }
+
+    &__item2 {
+      border-radius: 0.5rem 3rem;
+      border: 2px solid var(--color-cta);
     }
     &__image {
       img {
@@ -243,8 +296,8 @@
       color: var(--color-text);
       text-align: center;
       text-transform: uppercase;
-      font-size: 1.1rem;
-      font-size: clamp(0.7rem, 1vw, 1.1rem);
+      font-size: 1rem;
+      font-size: clamp(0.55rem, 1vw, 1rem);
 
       .summary--text {
         text-transform: lowercase;
@@ -256,16 +309,18 @@
       flex-direction: column;
       margin: 2rem auto;
       text-align: center;
-      gap: 1.5rem;
+      gap: 2rem;
       .summary__total {
         text-align: center;
         h3 {
-          font-size: 1.5rem;
-          font-size: clamp(1.2rem, 2vw, 1.5rem);
+          font-size: 1.6rem;
+          font-size: clamp(1.2rem, 2vw, 1.6rem);
+          color: var(--color-underline);
         }
         span {
+          font-size: 1.5rem;
+          font-size: clamp(1.2rem, 2vw, 1.5rem);
           color: var(--color-text);
-          font-size: 1.3rem;
         }
       }
     }
@@ -274,7 +329,7 @@
       align-items: center;
       margin: 0 auto;
       button {
-        color: #eeeeee;
+        color: var(--color-textdark);
         font-size: 1rem;
         font-weight: bold;
         background-color: var(--color-underline);
@@ -282,7 +337,7 @@
         height: 3.5rem;
         border-radius: 0.5rem;
         outline: none;
-        border: 2px solid #eeeeee;
+        border: 2px solid var(--color-text);
         cursor: pointer;
         transition: all 500ms ease;
         &:hover,
@@ -331,6 +386,9 @@
 
 @include media('<smd') {
   .checkout {
+    h3 {
+      text-align: center;
+    }
     &__wrapper {
       align-items: center;
       justify-content: center;
@@ -351,13 +409,17 @@
         }
       }
     }
-
+    &__payments {
+      align-items: center;
+      justify-content: center;
+    }
     .summary {
       justify-content: center;
       align-items: center;
 
       &__item {
-        width: 290px;
+        height: 60px;
+        width: 285px;
         max-width: unset;
       }
       &__image {

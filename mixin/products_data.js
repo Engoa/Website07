@@ -75,7 +75,7 @@ const Products = {
       id: 'dualsense',
     },
     {
-      name: 'Logitech G915 TKL',
+      name: 'Logitech G915',
       summary: 'Wireless Optical Mechanical Keyboard',
       compatibility: 'Compatible for Windows/MacOS',
       description1: `A breakthrough in design and engineering, now in black and white colorways.
@@ -225,7 +225,7 @@ const Products = {
       id: 'applewatch',
     },
     {
-      name: 'Corsair Virtuoso XT',
+      name: 'Corsair Virtuoso',
       summary: 'Wireless Gaming Headset',
       compatibility: 'Compatible for all platforms including Switch',
       description1: `The CORSAIR VIRTUOSO RGB Wireless XT delivers a high-fidelity audio experience,

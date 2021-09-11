@@ -1,10 +1,10 @@
 (() => {
   // Draws Summary on checkout form at the bottom!
   const drawCartSummary = () => {
-    Products.items.forEach((item) => {
+    Products.items.forEach((item, index) => {
       document.querySelector('.summary').innerHTML += `
     
-    <div class="summary__item">
+    <div class="summary__item ${index % 2 !== 0 ? 'summary__item2' : ''}">
       <div class="summary__image blackitems">
         <img src="${item.image_dark}" alt="Product Image" />
       </div>
