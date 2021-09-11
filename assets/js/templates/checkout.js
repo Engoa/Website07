@@ -69,8 +69,10 @@
   const checkOutModalOverlay = document.querySelector('.checkout--overlay');
   const checkOutModal = document.querySelector('.checkout--modal');
   const toggleCheckOutModal = () => {
-    checkOutModalOverlay.classList.toggle('checkout--overlay--active');
-    checkOutModal.classList.toggle('checkout--modal--active');
+    setTimeout(() => {
+      checkOutModal.classList.toggle('checkout--modal--active');
+      checkOutModalOverlay.classList.toggle('checkout--overlay--active');
+    }, 300);
   };
 
   const checkOutForm = document.querySelector('.checkout--form');
