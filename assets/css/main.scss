@@ -5,7 +5,7 @@
 @import 'breakpoints';
 @import 'variables';
 @import 'product';
-@import 'modal';
+@import 'cartmodal';
 @import 'checkout';
 @import '../../vendors/SnackBar-master/src/sass/snackbar';
 
@@ -36,6 +36,11 @@ html {
   }
 
   scroll-behavior: smooth;
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
 }
 
 *,
@@ -82,7 +87,7 @@ body {
     left: 0;
     right: 0;
     bottom: -0.2rem;
-    transition: opacity 250ms linear, transform 250ms linear;
+    transition: opacity 180ms linear, transform 180ms linear;
     transform: scaleX(0);
   }
   &:hover::before {
@@ -93,14 +98,15 @@ body {
 // Nav button animations
 
 nav {
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 100%;
+
   .nav--container {
-    max-width: 1440px;
-    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
-    padding: 2rem 0;
+    margin-top: 2rem;
   }
 
   .hamburger-menu {
@@ -407,7 +413,7 @@ nav {
 .image--anim {
   &--image {
     visibility: hidden;
-    animation: ItemsAnim 1s 500ms ease forwards;
+    animation: ItemsAnim 1s 300ms ease forwards;
   }
 }
 // Hide Items on load, for each theme!

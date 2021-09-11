@@ -79,8 +79,9 @@ nav {
   visibility: hidden;
   opacity: 0;
   transition: opacity 300ms ease;
-  max-width: 650px;
+  max-width: 600px;
   width: 90%;
+  box-shadow: var(--box-shadow);
 
   &__exit {
     display: flex;
@@ -98,10 +99,11 @@ nav {
       display: flex;
       align-items: center;
       justify-content: center;
-      transition: transform 130ms linear;
+      transition: all 130ms linear;
       &:active,
       &:hover {
         transform: rotate(90deg);
+        border: 2px solid var(--color-cta);
       }
     }
   }
@@ -153,18 +155,17 @@ nav {
   &__item {
     display: flex;
     flex-direction: row;
-    align-items: center;
     justify-content: space-between;
     width: 100%;
     border-bottom: 2px solid var(--color-text);
-    max-height: 70px;
+    height: 130px;
+    max-height: 130px;
+    align-items: center;
 
     .modal__image {
-      margin-bottom: 1.1rem;
       img {
-        max-width: 80px;
+        max-width: 100px;
         width: 100%;
-        border-radius: 50%;
         background-size: contain;
         background-position: center;
       }
@@ -189,18 +190,16 @@ nav {
 }
 .modal--link {
   text-decoration: none;
-  color: var(--color-accent);
+  color: var(--color-underline);
   transition: color 200ms ease;
 
   &:hover,
   &:active {
-    color: var(--color-underline);
+    color: var(--color-accent);
   }
 }
 
 .item--counts {
-  min-width: 50px;
-  max-width: 50px;
   display: flex;
   justify-content: center;
   gap: 0.3rem;

@@ -20,12 +20,6 @@ const Cart = {
 
   // Returns cart quantity
   get cartQuantity() {
-    // let sum = 0
-    // this.items.forEach(item=>sum+=item.quantity)
-    // return sum
-    // Reduce Function always returns some sort of a value,
-    // and holds the state of the value through each iteration,
-    // simillar to the code above
     return this.items.reduce((sum, item) => (sum += item.quantity), 0);
   },
   get grandTotal() {
@@ -75,6 +69,8 @@ const Cart = {
         this.items.splice(i, 1);
       }
     }
+    console.log(this.grandTotal);
+
     this.updateLS();
   },
 
@@ -85,6 +81,7 @@ const Cart = {
         this.items[i].quantity += 1;
       }
     }
+    console.log(this.grandTotal);
     this.updateLS();
   },
 
@@ -115,5 +112,5 @@ document.addEventListener('cart-update', () => {
 
   gsap
     .timeline({ yoyo: true, repeat: 1 })
-    .to('#cart', { scaleX: 1.7, scaleY: 1.7, overwrite: 'all', duration: 0.1 });
+    .to('#cart', { scaleX: 1.8, scaleY: 1.8, overwrite: 'all', duration: 0.1 });
 });

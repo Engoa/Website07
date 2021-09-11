@@ -38,6 +38,11 @@ loadPage(Router.getHash(location.hash));
 
 window.addEventListener(
   'hashchange',
-  (ev) => loadPage(Router.getHash(ev.target.location.hash), ev.oldURL.split('#')[1]),
+  (ev) => {
+    loadPage(Router.getHash(ev.target.location.hash), ev.oldURL.split('#')[1]);
+    if (CartModal.isOpen) {
+      CartModal.close();
+    }
+  },
   false
 );

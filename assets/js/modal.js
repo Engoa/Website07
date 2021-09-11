@@ -1,9 +1,8 @@
-(() => {
-  //  Cart Modal!
-  const drawCartModal = () => {
-    document.querySelector('.modal__items').innerHTML = Cart.computedItems.reduce(
-      (cartItemsList, item, index) => {
-        cartItemsList += `
+//  Cart Modal!
+const drawCartModal = () => {
+  document.querySelector('.modal__items').innerHTML = Cart.computedItems.reduce(
+    (cartItemsList, item, index) => {
+      cartItemsList += `
       
       <div class="modal__item cart-row--${index}" >
       
@@ -44,50 +43,78 @@
       </div>
         </div> `;
 
-        return cartItemsList;
-      },
-      ''
+      return cartItemsList;
+    },
+    ''
+  );
+  ////////////////////////////////////// Toggle Cart Modal!
+
+  Cart.computedItems.forEach((item, index) => {
+    // Increment function
+    $(`.cart-row--${index} button.increment-quantity`).click(() =>
+      Cart.incrementQuantity(item.id)
     );
-    ////////////////////////////////////// Toggle Cart Modal!
 
-    Cart.computedItems.forEach((item, index) => {
-      // Increment function
-      $(`.cart-row--${index} button.increment-quantity`).click(() =>
-        Cart.incrementQuantity(item.id)
-      );
+    // Decrement function
+    $(`.cart-row--${index} button.decrement-quantity`).click(() =>
+      Cart.decrementQuantity(item.id)
+    );
+  });
+};
 
-      // Decrement function
-      $(`.cart-row--${index} button.decrement-quantity`).click(() =>
-        Cart.decrementQuantity(item.id)
-      );
-    });
-  };
-
-  drawCartModal();
-
-  const cartModalOverlay = document.querySelector('#overlay--active');
-  const cartModal = document.querySelector('#modal--active');
-
-  const toggleModal = () => {
-    cartModalOverlay.classList.toggle('overlay--active');
-    cartModal.classList.toggle('modal--active');
-  };
-
-  const closeElements = document.querySelectorAll(
-    '.cart--btn, .modal--close, .modal--link, .modal__btn'
-  );
-  closeElements.forEach((el) =>
-    el.addEventListener('click', () => {
-      toggleModal();
-    })
-  );
-
+const drawGrandTotal = () => {
   // Total Cost in Cart Modal!
   document.querySelector('.modal__total').innerHTML = `
      <h3>Total Cost</h3>
-     <p class='totalcost'>$${Cart.grandTotal.toFixed(2)}</p>
+     <p class='totalcost'>$${Number(Cart.grandTotal.toFixed(2)).toLocaleString()}</p>
      <a class='modal__btn product__cta' href="#checkout">CheckOut</a>
      `;
-  // Event dispatched on every cart update
-  document.addEventListener('cart-update', drawCartModal);
-})();
+};
+
+// INITIAL DRAW
+drawCartModal();
+drawGrandTotal();
+
+const cartModalOverlay = document.querySelector('#overlay--active');
+const cartModalContainer = document.querySelector('#modal--active');
+
+const CartModal = {
+  isOpen: false,
+
+  close() {
+    cartModalOverlay.classList.remove('overlay--active');
+    cartModalContainer.classList.remove('modal--active');
+    cartModalContainer.style.transition = 'all 500ms ease';
+
+    this.isOpen = false;
+  },
+
+  open() {
+    cartModalOverlay.classList.add('overlay--active');
+    cartModalContainer.classList.add('modal--active');
+    this.isOpen = true;
+  },
+
+  toggle() {
+    if (this.isOpen) {
+      CartModal.close();
+    } else {
+      CartModal.open();
+    }
+  },
+};
+
+const closeElements = document.querySelectorAll(
+  '.cart--btn, .modal--close, .modal--link, .modal__btn'
+);
+closeElements.forEach((el) => el.addEventListener('click', () => CartModal.toggle()));
+
+cartModalOverlay.addEventListener('click', () => {
+  CartModal.toggle();
+});
+
+// Event dispatched on every cart update
+document.addEventListener('cart-update', () => {
+  drawCartModal();
+  drawGrandTotal();
+});

@@ -9,7 +9,8 @@
     <span
       >We'll begin processing the items once the payment has been completed on our side.</span
     >
-    <h3>Your order is as follows:</h3>
+    <h3 id="ordertext">Your order is as follows:</h3>
+    <div class="orderid"></div>
   </div>
 
   <div class="draworder-confirmation"></div>
@@ -31,34 +32,34 @@
           <h3>Billing details</h3>
           <fieldset class="checkout__input">
             <legend for="name">Name</legend>
-            <input type="text" name="name" id="name" />
+            <input type="text" name="name" id="name" required />
           </fieldset>
           <fieldset class="checkout__input">
             <legend for="email">Email Address</legend>
-            <input type="email" name="email" id="email" />
+            <input type="email" name="email" id="email" required />
           </fieldset>
           <fieldset class="checkout__input">
             <legend for="phone">Phone Number</legend>
-            <input type="number" name="phone" id="phone" />
+            <input type="number" name="phone" id="phone" required />
           </fieldset>
         </div>
         <div class="checkout__shipping">
           <h3>Shipping information</h3>
           <fieldset class="checkout__input">
             <legend for="country">Country</legend>
-            <input type="text" name="country" id="country" />
+            <input type="text" name="country" id="country" required />
           </fieldset>
           <fieldset class="checkout__input">
             <legend for="city">City</legend>
-            <input type="text" name="city" id="city" />
+            <input type="text" name="city" id="city" required />
           </fieldset>
           <fieldset class="checkout__input">
             <legend for="address">Address</legend>
-            <input type="text" name="address" id="address" />
+            <input type="text" name="address" id="address" required />
           </fieldset>
           <fieldset class="checkout__input">
             <legend for="zipcode">ZIPCODE</legend>
-            <input type="number" name="zipcode" id="zipcode" />
+            <input type="number" name="zipcode" id="zipcode" required />
           </fieldset>
         </div>
         <div class="checkout__payments">
@@ -68,15 +69,15 @@
           </div>
           <div class="checkout__payment">
             <label for="paypal">Paypal</label>
-            <input type="radio" name="payments" id="paypal" />
+            <input type="radio" name="payments" id="paypal" required />
           </div>
           <div class="checkout__payment">
             <label for="crypto">Crypto</label>
-            <input type="radio" name="payments" id="crypto" />
+            <input type="radio" name="payments" id="crypto" required />
           </div>
           <div class="checkout__payment">
             <label for="visa">VISA</label>
-            <input type="radio" name="payments" id="visa" />
+            <input type="radio" name="payments" id="visa" required />
           </div>
         </div>
       </div>
