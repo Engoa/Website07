@@ -1277,8 +1277,6 @@ nav .cart--wrapper .cart__quantity__text {
           transform: translate(-50%);
   background-color: var(--color-bg);
   border: 2px solid var(--color-text);
-  min-height: 500px;
-  max-height: 600px;
   z-index: 150;
   position: fixed;
   overflow: scroll;
@@ -1287,6 +1285,8 @@ nav .cart--wrapper .cart__quantity__text {
   -webkit-transition: opacity 300ms ease;
   transition: opacity 300ms ease;
   max-width: 600px;
+  min-height: 500px;
+  max-height: 600px;
   width: 90%;
   -webkit-box-shadow: var(--box-shadow);
           box-shadow: var(--box-shadow);
@@ -1547,8 +1547,12 @@ nav .cart--wrapper .cart__quantity__text {
           transform: translate(-50%);
   background-color: var(--color-bg);
   border: 2px solid var(--color-text);
+  max-width: 600px;
+  width: 90%;
   min-height: 500px;
-  max-height: 700px;
+  max-height: 600px;
+  -webkit-box-shadow: var(--box-shadow);
+          box-shadow: var(--box-shadow);
   z-index: 150;
   position: fixed;
   visibility: hidden;
@@ -1556,10 +1560,7 @@ nav .cart--wrapper .cart__quantity__text {
   overflow: scroll;
   -webkit-transition: opacity 300ms ease;
   transition: opacity 300ms ease;
-  max-width: 800px;
-  width: 90%;
-  -webkit-box-shadow: var(--box-shadow);
-          box-shadow: var(--box-shadow);
+  box-shadow: var(--box-shadow);
 }
 
 .checkout--modal__header {
@@ -1671,7 +1672,7 @@ nav .cart--wrapper .cart__quantity__text {
 
 .checkout {
   max-width: 1350px;
-  margin: 2.15rem auto;
+  margin: 3.5rem auto;
   width: 100%;
 }
 
@@ -2468,7 +2469,7 @@ nav .theme--wrapper_btn:checked::before {
   gap: 4rem;
   width: 100%;
   max-width: 1450px;
-  margin: 3rem auto;
+  margin: 3.5rem auto;
 }
 
 .home--container .container {
@@ -2587,8 +2588,8 @@ nav .theme--wrapper_btn:checked::before {
 }
 
 .home--container .container .card:hover, .home--container .container .card:active {
-  -webkit-transform: perspective(1000px) scaleY(1) scaleX(1) rotateY(15deg) skewX(-5deg);
-          transform: perspective(1000px) scaleY(1) scaleX(1) rotateY(15deg) skewX(-5deg);
+  -webkit-transform: perspective(1000px) scaleY(1) scaleX(1) rotateY(-15deg);
+          transform: perspective(1000px) scaleY(1) scaleX(1) rotateY(-15deg);
 }
 
 .home--container .container .card .cardplus {
@@ -2678,8 +2679,8 @@ nav .theme--wrapper_btn:checked::before {
 }
 
 .home--container .container2 .card:hover, .home--container .container2 .card:active {
-  -webkit-transform: perspective(1000px) scaleY(1) scaleX(1) rotateY(-15deg) skewX(5deg);
-          transform: perspective(1000px) scaleY(1) scaleX(1) rotateY(-15deg) skewX(5deg);
+  -webkit-transform: perspective(1000px) scaleY(1) scaleX(1) rotateY(15deg);
+          transform: perspective(1000px) scaleY(1) scaleX(1) rotateY(15deg);
 }
 
 .home--container .container2 .btn--wrapper .btn {
@@ -3107,7 +3108,7 @@ nav .theme--wrapper_btn:checked::before {
   opacity: 0;
   position: absolute;
   visibility: hidden;
-  top: 80px;
+  top: 35px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

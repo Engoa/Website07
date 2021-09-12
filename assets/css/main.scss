@@ -199,7 +199,7 @@ nav {
   gap: 4rem;
   width: 100%;
   max-width: 1450px;
-  margin: 3rem auto;
+  margin: 3.5rem auto;
 
   .container {
     height: 50vh;
@@ -286,7 +286,7 @@ nav {
 
       &:hover,
       &:active {
-        transform: perspective(1000px) scaleY(1) scaleX(1) rotateY(15deg) skewX(-5deg);
+        transform: perspective(1000px) scaleY(1) scaleX(1) rotateY(-15deg);
       }
 
       .cardplus {
@@ -361,7 +361,7 @@ nav {
     .card {
       &:hover,
       &:active {
-        transform: perspective(1000px) scaleY(1) scaleX(1) rotateY(-15deg) skewX(5deg);
+        transform: perspective(1000px) scaleY(1) scaleX(1) rotateY(15deg);
       }
     }
 
@@ -738,7 +738,7 @@ nav {
   opacity: 0;
   position: absolute;
   visibility: hidden;
-  top: 80px;
+  top: 35px;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
