@@ -71,7 +71,6 @@ nav {
   transform: translate(-50%);
   background-color: var(--color-bg);
   border: 2px solid var(--color-text);
-
   z-index: 150;
   position: fixed;
   overflow: scroll;
@@ -79,9 +78,9 @@ nav {
   opacity: 0;
   transition: opacity 300ms ease;
   max-width: 600px;
-  min-height: 500px;
-  max-height: 600px;
   width: 90%;
+  min-height: 500px;
+  max-height: 500px;
   box-shadow: var(--box-shadow);
 
   &__exit {

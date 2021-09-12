@@ -1285,9 +1285,9 @@ nav .cart--wrapper .cart__quantity__text {
   -webkit-transition: opacity 300ms ease;
   transition: opacity 300ms ease;
   max-width: 600px;
-  min-height: 500px;
-  max-height: 600px;
   width: 90%;
+  min-height: 500px;
+  max-height: 500px;
   -webkit-box-shadow: var(--box-shadow);
           box-shadow: var(--box-shadow);
 }
@@ -1550,7 +1550,7 @@ nav .cart--wrapper .cart__quantity__text {
   max-width: 600px;
   width: 90%;
   min-height: 500px;
-  max-height: 600px;
+  max-height: 500px;
   -webkit-box-shadow: var(--box-shadow);
           box-shadow: var(--box-shadow);
   z-index: 150;
